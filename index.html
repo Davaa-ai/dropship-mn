@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LUMINA Korea — Арьс Арчилгааны Багц</title>
+  <meta name="description"
+    content="LUMINA Korea 5 алхамт арьс арчилгааны бүрэн багц. Glass Skin үр дүн. Тонер, Эссенс, Серум, Нүдний тос, Чийгшүүлэгч. Үнэгүй хүргэлт.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="LUMINA Korea — Арьс Арчилгааны 5 Алхамт Багц">
+  <meta property="og:description"
+    content="Glass Skin үр дүн. Солонгосын #1 арьс арчилгааны багц. Одоо -50% хямдралтай!">
+  <meta property="og:image" content="img_hero.jpg">
+  <meta property="og:type" content="product">
+  <!-- Fonts: preconnect + stylesheet (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a class="back" href="#">←</a>
+    <input class="search" placeholder="🔍 Хайх..." readonly>
+    <div class="icons">
+      <a href="#">♡</a>
+      <a href="#">🛒<span class="badge">2</span></a>
+    </div>
+  </header>
+
+  <!-- Scrollable Image Gallery -->
+  <div class="gallery" id="gallery">
+    <img src="img_hero.jpg" alt="Бүтээгдэхүүний багц" width="640" height="640">
+    <img src="img_model.jpg" alt="Glass skin үр дүн" width="640" height="640" loading="lazy">
+    <img src="img_texture.jpg" alt="Тос бүтэц" width="640" height="640" loading="lazy">
+    <img src="img_flatlay.jpg" alt="Бүрэн багц" width="640" height="640" loading="lazy">
+    <img src="img_before_after.jpg" alt="Өмнө дараа" width="640" height="640" loading="lazy">
+  </div>
+  <div class="gallery-dots" id="dots">
+    <span class="active"></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Price -->
+  <section class="price-block">
+    <div class="price-row">
+      <span class="price-now">₮89,900</span>
+      <span class="price-was">₮179,900</span>
+      <span class="price-badge">−50%</span>
+    </div>
+    <h1 class="product-title">LUMINA Korea — Арьс Арчилгааны 5 Алхамт Бүрэн Багц · Glass Skin Үр Дүн · Тонер · Эссенс ·
+      Серум · Нүдний Тос · Чийгшүүлэгч</h1>
+    <div class="rating-row">
+      <span class="stars">★★★★★</span>
+      <span class="rating-text">4.9</span>
+      <span class="rating-divider">·</span>
+      <span class="rating-text">856 сэтгэгдэл</span>
+      <span class="rating-divider">·</span>
+      <span class="rating-text">2,341 борлуулсан</span>
+    </div>
+  </section>
+
+  <!-- INLINE CTA #1 — After price -->
+  <section class="inline-cta">
+    <button class="cta-scroll-btn"
+      onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+      🔥 Одоо захиалах — Үнэгүй хүргэлт
+    </button>
+  </section>
+
+  <!-- Promo + Urgency -->
+  <section>
+    <div class="promo-strip">
+      <div class="promo-left">
+        <span class="promo-tag">⚡ FLASH</span>
+        <span class="promo-text">Хямдрал дуусахад</span>
+      </div>
+      <div class="timer">
+        <b id="h">05</b><span class="colon">:</span>
+        <b id="m">23</b><span class="colon">:</span>
+        <b id="s">47</b>
+      </div>
+    </div>
+    <div class="urgency">
+      <span><span class="live-dot"></span>Одоо <b>47 хүн</b> үзэж байна</span>
+      <span class="stock-low">Зөвхөн 12 ширхэг үлдлээ</span>
+    </div>
+  </section>
+
+  <!-- Tiered Pricing -->
+  <section>
+    <div class="section-head">
+      <h2>Багц сонгох</h2>
+    </div>
+    <div class="tiers" id="tiers">
+      <div class="tier" data-qty="1">
+        <div class="tier-radio"></div>
+        <div class="tier-body">
+          <div class="tier-label">1 багц</div>
+          <div class="tier-sub">Үнэгүй хүргэлттэй</div>
+        </div>
+        <div class="tier-price">
+          <div class="now">₮89,900</div>
+          <div class="was">₮179,900</div>
+        </div>
+      </div>
+      <div class="tier popular active" data-qty="2">
+        <div class="tier-radio"></div>
+        <div class="tier-body">
+          <div class="tier-label">2 багц авах</div>
+          <div class="tier-sub">Үнэгүй хүргэлт + Нүүрний маск бэлэг</div>
+        </div>
+        <div class="tier-price">
+          <div class="now">₮149,900</div>
+          <div class="was">₮359,800</div>
+          <div class="save">₮209,900 хэмнэлт</div>
+        </div>
+      </div>
+      <div class="tier" data-qty="3">
+        <div class="tier-radio"></div>
+        <div class="tier-body">
+          <div class="tier-label">3 багц авах</div>
+          <div class="tier-sub">Үнэгүй хүргэлт + Маск + Серум бэлэг</div>
+        </div>
+        <div class="tier-price">
+          <div class="now">₮199,900</div>
+          <div class="was">₮539,700</div>
+          <div class="save">₮339,800 хэмнэлт!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coupons -->
+  <section>
+    <div class="section-head">
+      <h2>Купон</h2><a class="see-all" href="#">Бүгдийг харах</a>
+    </div>
+    <div class="coupon-scroll">
+      <div class="coupon">
+        <div class="val">₮5,000</div>
+        <div class="cond">₮50K+ захиалгад</div>
+      </div>
+      <div class="coupon">
+        <div class="val">₮10,000</div>
+        <div class="cond">₮100K+ захиалгад</div>
+      </div>
+      <div class="coupon">
+        <div class="val">₮20,000</div>
+        <div class="cond">₮200K+ захиалгад</div>
+      </div>
+      <div class="coupon">
+        <div class="val">15%</div>
+        <div class="cond">Шинэ хэрэглэгч</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <section>
+    <div class="trust">
+      <div class="trust-item"><span class="ico">✅</span>Жинхэнэ бараа</div>
+      <div class="trust-item"><span class="ico">📦</span>Үнэгүй хүргэлт</div>
+      <div class="trust-item"><span class="ico">🔄</span>7 хоног буцаалт</div>
+      <div class="trust-item"><span class="ico">🔒</span>Аюулгүй төлбөр</div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="desc-section">
+    <div class="section-head">
+      <h2>Үр дүн — Өмнө ба Дараа</h2>
+    </div>
+    <img src="img_before_after.jpg" alt="Өмнө дараа" width="640" height="640" loading="lazy">
+    <div class="desc-text">
+      <p>2 долоо хоног тогтмол хэрэглэснээр<br>
+        арьсны өнгө жигд, толбо багасч,<br>
+        гэрэлтсэн Glass Skin үр дүнд хүрнэ.</p>
+    </div>
+  </section>
+
+  <!-- INLINE CTA #2 — After before/after -->
+  <section class="inline-cta cta-highlight">
+    <div class="cta-urgency-text">⚡ Зөвхөн <b>12 ширхэг</b> үлдлээ — Одоо авах!</div>
+    <button class="cta-scroll-btn"
+      onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+      💳 Шилжүүлэг хийж захиалах
+    </button>
+  </section>
+
+  <!-- 5-Step Infographic -->
+  <section class="desc-section">
+    <div class="section-head">
+      <h2>5 Алхамт Систем</h2>
+    </div>
+    <img src="img_steps.jpg" alt="5 алхам" width="640" height="640" loading="lazy">
+    <div class="desc-text">
+      <p>01 · Тонер — pH тэнцвэржүүлэлт<br>
+        02 · Эссенс — Гүнзгий шимтгэл<br>
+        03 · Серум — Толбо арилгагч<br>
+        04 · Нүдний тос — Үрчлээ багасгагч<br>
+        05 · Чийгшүүлэгч — 72 цаг чийгшүүлэлт</p>
+    </div>
+  </section>
+
+  <!-- Ingredients Infographic -->
+  <section class="desc-section">
+    <div class="section-head">
+      <h2>Байгалийн Найрлага</h2>
+    </div>
+    <img src="img_ingredients_info.jpg" alt="Найрлага" width="640" height="640" loading="lazy">
+    <div class="desc-text">
+      <p>Бүх найрлага байгалийн гаралтай.<br>
+        Парабен, хиймэл үнэр, хортой бодисгүй.<br>
+        Мэдрэг арьсанд ч тохиромжтой.</p>
+    </div>
+  </section>
+
+  <!-- Seller -->
+  <section>
+    <div class="seller">
+      <div class="seller-av">🏪</div>
+      <div class="seller-body">
+        <div class="seller-name">LUMINA Official 🔵</div>
+        <div class="seller-meta">12.8K дагагч · 98% эерэг үнэлгээ</div>
+      </div>
+      <button class="seller-btn">Дагах</button>
+    </div>
+  </section>
+
+  <!-- Product details -->
+  <section>
+    <div class="section-head">
+      <h2>Дэлгэрэнгүй</h2>
+    </div>
+    <div class="info-rows">
+      <div class="info-row"><span class="label">Брэнд</span><span class="value">LUMINA Korea</span></div>
+      <div class="info-row"><span class="label">Гарал</span><span class="value">🇰🇷 Солонгос</span></div>
+      <div class="info-row"><span class="label">Багцад</span><span class="value">5 бүтээгдэхүүн</span></div>
+      <div class="info-row"><span class="label">Арьсны төрөл</span><span class="value">Бүх төрөл</span></div>
+      <div class="info-row"><span class="label">Гол найрлага</span><span class="value">Гиалуроны хүчил, Витамин C</span>
+      </div>
+      <div class="info-row"><span class="label">Хүргэлт</span><span class="value highlight">Үнэгүй 🎉</span></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section>
+    <div class="section-head">
+      <h2>Сэтгэгдэл</h2><a class="see-all" href="#">856 →</a>
+    </div>
+    <div class="reviews-summary">
+      <span class="reviews-big">4.9</span>
+      <div class="reviews-detail">
+        <div style="color:#f59e0b;font-size:14px;margin-bottom:4px;">★★★★★</div>
+        <div class="bar-row"><span>5★</span>
+          <div class="bar">
+            <div class="bar-fill" style="width:82%"></div>
+          </div><span>82%</span>
+        </div>
+        <div class="bar-row"><span>4★</span>
+          <div class="bar">
+            <div class="bar-fill" style="width:12%"></div>
+          </div><span>12%</span>
+        </div>
+        <div class="bar-row"><span>3★</span>
+          <div class="bar">
+            <div class="bar-fill" style="width:4%"></div>
+          </div><span>4%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="review">
+      <div class="review-top">
+        <div class="review-av">👩</div>
+        <span class="review-author">Болормаа Б.</span>
+        <span class="review-date">2 өдрийн өмнө</span>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-body">Маш сайн бүтээгдэхүүн! 2 долоо хоног хэрэглээд арьс маань тунгалаг болсон. Найз нөхөд юу
+        түрхсэн бэ гэж асуух болсон 😍</div>
+      <div class="review-imgs">
+        <img src="img_texture.jpg" alt="" width="68" height="68" loading="lazy">
+        <img src="img_hero.jpg" alt="" width="68" height="68" loading="lazy">
+      </div>
+    </div>
+
+    <div class="review">
+      <div class="review-top">
+        <div class="review-av">👩‍🦰</div>
+        <span class="review-author">Сарангэрэл Д.</span>
+        <span class="review-date">5 өдрийн өмнө</span>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-body">Ээждээ бэлэг авсан, маш баярлалаа. Савлагаа үзэсгэлэнтэй, серум нь ялангуяа гайхалтай.
+        100% зөвлөж байна!</div>
+    </div>
+
+    <div class="review">
+      <div class="review-top">
+        <div class="review-av">🧑</div>
+        <span class="review-author">Тэмүүлэн О.</span>
+        <span class="review-date">1 долоо хоногийн өмнө</span>
+      </div>
+      <div class="review-stars">★★★★☆</div>
+      <div class="review-body">Найз охиндоо авч өгсөн, маш их таалагдсан. Зуны улиралд хөнгөн хувилбар гаргавал сайн
+        байна.</div>
+    </div>
+  </section>
+
+  <!-- INLINE CTA #3 — After reviews -->
+  <section class="inline-cta">
+    <div class="cta-social-text">✅ 2,341 хүн аль хэдийн захиалсан</div>
+    <button class="cta-scroll-btn"
+      onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+      📦 Захиалга өгөх →
+    </button>
+  </section>
+
+  <!-- Q&A -->
+  <section>
+    <div class="section-head">
+      <h2>Асуулт & Хариулт</h2>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Мэдрэг арьсанд тохирох уу?</div>
+      <div class="qa-a">Тийм, бүх төрлийн арьсанд тохирно. Парабен болон хиймэл үнэргүй.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Жинхэнэ бараа мөн үү?</div>
+      <div class="qa-a">100% жинхэнэ, Солонгосоос шууд импорт. Баталгааны бичиг хамт ирнэ.</div>
+    </div>
+  </section>
+
+  <!-- ORDER + PAYMENT SECTION -->
+  <section id="order-section">
+    <div class="order-form">
+      <h2>📦 Захиалга өгөх</h2>
+      <div class="subtitle">3 алхамаар хялбар захиалаарай</div>
+
+      <!-- Step 1: Choose tier -->
+      <div class="payment-step">
+        <div class="step-badge">1</div>
+        <div class="step-title">Багцаа сонгоно уу</div>
+      </div>
+      <div class="form-group">
+        <select id="ftier">
+          <option value="1">1 багц — ₮89,900</option>
+          <option value="2" selected>2 багц — ₮149,900 (хэмнэлттэй)</option>
+          <option value="3">3 багц — ₮199,900 (хамгийн их хэмнэлт)</option>
+        </select>
+      </div>
+
+      <!-- Step 2: Bank Transfer -->
+      <div class="payment-step">
+        <div class="step-badge">2</div>
+        <div class="step-title">Шилжүүлэг хийнэ үү</div>
+      </div>
+
+      <div class="bank-details-card">
+        <div class="bank-header">
+          <span class="bank-icon">🏦</span>
+          <span class="bank-name">Хаан Банк</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Дансны дугаар</span>
+          <div class="bank-value-row">
+            <span class="bank-value" id="bankAccount">5041 0338 49</span>
+            <button class="copy-btn" onclick="copyBank()" id="copyBtn">📋 Хуулах</button>
+          </div>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Данс эзэмшигч</span>
+          <span class="bank-value">ГАНЦЭЦЭГ</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Гүйлгээний утга</span>
+          <span class="bank-value bank-note">Нэр + утасны дугаар</span>
+        </div>
+        <div class="bank-amounts">
+          <div class="bank-amount-item">
+            <span>1 багц</span>
+            <b>₮89,900</b>
+          </div>
+          <div class="bank-amount-item popular-amount">
+            <span>2 багц ⭐</span>
+            <b>₮149,900</b>
+          </div>
+          <div class="bank-amount-item">
+            <span>3 багц</span>
+            <b>₮199,900</b>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Confirm order -->
+      <div class="payment-step">
+        <div class="step-badge">3</div>
+        <div class="step-title">Мэдээллээ бөглөж баталгаажуулна уу</div>
+      </div>
+
+      <div class="form-group">
+        <label>Нэр</label>
+        <input type="text" placeholder="Таны нэр" id="fname">
+      </div>
+      <div class="form-group">
+        <label>Утасны дугаар</label>
+        <input type="tel" placeholder="9911 2233" id="fphone">
+      </div>
+      <div class="form-group">
+        <label>Хаяг (дүүрэг, хороо)</label>
+        <input type="text" placeholder="Баянгол, 4-р хороо" id="faddr">
+      </div>
+
+      <button class="submit-btn" id="submitBtn">✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ</button>
+      <div class="form-guarantee">🔒 Мэдээлэл нууцлалтай · 📦 Үнэгүй хүргэлт · 🔄 7 хоног буцаалт</div>
+
+      <div class="payment-note">
+        <b>💡 Хэрхэн ажиллах вэ?</b>
+        <p>Шилжүүлэг хийсний дараа захиалгаа баталгаажуулснаар бид тантай 24 цагийн дотор холбогдож, хүргэлтийн мэдээлэл
+          өгнө.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section>
+    <div class="section-head">
+      <h2>Танд таалагдаж магадгүй</h2>
+    </div>
+    <div class="related-scroll">
+      <div class="related-card">
+        <img src="img_hero.jpg" alt="" width="150" height="150" loading="lazy">
+        <div class="info">
+          <div class="name">LUMINA Тонер 150мл</div>
+          <div class="price">₮29,900</div>
+          <div class="sold">1,203 борлуулсан</div>
+        </div>
+      </div>
+      <div class="related-card">
+        <img src="img_texture.jpg" alt="" width="150" height="150" loading="lazy">
+        <div class="info">
+          <div class="name">LUMINA Серум 50мл — Витамин C</div>
+          <div class="price">₮39,900</div>
+          <div class="sold">987 борлуулсан</div>
+        </div>
+      </div>
+      <div class="related-card">
+        <img src="img_flatlay.jpg" alt="" width="150" height="150" loading="lazy">
+        <div class="info">
+          <div class="name">LUMINA Люкс Багц 7 алхам</div>
+          <div class="price">₮129,900</div>
+          <div class="sold">456 борлуулсан</div>
+        </div>
+      </div>
+      <div class="related-card">
+        <img src="img_model.jpg" alt="" width="150" height="150" loading="lazy">
+        <div class="info">
+          <div class="name">LUMINA Нүүрний маск 10ш</div>
+          <div class="price">₮19,900</div>
+          <div class="sold">2,109 борлуулсан</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom bar -->
+  <div class="bottom-bar">
+    <a class="bar-icon" href="#"><span class="ico">🏪</span>Дэлгүүр</a>
+    <a class="bar-icon" href="#"><span class="ico">💬</span>Чат</a>
+    <button class="btn-add"
+      onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Сагслах</button>
+    <button class="btn-buy"
+      onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Захиалах</button>
+  </div>
+
+  <!-- Purchase toast container -->
+  <div class="toast-container" id="toasts"></div>
+
+  <script>
+    // Copy bank account number
+    function copyBank() {
+      const acc = document.getElementById('bankAccount').textContent.replace(/\s/g, '');
+      navigator.clipboard.writeText(acc).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = '✅ Хуулсан!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = '📋 Хуулах'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const t = document.createElement('textarea');
+        t.value = acc; document.body.appendChild(t); t.select();
+        document.execCommand('copy'); document.body.removeChild(t);
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = '✅ Хуулсан!';
+        setTimeout(() => { btn.textContent = '📋 Хуулах'; }, 2000);
+      });
+    }
+
+    // Countdown timer — clears when done
+    let t = 5 * 3600 + 23 * 60 + 47;
+    const timerInterval = setInterval(() => {
+      if (t <= 0) { clearInterval(timerInterval); return; }
+      t--;
+      document.getElementById('h').textContent = String(Math.floor(t / 3600)).padStart(2, '0');
+      document.getElementById('m').textContent = String(Math.floor((t % 3600) / 60)).padStart(2, '0');
+      document.getElementById('s').textContent = String(t % 60).padStart(2, '0');
+    }, 1000);
+
+    // Gallery dots — throttled with rAF
+    const g = document.getElementById('gallery'), ds = document.querySelectorAll('#dots span');
+    let galleryTicking = false;
+    g.addEventListener('scroll', () => {
+      if (!galleryTicking) {
+        requestAnimationFrame(() => {
+          const i = Math.round(g.scrollLeft / g.clientWidth);
+          ds.forEach((d, j) => d.classList.toggle('active', j === i));
+          galleryTicking = false;
+        });
+        galleryTicking = true;
+      }
+    });
+
+    // Tier selector
+    document.querySelectorAll('.tier').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.tier').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+        const q = el.dataset.qty;
+        document.getElementById('ftier').value = q;
+      });
+    });
+
+    // Randomize live viewer count
+    const viewerEl = document.querySelector('.urgency b');
+    function updateViewers() {
+      viewerEl.textContent = (38 + Math.floor(Math.random() * 24)) + ' хүн';
+    }
+    setInterval(updateViewers, 12000 + Math.random() * 8000);
+
+    // Purchase toast notifications — randomized
+    const buyers = [
+      { name: 'Оюунаа Б.', loc: 'БГД' },
+      { name: 'Нарангэрэл Д.', loc: 'ХУД' },
+      { name: 'Энхтүвшин О.', loc: 'Дархан' },
+      { name: 'Алтанцэцэг С.', loc: 'СБД' },
+      { name: 'Мөнхзул Г.', loc: 'ЧД' },
+      { name: 'Батцэцэг Т.', loc: 'Эрдэнэт' },
+      { name: 'Солонгоо Н.', loc: 'БЗД' },
+      { name: 'Цолмон Б.', loc: 'СХД' },
+      { name: 'Сарнай Д.', loc: 'БГД' },
+      { name: 'Одмаа Т.', loc: 'ХУД' },
+      { name: 'Номин Б.', loc: 'СБД' },
+      { name: 'Ариунаа Г.', loc: 'Дархан' },
+    ];
+    let lastBuyerIdx = -1;
+    function showToast() {
+      let idx;
+      do { idx = Math.floor(Math.random() * buyers.length); } while (idx === lastBuyerIdx);
+      lastBuyerIdx = idx;
+      const b = buyers[idx];
+      const ago = (1 + Math.floor(Math.random() * 28)) + ' мин';
+      const tc = document.getElementById('toasts');
+      tc.innerHTML = `<div class="toast"><div class="av">🛍️</div><span><span class="name">${b.name}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
+      setTimeout(() => { tc.innerHTML = ''; }, 4000);
+    }
+    setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
+
+    // Form submit → Messenger DM
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const btn = document.getElementById('submitBtn');
+      if (btn.disabled) return;
+      const name = document.getElementById('fname').value.trim();
+      const phone = document.getElementById('fphone').value.trim();
+      const addr = document.getElementById('faddr').value.trim();
+      const tier = document.getElementById('ftier').selectedOptions[0].text;
+      if (!name || !phone || !addr) {
+        alert('Нэр, утас, хаягаа бүрэн бөглөнө үү!');
+        return;
+      }
+      // Disable button to prevent double submit
+      btn.disabled = true;
+      btn.textContent = '⏳ Илгээж байна...';
+      btn.style.opacity = '0.6';
+
+      // Build Messenger DM link with pre-filled message
+      // Replace YOUR_PAGE_ID with your Facebook Page ID or username
+      const msg = encodeURIComponent(`📦 Шинэ захиалга!\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n📌 ${tier}`);
+      const messengerUrl = `https://m.me/YOUR_PAGE_ID?text=${msg}`;
+
+      // Show success then redirect to Messenger
+      setTimeout(() => {
+        btn.textContent = '✅ Амжилттай! Messenger руу шилжиж байна...';
+        btn.style.background = '#16a34a';
+        setTimeout(() => {
+          window.open(messengerUrl, '_blank');
+          // Reset button after redirect
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = '✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+            btn.style.opacity = '1';
+            btn.style.background = '';
+          }, 3000);
+        }, 1000);
+      }, 500);
+    });
+  </script>
+
+</body>
+
+</html>

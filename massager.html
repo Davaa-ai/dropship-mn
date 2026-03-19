@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>RELAXA — Хүзүүний EMS Массажер</title>
+    <meta name="description"
+        content="RELAXA EMS Хүзүүний Массажер — Хүзүү, мөрний өвдөлтийг арилгана. 6 горим, 15 түвшин. Дулааны эмчилгээ + EMS импульс. Үнэгүй хүргэлт.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="RELAXA — EMS Хүзүүний Массажер · Өвдөлтийг арилгана">
+    <meta property="og:description"
+        content="Хүзүү, мөрний өвдөлтөөс 10 минутад салаарай. EMS импульс + дулааны эмчилгээ. Одоо -55% хямдралтай!">
+    <meta property="og:image" content="massager_hero.jpg">
+    <meta property="og:type" content="product">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💆</text></svg>">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a class="back" href="#">←</a>
+        <input class="search" placeholder="🔍 Хайх..." readonly>
+        <div class="icons">
+            <a href="#">♡</a>
+            <a href="#">🛒<span class="badge">1</span></a>
+        </div>
+    </header>
+
+    <!-- Scrollable Image Gallery -->
+    <div class="gallery" id="gallery">
+        <img src="massager_hero.jpg" alt="EMS Хүзүүний Массажер" width="640" height="640">
+        <img src="massager_model.jpg" alt="Массажер хэрэглэж буй" width="640" height="640" loading="lazy">
+        <img src="massager_detail.jpg" alt="EMS электрод дэлгэрэнгүй" width="640" height="640" loading="lazy">
+        <img src="massager_flatlay.jpg" alt="Бүрэн багц" width="640" height="640" loading="lazy">
+        <img src="massager_before_after.jpg" alt="Өмнө дараа" width="640" height="640" loading="lazy">
+    </div>
+    <div class="gallery-dots" id="dots">
+        <span class="active"></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Price -->
+    <section class="price-block">
+        <div class="price-row">
+            <span class="price-now">₮79,900</span>
+            <span class="price-was">₮179,900</span>
+            <span class="price-badge">−55%</span>
+        </div>
+        <h1 class="product-title">RELAXA — EMS Хүзүүний Массажер · 6 Горим · Дулааны Эмчилгээ · Хүзүү Мөрний Өвдөлт
+            Арилгагч · USB Цэнэглэгч</h1>
+        <div class="rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">4.8</span>
+            <span class="rating-divider">·</span>
+            <span class="rating-text">634 сэтгэгдэл</span>
+            <span class="rating-divider">·</span>
+            <span class="rating-text">1,847 борлуулсан</span>
+        </div>
+    </section>
+
+    <!-- INLINE CTA #1 — After price -->
+    <section class="inline-cta">
+        <button class="cta-scroll-btn"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+            🔥 Одоо захиалах — Үнэгүй хүргэлт
+        </button>
+    </section>
+
+    <!-- Promo + Urgency -->
+    <section>
+        <div class="promo-strip">
+            <div class="promo-left">
+                <span class="promo-tag">⚡ FLASH</span>
+                <span class="promo-text">Хямдрал дуусахад</span>
+            </div>
+            <div class="timer">
+                <b id="h">03</b><span class="colon">:</span>
+                <b id="m">47</b><span class="colon">:</span>
+                <b id="s">12</b>
+            </div>
+        </div>
+        <div class="urgency">
+            <span><span class="live-dot"></span>Одоо <b>38 хүн</b> үзэж байна</span>
+            <span class="stock-low">Зөвхөн 18 ширхэг үлдлээ</span>
+        </div>
+    </section>
+
+    <!-- Tiered Pricing -->
+    <section>
+        <div class="section-head">
+            <h2>Багц сонгох</h2>
+        </div>
+        <div class="tiers" id="tiers">
+            <div class="tier" data-qty="1">
+                <div class="tier-radio"></div>
+                <div class="tier-body">
+                    <div class="tier-label">1 ширхэг</div>
+                    <div class="tier-sub">Үнэгүй хүргэлттэй</div>
+                </div>
+                <div class="tier-price">
+                    <div class="now">₮79,900</div>
+                    <div class="was">₮179,900</div>
+                </div>
+            </div>
+            <div class="tier popular active" data-qty="2">
+                <div class="tier-radio"></div>
+                <div class="tier-body">
+                    <div class="tier-label">2 ширхэг авах</div>
+                    <div class="tier-sub">Үнэгүй хүргэлт + Толгойн массажер бэлэг</div>
+                </div>
+                <div class="tier-price">
+                    <div class="now">₮129,900</div>
+                    <div class="was">₮359,800</div>
+                    <div class="save">₮229,900 хэмнэлт</div>
+                </div>
+            </div>
+            <div class="tier" data-qty="3">
+                <div class="tier-radio"></div>
+                <div class="tier-body">
+                    <div class="tier-label">3 ширхэг авах</div>
+                    <div class="tier-sub">Үнэгүй хүргэлт + Толгойн массажер + Нүд массажер бэлэг</div>
+                </div>
+                <div class="tier-price">
+                    <div class="now">₮179,900</div>
+                    <div class="was">₮539,700</div>
+                    <div class="save">₮359,800 хэмнэлт!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coupons -->
+    <section>
+        <div class="section-head">
+            <h2>Купон</h2><a class="see-all" href="#">Бүгдийг харах</a>
+        </div>
+        <div class="coupon-scroll">
+            <div class="coupon">
+                <div class="val">₮5,000</div>
+                <div class="cond">₮50K+ захиалгад</div>
+            </div>
+            <div class="coupon">
+                <div class="val">₮10,000</div>
+                <div class="cond">₮100K+ захиалгад</div>
+            </div>
+            <div class="coupon">
+                <div class="val">₮15,000</div>
+                <div class="cond">₮150K+ захиалгад</div>
+            </div>
+            <div class="coupon">
+                <div class="val">20%</div>
+                <div class="cond">Шинэ хэрэглэгч</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust badges -->
+    <section>
+        <div class="trust">
+            <div class="trust-item"><span class="ico">✅</span>Жинхэнэ бараа</div>
+            <div class="trust-item"><span class="ico">📦</span>Үнэгүй хүргэлт</div>
+            <div class="trust-item"><span class="ico">🔄</span>7 хоног буцаалт</div>
+            <div class="trust-item"><span class="ico">🔒</span>Аюулгүй төлбөр</div>
+        </div>
+    </section>
+
+    <!-- Before / After -->
+    <section class="desc-section">
+        <div class="section-head">
+            <h2>Үр дүн — Өмнө ба Дараа</h2>
+        </div>
+        <img src="massager_before_after.jpg" alt="Өмнө дараа" width="640" height="640" loading="lazy">
+        <div class="desc-text">
+            <p>7 хоног тогтмол хэрэглэснээр<br>
+                хүзүү, мөрний өвдөлт мэдэгдэхүйц буурч,<br>
+                хөдөлгөөний чөлөөт байдал сайжирна.</p>
+        </div>
+    </section>
+
+    <!-- INLINE CTA #2 — After before/after -->
+    <section class="inline-cta cta-highlight">
+        <div class="cta-urgency-text">⚡ Зөвхөн <b>18 ширхэг</b> үлдлээ — Одоо авах!</div>
+        <button class="cta-scroll-btn"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+            💳 Шилжүүлэг хийж захиалах
+        </button>
+    </section>
+
+    <!-- Features Infographic — How It Works -->
+    <section class="desc-section">
+        <div class="section-head">
+            <h2>Хэрхэн ажилладаг вэ?</h2>
+        </div>
+        <img src="massager_detail.jpg" alt="EMS технологи" width="640" height="640" loading="lazy">
+        <div class="desc-text">
+            <p>01 · <b>EMS импульс</b> — Булчингийн гүнд нэвтэрч, хөшсөн булчинг сулруулна<br>
+                02 · <b>Дулааны эмчилгээ</b> — 42°C хүртэл халж, цусны эргэлтийг сайжруулна<br>
+                03 · <b>6 горим</b> — Нухалт, цохилт, дарамт, заслын 6 өөр горим<br>
+                04 · <b>15 түвшин</b> — Хүч чадлаа өөрөө тохируулна</p>
+        </div>
+    </section>
+
+    <!-- Who Needs This -->
+    <section class="desc-section">
+        <div class="section-head">
+            <h2>Хэнд зориулсан бэ?</h2>
+        </div>
+        <img src="massager_model.jpg" alt="Оффисын ажилтан" width="640" height="640" loading="lazy">
+        <div class="desc-text">
+            <p>💼 <b>Оффисын ажилтнууд</b> — Өдөржин компьютерийн өмнө суудаг бол<br>
+                🚗 <b>Жолоочид</b> — Удаан жолоодож хүзүү хөшдөг бол<br>
+                📱 <b>Утасны хэрэглэгчид</b> — "Утасны хүзүү" синдромоос сэргийлэх<br>
+                🏋️ <b>Биеийн тамирчид</b> — Дасгалын дараа булчин сэргээх<br>
+                👵 <b>Эцэг эхдээ бэлэг</b> — Хамгийн шилдэг бэлэг!</p>
+        </div>
+    </section>
+
+    <!-- Seller -->
+    <section>
+        <div class="seller">
+            <div class="seller-av">🏪</div>
+            <div class="seller-body">
+                <div class="seller-name">RELAXA Official 🔵</div>
+                <div class="seller-meta">8.2K дагагч · 97% эерэг үнэлгээ</div>
+            </div>
+            <button class="seller-btn">Дагах</button>
+        </div>
+    </section>
+
+    <!-- Product details -->
+    <section>
+        <div class="section-head">
+            <h2>Дэлгэрэнгүй</h2>
+        </div>
+        <div class="info-rows">
+            <div class="info-row"><span class="label">Брэнд</span><span class="value">RELAXA</span></div>
+            <div class="info-row"><span class="label">Төрөл</span><span class="value">EMS Хүзүүний массажер</span></div>
+            <div class="info-row"><span class="label">Горим</span><span class="value">6 горим, 15 түвшин</span></div>
+            <div class="info-row"><span class="label">Дулаан</span><span class="value">38°C - 42°C дулааны
+                    эмчилгээ</span>
+            </div>
+            <div class="info-row"><span class="label">Цэнэглэгч</span><span class="value">USB Type-C, 2 цаг
+                    ажиллана</span>
+            </div>
+            <div class="info-row"><span class="label">Жин</span><span class="value">150г — Хөнгөн, зөөврийн</span></div>
+            <div class="info-row"><span class="label">Хүргэлт</span><span class="value highlight">Үнэгүй 🎉</span></div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section>
+        <div class="section-head">
+            <h2>Сэтгэгдэл</h2><a class="see-all" href="#">634 →</a>
+        </div>
+        <div class="reviews-summary">
+            <span class="reviews-big">4.8</span>
+            <div class="reviews-detail">
+                <div style="color:#f59e0b;font-size:14px;margin-bottom:4px;">★★★★★</div>
+                <div class="bar-row"><span>5★</span>
+                    <div class="bar">
+                        <div class="bar-fill" style="width:78%"></div>
+                    </div><span>78%</span>
+                </div>
+                <div class="bar-row"><span>4★</span>
+                    <div class="bar">
+                        <div class="bar-fill" style="width:15%"></div>
+                    </div><span>15%</span>
+                </div>
+                <div class="bar-row"><span>3★</span>
+                    <div class="bar">
+                        <div class="bar-fill" style="width:5%"></div>
+                    </div><span>5%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="review-top">
+                <div class="review-av">👨‍💼</div>
+                <span class="review-author">Бат-Эрдэнэ Д.</span>
+                <span class="review-date">1 өдрийн өмнө</span>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <div class="review-body">Оффист өдөржин суудаг хүнд яг таарсан! 2 долоо хоног хэрэглээд хүзүүний өвдөлт
+                бараг
+                арилсан. Дулааны горим нь ялангуяа сайхан. Гэр бүлд нэг нэгийг нь авч өгсөн 👍</div>
+        </div>
+
+        <div class="review">
+            <div class="review-top">
+                <div class="review-av">👩</div>
+                <span class="review-author">Оюунчимэг Б.</span>
+                <span class="review-date">3 өдрийн өмнө</span>
+            </div>
+            <div class="review-stars">★★★★★</div>
+            <div class="review-body">Ээждээ бэлэг авсан, маш баярлаж байна. Өдөр бүр хэрэглэдэг болсон. Хүзүү мөрний
+                өвдөлттэй хүмүүст заавал зөвлөе! Хүргэлт хурдан ирсэн 📦</div>
+        </div>
+
+        <div class="review">
+            <div class="review-top">
+                <div class="review-av">🧑</div>
+                <span class="review-author">Ганбаатар Т.</span>
+                <span class="review-date">5 өдрийн өмнө</span>
+            </div>
+            <div class="review-stars">★★★★☆</div>
+            <div class="review-body">Жолооч нарт маш тохиромжтой. Удаан замд явахдаа хэрэглэдэг, хүзүү хөшихгүй болсон.
+                Цэнэг удаан барьдаг, нэг цэнэглээд 2 өдөр хэрэглэнэ.</div>
+        </div>
+    </section>
+
+    <!-- INLINE CTA #3 — After reviews -->
+    <section class="inline-cta">
+        <div class="cta-social-text">✅ 1,847 хүн аль хэдийн захиалсан</div>
+        <button class="cta-scroll-btn"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+            📦 Захиалга өгөх →
+        </button>
+    </section>
+
+    <!-- Q&A -->
+    <section>
+        <div class="section-head">
+            <h2>Асуулт & Хариулт</h2>
+        </div>
+        <div class="qa">
+            <div class="qa-q">EMS гэж юу вэ? Аюулгүй юу?</div>
+            <div class="qa-a">EMS (Electrical Muscle Stimulation) нь бага хүчдэлийн цахилгаан импульсээр булчинг
+                стимуляцлах технологи. Эмнэлэг, нуруу сувилалд ашигладаг, бүрэн аюулгүй.</div>
+        </div>
+        <div class="qa">
+            <div class="qa-q">Жирэмсэн эмэгтэйчүүд хэрэглэж болох уу?</div>
+            <div class="qa-a">Жирэмсэн үед хэрэглэхийг зөвлөдөггүй. Мөн зүрхний кардиостимулятор суулгасан хүмүүст
+                хэрэглэхгүй.</div>
+        </div>
+        <div class="qa">
+            <div class="qa-q">Хэр удаан хэрэглэх вэ?</div>
+            <div class="qa-a">Өдөрт 1-2 удаа, удаа бүр 15 минут хангалттай. Автомат унтрах горимтой тул алдсан ч
+                асуудалгүй.
+            </div>
+        </div>
+        <div class="qa">
+            <div class="qa-q">Жинхэнэ бараа мөн үү?</div>
+            <div class="qa-a">100% жинхэнэ, шууд үйлдвэрээс импорт. CE баталгаатай, 1 жилийн баталгаа.</div>
+        </div>
+    </section>
+
+    <!-- ORDER + PAYMENT SECTION -->
+    <section id="order-section">
+        <div class="order-form">
+            <h2>📦 Захиалга өгөх</h2>
+            <div class="subtitle">3 алхамаар хялбар захиалаарай</div>
+
+            <!-- Step 1: Choose tier -->
+            <div class="payment-step">
+                <div class="step-badge">1</div>
+                <div class="step-title">Багцаа сонгоно уу</div>
+            </div>
+            <div class="form-group">
+                <select id="ftier">
+                    <option value="1">1 ширхэг — ₮79,900</option>
+                    <option value="2" selected>2 ширхэг — ₮129,900 (хэмнэлттэй)</option>
+                    <option value="3">3 ширхэг — ₮179,900 (хамгийн их хэмнэлт)</option>
+                </select>
+            </div>
+
+            <!-- Step 2: Bank Transfer -->
+            <div class="payment-step">
+                <div class="step-badge">2</div>
+                <div class="step-title">Шилжүүлэг хийнэ үү</div>
+            </div>
+
+            <div class="bank-details-card">
+                <div class="bank-header">
+                    <span class="bank-icon">🏦</span>
+                    <span class="bank-name">Хаан Банк</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Дансны дугаар</span>
+                    <div class="bank-value-row">
+                        <span class="bank-value" id="bankAccount">5041 0338 49</span>
+                        <button class="copy-btn" onclick="copyBank()" id="copyBtn">📋 Хуулах</button>
+                    </div>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Данс эзэмшигч</span>
+                    <span class="bank-value">ГАНЦЭЦЭГ</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Гүйлгээний утга</span>
+                    <span class="bank-value bank-note">Нэр + утасны дугаар</span>
+                </div>
+                <div class="bank-amounts">
+                    <div class="bank-amount-item">
+                        <span>1 ширхэг</span>
+                        <b>₮79,900</b>
+                    </div>
+                    <div class="bank-amount-item popular-amount">
+                        <span>2 ширхэг ⭐</span>
+                        <b>₮129,900</b>
+                    </div>
+                    <div class="bank-amount-item">
+                        <span>3 ширхэг</span>
+                        <b>₮179,900</b>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Confirm order -->
+            <div class="payment-step">
+                <div class="step-badge">3</div>
+                <div class="step-title">Мэдээллээ бөглөж баталгаажуулна уу</div>
+            </div>
+
+            <div class="form-group">
+                <label>Нэр</label>
+                <input type="text" placeholder="Таны нэр" id="fname">
+            </div>
+            <div class="form-group">
+                <label>Утасны дугаар</label>
+                <input type="tel" placeholder="9911 2233" id="fphone">
+            </div>
+            <div class="form-group">
+                <label>Хаяг (дүүрэг, хороо)</label>
+                <input type="text" placeholder="Баянгол, 4-р хороо" id="faddr">
+            </div>
+
+            <button class="submit-btn" id="submitBtn">✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ</button>
+            <div class="form-guarantee">🔒 Мэдээлэл нууцлалтай · 📦 Үнэгүй хүргэлт · 🔄 7 хоног буцаалт</div>
+
+            <div class="payment-note">
+                <b>💡 Хэрхэн ажиллах вэ?</b>
+                <p>Шилжүүлэг хийсний дараа захиалгаа баталгаажуулснаар бид тантай 24 цагийн дотор холбогдож, хүргэлтийн
+                    мэдээлэл өгнө.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related -->
+    <section>
+        <div class="section-head">
+            <h2>Танд таалагдаж магадгүй</h2>
+        </div>
+        <div class="related-scroll">
+            <div class="related-card">
+                <img src="massager_hero.jpg" alt="" width="150" height="150" loading="lazy">
+                <div class="info">
+                    <div class="name">RELAXA Толгойн Массажер</div>
+                    <div class="price">₮39,900</div>
+                    <div class="sold">987 борлуулсан</div>
+                </div>
+            </div>
+            <div class="related-card">
+                <img src="massager_detail.jpg" alt="" width="150" height="150" loading="lazy">
+                <div class="info">
+                    <div class="name">RELAXA Нүд Массажер</div>
+                    <div class="price">₮59,900</div>
+                    <div class="sold">645 борлуулсан</div>
+                </div>
+            </div>
+            <div class="related-card">
+                <img src="massager_flatlay.jpg" alt="" width="150" height="150" loading="lazy">
+                <div class="info">
+                    <div class="name">RELAXA 3-н Багц Premium</div>
+                    <div class="price">₮149,900</div>
+                    <div class="sold">312 борлуулсан</div>
+                </div>
+            </div>
+            <div class="related-card">
+                <img src="img_hero.jpg" alt="" width="150" height="150" loading="lazy">
+                <div class="info">
+                    <div class="name">LUMINA Арьс Арчилгааны Багц</div>
+                    <div class="price">₮89,900</div>
+                    <div class="sold">2,341 борлуулсан</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom bar -->
+    <div class="bottom-bar">
+        <a class="bar-icon" href="#"><span class="ico">🏪</span>Дэлгүүр</a>
+        <a class="bar-icon" href="#"><span class="ico">💬</span>Чат</a>
+        <button class="btn-add"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Сагслах</button>
+        <button class="btn-buy"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Захиалах</button>
+    </div>
+
+    <!-- Purchase toast container -->
+    <div class="toast-container" id="toasts"></div>
+
+    <script>
+        // Copy bank account number
+        function copyBank() {
+            const acc = document.getElementById('bankAccount').textContent.replace(/\s/g, '');
+            navigator.clipboard.writeText(acc).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = '✅ Хуулсан!';
+                btn.classList.add('copied');
+                setTimeout(() => { btn.textContent = '📋 Хуулах'; btn.classList.remove('copied'); }, 2000);
+            }).catch(() => {
+                const t = document.createElement('textarea');
+                t.value = acc; document.body.appendChild(t); t.select();
+                document.execCommand('copy'); document.body.removeChild(t);
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = '✅ Хуулсан!';
+                setTimeout(() => { btn.textContent = '📋 Хуулах'; }, 2000);
+            });
+        }
+
+        // Countdown timer
+        let t = 3 * 3600 + 47 * 60 + 12;
+        const timerInterval = setInterval(() => {
+            if (t <= 0) { clearInterval(timerInterval); return; }
+            t--;
+            document.getElementById('h').textContent = String(Math.floor(t / 3600)).padStart(2, '0');
+            document.getElementById('m').textContent = String(Math.floor((t % 3600) / 60)).padStart(2, '0');
+            document.getElementById('s').textContent = String(t % 60).padStart(2, '0');
+        }, 1000);
+
+        // Gallery dots — throttled with rAF
+        const g = document.getElementById('gallery'), ds = document.querySelectorAll('#dots span');
+        let galleryTicking = false;
+        g.addEventListener('scroll', () => {
+            if (!galleryTicking) {
+                requestAnimationFrame(() => {
+                    const i = Math.round(g.scrollLeft / g.clientWidth);
+                    ds.forEach((d, j) => d.classList.toggle('active', j === i));
+                    galleryTicking = false;
+                });
+                galleryTicking = true;
+            }
+        });
+
+        // Tier selector
+        document.querySelectorAll('.tier').forEach(el => {
+            el.addEventListener('click', () => {
+                document.querySelectorAll('.tier').forEach(t => t.classList.remove('active'));
+                el.classList.add('active');
+                const q = el.dataset.qty;
+                document.getElementById('ftier').value = q;
+            });
+        });
+
+        // Randomize live viewer count
+        const viewerEl = document.querySelector('.urgency b');
+        function updateViewers() {
+            viewerEl.textContent = (28 + Math.floor(Math.random() * 30)) + ' хүн';
+        }
+        setInterval(updateViewers, 12000 + Math.random() * 8000);
+
+        // Purchase toast notifications — randomized
+        const buyers = [
+            { name: 'Бат-Эрдэнэ Д.', loc: 'БГД' },
+            { name: 'Оюунчимэг Б.', loc: 'ХУД' },
+            { name: 'Цэнгэл О.', loc: 'Дархан' },
+            { name: 'Алтанцэцэг С.', loc: 'СБД' },
+            { name: 'Ганбаатар Т.', loc: 'ЧД' },
+            { name: 'Түвшинбаяр Б.', loc: 'Эрдэнэт' },
+            { name: 'Нарангэрэл Д.', loc: 'БЗД' },
+            { name: 'Болормаа Г.', loc: 'СХД' },
+            { name: 'Энхтүвшин М.', loc: 'БГД' },
+            { name: 'Мөнхзул О.', loc: 'ХУД' },
+            { name: 'Дэлгэрмаа Б.', loc: 'СБД' },
+            { name: 'Батцэцэг Н.', loc: 'Дархан' },
+        ];
+        let lastBuyerIdx = -1;
+        function showToast() {
+            let idx;
+            do { idx = Math.floor(Math.random() * buyers.length); } while (idx === lastBuyerIdx);
+            lastBuyerIdx = idx;
+            const b = buyers[idx];
+            const ago = (1 + Math.floor(Math.random() * 28)) + ' мин';
+            const tc = document.getElementById('toasts');
+            tc.innerHTML = `<div class="toast"><div class="av">💆</div><span><span class="name">${b.name}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
+            setTimeout(() => { tc.innerHTML = ''; }, 4000);
+        }
+        setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
+
+        // Form submit → Messenger DM
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const btn = document.getElementById('submitBtn');
+            if (btn.disabled) return;
+            const name = document.getElementById('fname').value.trim();
+            const phone = document.getElementById('fphone').value.trim();
+            const addr = document.getElementById('faddr').value.trim();
+            const tier = document.getElementById('ftier').selectedOptions[0].text;
+            if (!name || !phone || !addr) {
+                alert('Нэр, утас, хаягаа бүрэн бөглөнө үү!');
+                return;
+            }
+            btn.disabled = true;
+            btn.textContent = '⏳ Илгээж байна...';
+            btn.style.opacity = '0.6';
+
+            const msg = encodeURIComponent(`📦 Шинэ захиалга — RELAXA Массажер!\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n📌 ${tier}`);
+            const messengerUrl = `https://m.me/YOUR_PAGE_ID?text=${msg}`;
+
+            setTimeout(() => {
+                btn.textContent = '✅ Амжилттай! Messenger руу шилжиж байна...';
+                btn.style.background = '#16a34a';
+                setTimeout(() => {
+                    window.open(messengerUrl, '_blank');
+                    setTimeout(() => {
+                        btn.disabled = false;
+                        btn.textContent = '✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+                        btn.style.opacity = '1';
+                        btn.style.background = '';
+                    }, 3000);
+                }, 1000);
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>

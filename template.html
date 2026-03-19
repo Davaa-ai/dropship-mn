@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{{BRAND}} — {{PRODUCT_NAME}}</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Facebook Pixel: Replace YOUR_PIXEL_ID -->
+</head>
+
+<body>
+
+    <header class="header">
+        <a class="back" href="#">←</a>
+        <input class="search" placeholder="🔍 Хайх..." readonly>
+        <div class="icons"><a href="#">♡</a><a href="#">🛒<span class="badge">0</span></a></div>
+    </header>
+
+    <div class="gallery" id="gallery">
+        <img src="img_hero.png" alt="{{PRODUCT_NAME}}">
+        <img src="img_model.png" alt="{{PRODUCT_NAME}} model">
+        <img src="img_texture.png" alt="{{PRODUCT_NAME}} detail">
+        <img src="img_flatlay.png" alt="{{PRODUCT_NAME}} flatlay">
+        <img src="img_before_after.png" alt="Өмнө дараа">
+    </div>
+    <div class="gallery-dots" id="dots">
+        <span class="active"></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <section class="price-block">
+        <div class="price-row">
+            <span class="price-now">₮{{PRICE}}</span>
+            <span class="price-was">₮{{ORIGINAL_PRICE}}</span>
+            <span class="price-badge">−{{DISCOUNT}}%</span>
+        </div>
+        <h1 class="product-title">{{PRODUCT_TITLE_MN}}</h1>
+        <div class="rating-row">
+            <span class="stars">★★★★★</span>
+            <span class="rating-text">{{RATING}}</span>
+            <span class="rating-divider">·</span>
+            <span class="rating-text">{{REVIEW_COUNT}} сэтгэгдэл</span>
+            <span class="rating-divider">·</span>
+            <span class="rating-text">{{SOLD_COUNT}} борлуулсан</span>
+        </div>
+    </section>
+
+    <section>
+        <div class="promo-strip">
+            <div class="promo-left">
+                <span class="promo-tag">⚡ FLASH</span>
+                <span class="promo-text">Хямдрал дуусахад</span>
+            </div>
+            <div class="timer">
+                <b id="h">05</b><span class="colon">:</span>
+                <b id="m">23</b><span class="colon">:</span>
+                <b id="s">47</b>
+            </div>
+        </div>
+        <div class="urgency">
+            <span><span class="live-dot"></span>Одоо <b>{{VIEWERS}} хүн</b> үзэж байна</span>
+            <span class="stock-low">Зөвхөн {{STOCK}} ширхэг үлдлээ</span>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-head">
+            <h2>Багц сонгох</h2>
+        </div>
+        <div class="tiers" id="tiers">
+            <div class="tier" data-qty="1">
+                <div class="tier-radio"></div>
+                <div class="tier-body">
+                    <div class="tier-label">1 ширхэг</div>
+                    <div class="tier-sub">Үнэгүй хүргэлттэй</div>
+                </div>
+                <div class="tier-price">
+                    <div class="now">₮{{PRICE_1}}</div>
+                    <div class="was">₮{{ORIG_1}}</div>
+                </div>
+            </div>
+            <div class="tier popular active" data-qty="2">
+                <div class="tier-radio"></div>
+                <div class="tier-body">
+                    <div class="tier-label">2 ширхэг</div>
+                    <div class="tier-sub">Үнэгүй хүргэлт + бэлэг</div>
+                </div>
+                <div class="tier-price">
+                    <div class="now">₮{{PRICE_2}}</div>
+                    <div class="was">₮{{ORIG_2}}</div>
+                    <div class="save">₮{{SAVE_2}} хэмнэлт</div>
+                </div>
+            </div>
+            <div class="tier" data-qty="3">
+                <div class="tier-radio"></div>
+                <div class="tier-body">
+                    <div class="tier-label">3 ширхэг</div>
+                    <div class="tier-sub">Үнэгүй хүргэлт + 2 бэлэг</div>
+                </div>
+                <div class="tier-price">
+                    <div class="now">₮{{PRICE_3}}</div>
+                    <div class="was">₮{{ORIG_3}}</div>
+                    <div class="save">₮{{SAVE_3}} хэмнэлт!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="trust">
+            <div class="trust-item"><span class="ico">✅</span>Жинхэнэ бараа</div>
+            <div class="trust-item"><span class="ico">📦</span>Үнэгүй хүргэлт</div>
+            <div class="trust-item"><span class="ico">🔄</span>7 хоног буцаалт</div>
+            <div class="trust-item"><span class="ico">🔒</span>Аюулгүй төлбөр</div>
+        </div>
+    </section>
+
+    <!-- ADD INFOGRAPHIC SECTIONS HERE -->
+
+    <section>
+        <div class="seller">
+            <div class="seller-av">🏪</div>
+            <div class="seller-body">
+                <div class="seller-name">{{BRAND}} Official 🔵</div>
+                <div class="seller-meta">{{FOLLOWERS}} дагагч · {{POSITIVE_RATE}}% эерэг үнэлгээ</div>
+            </div>
+            <button class="seller-btn">Дагах</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-head">
+            <h2>Дэлгэрэнгүй</h2>
+        </div>
+        <div class="info-rows">
+            <div class="info-row"><span class="label">Брэнд</span><span class="value">{{BRAND}}</span></div>
+            <div class="info-row"><span class="label">Гарал</span><span class="value">{{ORIGIN}}</span></div>
+            <div class="info-row"><span class="label">Хүргэлт</span><span class="value highlight">Үнэгүй 🎉</span></div>
+        </div>
+    </section>
+
+    <!-- REVIEWS: Copy review blocks from tricks.md -->
+    <section>
+        <div class="section-head">
+            <h2>Сэтгэгдэл</h2><a class="see-all" href="#">{{REVIEW_COUNT}} →</a>
+        </div>
+        <!-- Add reviews here -->
+    </section>
+
+    <!-- Q&A: Copy from tricks.md -->
+    <section>
+        <div class="section-head">
+            <h2>Асуулт & Хариулт</h2>
+        </div>
+        <!-- Add Q&A here -->
+    </section>
+
+    <!-- ORDER FORM -->
+    <section id="order-section">
+        <div class="order-form">
+            <h2>📦 Захиалга өгөх</h2>
+            <div class="subtitle">Мэдээллээ бөглөөд бид тантай холбогдоно</div>
+            <div class="form-group"><label>Нэр</label><input type="text" placeholder="Таны нэр" id="fname"></div>
+            <div class="form-group"><label>Утасны дугаар</label><input type="tel" placeholder="9911 2233" id="fphone">
+            </div>
+            <div class="form-group"><label>Хаяг</label><input type="text" placeholder="Дүүрэг, хороо" id="faddr"></div>
+            <div class="form-group"><label>Багц</label>
+                <select id="ftier">
+                    <option value="1">1 ширхэг — ₮{{PRICE_1}}</option>
+                    <option value="2" selected>2 ширхэг — ₮{{PRICE_2}}</option>
+                    <option value="3">3 ширхэг — ₮{{PRICE_3}}</option>
+                </select>
+            </div>
+            <button class="submit-btn" id="submitBtn">🔥 ЗАХИАЛАХ — ҮНЭГҮЙ ХҮРГЭЛТ</button>
+            <div class="form-guarantee">🔒 Нууцлалтай · 📦 Үнэгүй хүргэлт · 🔄 7 хоног буцаалт</div>
+        </div>
+    </section>
+
+    <div class="bottom-bar">
+        <a class="bar-icon" href="#"><span class="ico">🏪</span>Дэлгүүр</a>
+        <a class="bar-icon" href="#"><span class="ico">💬</span>Чат</a>
+        <button class="btn-add"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Сагслах</button>
+        <button class="btn-buy"
+            onclick="document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Захиалах</button>
+    </div>
+
+    <div class="toast-container" id="toasts"></div>
+
+    <script>
+        // Countdown
+        let t = 5 * 3600 + 23 * 60 + 47;
+        setInterval(() => {
+            if (t <= 0) return; t--;
+            document.getElementById('h').textContent = String(Math.floor(t / 3600)).padStart(2, '0');
+            document.getElementById('m').textContent = String(Math.floor((t % 3600) / 60)).padStart(2, '0');
+            document.getElementById('s').textContent = String(t % 60).padStart(2, '0');
+        }, 1000);
+
+        // Gallery dots
+        const g = document.getElementById('gallery'), ds = document.querySelectorAll('#dots span');
+        g.addEventListener('scroll', () => {
+            const i = Math.round(g.scrollLeft / g.clientWidth);
+            ds.forEach((d, j) => d.classList.toggle('active', j === i));
+        });
+
+        // Tier selector
+        document.querySelectorAll('.tier').forEach(el => {
+            el.addEventListener('click', () => {
+                document.querySelectorAll('.tier').forEach(t => t.classList.remove('active'));
+                el.classList.add('active');
+                document.getElementById('ftier').value = el.dataset.qty;
+            });
+        });
+
+        // Toast notifications — Replace names with your product's target demo
+        const buyers = [
+            { name: 'Оюунаа Б.', loc: 'БГД', ago: '2 мин' },
+            { name: 'Нарангэрэл Д.', loc: 'ХУД', ago: '5 мин' },
+            { name: 'Энхтүвшин О.', loc: 'Дархан', ago: '8 мин' },
+            { name: 'Алтанцэцэг С.', loc: 'СБД', ago: '12 мин' },
+        ];
+        let bi = 0;
+        function showToast() {
+            const b = buyers[bi % buyers.length]; bi++;
+            const tc = document.getElementById('toasts');
+            tc.innerHTML = `<div class="toast"><div class="av">🛍️</div><span><span class="name">${b.name}</span> (${b.loc}) захиалга өглөө</span><span class="time">${b.ago} өмнө</span></div>`;
+            setTimeout(() => { tc.innerHTML = ''; }, 4000);
+        }
+        setTimeout(() => { showToast(); setInterval(showToast, 8000); }, 5000);
+
+        // Form submit — Replace BOT_TOKEN and CHAT_ID
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const name = document.getElementById('fname').value;
+            const phone = document.getElementById('fphone').value;
+            const addr = document.getElementById('faddr').value;
+            const tier = document.getElementById('ftier').selectedOptions[0].text;
+            if (!name || !phone) { alert('Нэр, утасны дугаараа бөглөнө үү!'); return; }
+            const msg = `📦 Шинэ захиалга!\n👤 ${name}\n📱 ${phone}\n📍 ${addr}\n📌 ${tier}`;
+            // fetch(`https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:'YOUR_CHAT_ID',text:msg})});
+            alert('✅ Захиалга амжилттай!');
+        });
+    </script>
+</body>
+
+</html>
