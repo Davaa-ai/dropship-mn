@@ -2183,20 +2183,20 @@
   <div class="toast-container" id="toasts"></div>
 
   <script>
-    // Buyers toast notifications — Mongolian mom/family names with districts
+    // Buyers toast notifications — Mongolian mom/family names with phone + districts
     const buyers = [
-      { name: 'Оюунаа Б.', loc: 'БГД' },
-      { name: 'Нарангэрэл Д.', loc: 'ХУД' },
-      { name: 'Төгөлдөр О.', loc: 'Дархан' },
-      { name: 'Удвал С.', loc: 'СБД' },
-      { name: 'Ганбаатар Г.', loc: 'ЧД' },
-      { name: 'Батцэцэг Т.', loc: 'Эрдэнэт' },
-      { name: 'Энхтуяа М.', loc: 'БЗД' },
-      { name: 'Цолмон Б.', loc: 'СХД' },
-      { name: 'Алтанцэцэг Д.', loc: 'ХУД' },
-      { name: 'Золзаяа Н.', loc: 'БГД' },
-      { name: 'Мөнхзул О.', loc: 'ЧД' },
-      { name: 'Сарнай Б.', loc: 'Дархан' },
+      { name: 'Оюунаа Б.', phone: '9685-xxxx', loc: 'БГД' },
+      { name: 'Нарангэрэл Д.', phone: '9911-xxxx', loc: 'ХУД' },
+      { name: 'Төгөлдөр О.', phone: '9505-xxxx', loc: 'Дархан' },
+      { name: 'Удвал С.', phone: '8808-xxxx', loc: 'СБД' },
+      { name: 'Ганбаатар Г.', phone: '8019-xxxx', loc: 'ЧД' },
+      { name: 'Батцэцэг Т.', phone: '9915-xxxx', loc: 'Эрдэнэт' },
+      { name: 'Энхтуяа М.', phone: '8625-xxxx', loc: 'БЗД' },
+      { name: 'Цолмон Б.', phone: '9570-xxxx', loc: 'СХД' },
+      { name: 'Алтанцэцэг Д.', phone: '9904-xxxx', loc: 'ХУД' },
+      { name: 'Золзаяа Н.', phone: '8016-xxxx', loc: 'БГД' },
+      { name: 'Мөнхзул О.', phone: '9688-xxxx', loc: 'ЧД' },
+      { name: 'Сарнай Б.', phone: '8833-xxxx', loc: 'Дархан' },
     ];
     let lastBuyerIdx = -1;
     function showToast() {
@@ -2206,7 +2206,14 @@
       const b = buyers[idx];
       const ago = (1 + Math.floor(Math.random() * 28)) + ' мин';
       const tc = document.getElementById('toasts');
-      tc.innerHTML = `<div class="toast"><div class="av">👶</div><span><span class="name">${b.name}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
+      tc.innerHTML = `<div class="toast" style="display:flex;align-items:center;gap:10px;padding:12px 16px;">
+        <div style="font-size:20px;">✅</div>
+        <div style="flex:1;line-height:1.45;">
+          <div style="font-size:12px;font-weight:700;color:#2D2A26;">${b.name} <span style="font-weight:400;color:#A39E99;">· ${b.loc}</span></div>
+          <div style="font-size:11px;color:#6B6560;margin-top:2px;">📱 ${b.phone} · захиалга өглөө</div>
+        </div>
+        <div style="font-size:10px;color:#A39E99;white-space:nowrap;">${ago} өмнө</div>
+      </div>`;
       setTimeout(() => { tc.innerHTML = ''; }, 4000);
     }
     setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
