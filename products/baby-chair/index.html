@@ -1832,7 +1832,9 @@
     <div class="review-list">
       <article class="review review-card">
         <div class="review-top">
-          <div class="review-av review-av-baby">👩</div>
+          <div class="review-av" style="background:none;border:none;">
+            <img src="https://i.pravatar.cc/150?img=47" alt="Profile" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          </div>
           <div class="review-meta">
             <div class="review-author-row">
               <span class="review-author">Энхтуяа Б.</span>
@@ -1852,7 +1854,9 @@
 
       <article class="review review-card">
         <div class="review-top">
-          <div class="review-av review-av-baby">👩‍🦱</div>
+          <div class="review-av" style="background:none;border:none;">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Profile" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          </div>
           <div class="review-meta">
             <div class="review-author-row">
               <span class="review-author">Саран М.</span>
@@ -1872,7 +1876,9 @@
 
       <article class="review review-card">
         <div class="review-top">
-          <div class="review-av review-av-baby">👩‍🦰</div>
+          <div class="review-av" style="background:none;border:none;">
+            <img src="https://i.pravatar.cc/150?img=9" alt="Profile" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+          </div>
           <div class="review-meta">
             <div class="review-author-row">
               <span class="review-author">Oyun Oyun</span>
@@ -2051,12 +2057,12 @@
           </div>
         </label>
 
-        <label class="payment-option-label" id="lbl-cod">
+        <label class="payment-option-label" id="lbl-cod" style="padding: 12px; margin-top: 8px; border: 1px dashed rgba(0,0,0,0.1); background: transparent; opacity: 0.7; transform: scale(0.96); transform-origin: top center;">
           <input type="radio" name="payment_method" value="Хүргүүлж авахдаа төлөх" onchange="togglePayment()">
-          <div class="payment-radio"></div>
+          <div class="payment-radio" style="width: 16px; height: 16px; border-width: 1px;"></div>
           <div class="payment-info">
-            <div class="payment-title">Хүргүүлж авахдаа төлөх (Бэлнээр)</div>
-            <div class="payment-desc">1-2 хоногийн дотор хүргэгдэнэ</div>
+            <div class="payment-title" style="font-size: 13px; font-weight: 500; color: #6B6560;">Хүргүүлж авахдаа төлөх (Бэлнээр)</div>
+            <div class="payment-desc" style="font-size: 11px;">1-2 хоногийн дотор хүргэгдэнэ</div>
           </div>
         </label>
       </div>
@@ -2183,20 +2189,20 @@
   <div class="toast-container" id="toasts"></div>
 
   <script>
-    // Buyers toast notifications — Mongolian mom/family names with phone + districts
+    // Buyers toast notifications — Mongolian phone numbers with masked digits
     const buyers = [
-      { name: 'Оюунаа Б.', phone: '9685-xxxx', loc: 'БГД' },
-      { name: 'Нарангэрэл Д.', phone: '9911-xxxx', loc: 'ХУД' },
-      { name: 'Төгөлдөр О.', phone: '9505-xxxx', loc: 'Дархан' },
-      { name: 'Удвал С.', phone: '8808-xxxx', loc: 'СБД' },
-      { name: 'Ганбаатар Г.', phone: '8019-xxxx', loc: 'ЧД' },
-      { name: 'Батцэцэг Т.', phone: '9915-xxxx', loc: 'Эрдэнэт' },
-      { name: 'Энхтуяа М.', phone: '8625-xxxx', loc: 'БЗД' },
-      { name: 'Цолмон Б.', phone: '9570-xxxx', loc: 'СХД' },
-      { name: 'Алтанцэцэг Д.', phone: '9904-xxxx', loc: 'ХУД' },
-      { name: 'Золзаяа Н.', phone: '8016-xxxx', loc: 'БГД' },
-      { name: 'Мөнхзул О.', phone: '9688-xxxx', loc: 'ЧД' },
-      { name: 'Сарнай Б.', phone: '8833-xxxx', loc: 'Дархан' },
+      { phone: '9685xxxx', loc: 'БГД' },
+      { phone: '9911xxxx', loc: 'ХУД' },
+      { phone: '9505xxxx', loc: 'Дархан' },
+      { phone: '8808xxxx', loc: 'СБД' },
+      { phone: '8019xxxx', loc: 'ЧД' },
+      { phone: '9915xxxx', loc: 'Эрдэнэт' },
+      { phone: '8625xxxx', loc: 'БЗД' },
+      { phone: '9570xxxx', loc: 'СХД' },
+      { phone: '9904xxxx', loc: 'ХУД' },
+      { phone: '8016xxxx', loc: 'БГД' },
+      { phone: '9688xxxx', loc: 'ЧД' },
+      { phone: '8833xxxx', loc: 'Дархан' },
     ];
     let lastBuyerIdx = -1;
     function showToast() {
@@ -2206,14 +2212,7 @@
       const b = buyers[idx];
       const ago = (1 + Math.floor(Math.random() * 28)) + ' мин';
       const tc = document.getElementById('toasts');
-      tc.innerHTML = `<div class="toast" style="display:flex;align-items:center;gap:10px;padding:12px 16px;">
-        <div style="font-size:20px;">✅</div>
-        <div style="flex:1;line-height:1.45;">
-          <div style="font-size:12px;font-weight:700;color:#2D2A26;">${b.name} <span style="font-weight:400;color:#A39E99;">· ${b.loc}</span></div>
-          <div style="font-size:11px;color:#6B6560;margin-top:2px;">📱 ${b.phone} · захиалга өглөө</div>
-        </div>
-        <div style="font-size:10px;color:#A39E99;white-space:nowrap;">${ago} өмнө</div>
-      </div>`;
+      tc.innerHTML = `<div class="toast"><div class="av">👶</div><span><span class="name">${b.phone}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
       setTimeout(() => { tc.innerHTML = ''; }, 4000);
     }
     setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
@@ -2349,8 +2348,11 @@
 
   <!-- Contact Proof Footer -->
   <footer style="max-width:480px;margin:0 auto;padding:24px 16px 100px;text-align:center;font-size:11px;color:#A39E99;line-height:1.7;">
-    <div style="width:40px;height:1px;background:#EDEAE7;margin:0 auto 14px;"></div>
-    <div style="font-weight:600;color:#6B6560;margin-bottom:4px;">Bambi Room</div>
+    <div style="width:40px;height:1px;background:#EDEAE7;margin:0 auto 20px;"></div>
+    <div style="display:flex;justify-content:center;margin-bottom:12px;">
+      <img src="../../baby-chair/store_logo.webp" alt="Bambi Room Logo" style="width:48px;height:48px;border-radius:50%;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+    </div>
+    <div style="font-weight:600;color:#6B6560;margin-bottom:4px;font-size:13px;">Bambi Room</div>
     <div>Асуулт, санал хүсэлт байвал холбогдоорой</div>
     <div style="margin-top:6px;">
       📧 <a href="mailto:bambiroom.mn@gmail.com" style="color:#00B4A6;text-decoration:none;">bambiroom.mn@gmail.com</a>
