@@ -2161,15 +2161,15 @@
 
       <div class="form-group">
         <label>Нэр</label>
-        <input type="text" placeholder="Таны нэр" id="fname">
+        <input type="text" placeholder="Таны нэр..." id="fname">
       </div>
       <div class="form-group">
         <label>Утасны дугаар</label>
-        <input type="tel" placeholder="9911 2233" id="fphone">
+        <input type="tel" placeholder="9911 2233..." id="fphone">
       </div>
       <div class="form-group">
         <label>Хаяг (дүүрэг, хороо)</label>
-        <input type="text" placeholder="Баянгол, 4-р хороо" id="faddr">
+        <input type="text" placeholder="Баянгол, 4-р хороо..." id="faddr">
       </div>
 
       <button class="submit-btn" id="submitBtn">✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ</button>
@@ -2279,7 +2279,8 @@
     document.getElementById('submitBtn').addEventListener('click', () => {
       const btn = document.getElementById('submitBtn');
       if (btn.disabled) return;
-      const name = document.getElementById('fname').value.trim();
+      const nameInput = document.getElementById('fname').value.trim();
+      const name = nameInput ? nameInput : 'Эрхэм харилцагч';
       const phone = document.getElementById('fphone').value.trim();
       const addr = document.getElementById('faddr').value.trim();
       const tier = window.orderQty + ' ширхэг — ₮' + (window.orderQty * 69000).toLocaleString();
@@ -2293,8 +2294,8 @@
         }
       }
 
-      if (!name || !phone || !addr) {
-        alert('Нэр, утас, хаягаа бүрэн бөглөнө үү!');
+      if (!phone || !addr) {
+        alert('Утас, хаягаа бүрэн бөглөнө үү!');
         return;
       }
       btn.disabled = true;

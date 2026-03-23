@@ -991,7 +991,9 @@ section {
 }
 
 .form-group input::placeholder {
-  color: var(--text-muted);
+  color: #D1D5DB;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .submit-btn {
