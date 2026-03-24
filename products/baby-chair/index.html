@@ -1814,20 +1814,25 @@
 
 
     <div class="promo-card"
-      style="margin: 0 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); border: 1px solid rgba(0,212,197,0.15);">
-      <div class="promo-strip">
+      style="margin: 0 16px 20px; box-shadow: 0 4px 15px rgba(239, 123, 132, 0.12); border: 1.5px solid var(--accent); background: var(--accent-soft); border-radius: 12px; overflow: hidden;">
+      <div class="promo-strip" style="background: transparent; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 18px 16px;">
         <div class="promo-left">
-          <span class="promo-text"><i class="hgi-stroke hgi-fire" style="font-size: 16px;"></i> Хямдрал дуусахад</span>
+          <span class="promo-text" style="color: var(--text); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+            <i class="hgi-stroke hgi-fire" style="font-size: 16px; color: var(--accent);"></i> Хямдрал дуусахад
+          </span>
         </div>
-        <div class="timer">
-          <b id="h">12</b><span class="colon">:</span>
-          <b id="m">39</b><span class="colon">:</span>
-          <b id="s">28</b>
+        <div class="timer" style="display: flex; align-items: center; gap: 6px;">
+          <b id="h" style="background: var(--text); color: #ffffff; font-size: 15px; font-weight: 700; padding: 5px 6px; border-radius: 6px; min-width: 25px; text-align: center; display: inline-block; line-height: 1.2;">12</b><span class="colon" style="color: var(--text); font-weight: 700; font-size: 15px;">:</span>
+          <b id="m" style="background: var(--text); color: #ffffff; font-size: 15px; font-weight: 700; padding: 5px 6px; border-radius: 6px; min-width: 25px; text-align: center; display: inline-block; line-height: 1.2;">39</b><span class="colon" style="color: var(--text); font-weight: 700; font-size: 15px;">:</span>
+          <b id="s" style="background: var(--text); color: #ffffff; font-size: 15px; font-weight: 700; padding: 5px 6px; border-radius: 6px; min-width: 25px; text-align: center; display: inline-block; line-height: 1.2;">28</b>
         </div>
       </div>
-      <div class="urgency">
-        <span><span class="live-dot"></span>Одоо <b>45 хүн</b> үзэж байна</span>
-        <span class="stock-low">Цөөн үлдлээ!</span>
+      <div class="urgency" style="background: rgba(239, 123, 132, 0.08); border-top: 1px dashed rgba(239, 123, 132, 0.25); padding: 12px 16px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+        <span style="font-size: 13px; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center;">
+          <span class="live-dot" style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 8px;"></span>
+          Одоо <b>45 хүн</b> үзэж байна
+        </span>
+        <span class="stock-low" style="font-weight: 700; color: var(--accent) !important; font-size: 13px;">Цөөн үлдлээ!</span>
       </div>
     </div>
   </div>
@@ -1927,7 +1932,7 @@
     <div class="section-head">
       <h2>Дэлгэрэнгүй</h2>
     </div>
-    <div class="info-rows">
+    <div class="info-rows" style="padding: 0 16px;">
       <div class="info-row" style="flex-direction:column; align-items:flex-start; gap:10px;">
         <div style="display:flex; justify-content:space-between; width:100%;">
           <span class="label">Материал</span><span class="value">PP хуванцар (BPA-free)</span>
@@ -1963,7 +1968,6 @@
             class="hgi-stroke hgi-sparkles"></i></span></div>
     </div>
   </section>
-
 
   <section>
     <div class="section-head">
