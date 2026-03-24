@@ -3,237 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropship MN - Дэлгүүр</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <title>Bambi Room - Тун удахгүй</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #fdfaf6;
             font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 40px 20px;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .header h1 {
-            font-size: 32px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin: 0 0 10px 0;
-        }
-        .header p {
-            font-size: 16px;
-            color: #666;
-            margin: 0;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .product-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 30px 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #f1f3f5;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-            border-color: #e9ecef;
-        }
-        .icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-            display: block;
-        }
-        .title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #212529;
-            margin: 0 0 8px 0;
-            line-height: 1.4;
-        }
-        .desc {
-            font-size: 14px;
-            color: #6c757d;
-            margin: 0 0 16px 0;
-            line-height: 1.5;
-            flex-grow: 1;
-        }
-        .price {
-            font-size: 18px;
-            font-weight: 800;
-            color: #d946ef; /* Magenta pop */
-            margin-bottom: 24px;
-        }
-        .view-btn {
-            display: inline-block;
-            background: #1a1a1a;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 99px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: background 0.2s;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .view-btn:hover {
-            background: #343a40;
-        }
-
-        /* Nav & Banner Styles */
-        .store-nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            height: 100vh;
+            text-align: center;
+            color: #4A3728;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
             margin-bottom: 24px;
-            gap: 12px;
+            filter: drop-shadow(0 4px 12px rgba(224, 160, 113, 0.2));
         }
-        .store-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #E0A071;
-            background: #fdf5f4;
-        }
-        .store-title {
-            font-size: 24px;
-            font-weight: 800;
-            color: #4A3728;
-            margin: 0;
-            letter-spacing: -0.5px;
-        }
-        .hero-banner {
-            width: calc(100% - 40px);
-            max-width: 1000px;
-            margin: 0 auto 30px auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            position: relative;
-            background: #fdfaf6;
-        }
-        .hero-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            aspect-ratio: 16/5;
-            object-fit: cover;
-            object-position: right center;
-        }
-        .banner-text {
-            position: absolute;
-            top: 50%;
-            left: 5%;
-            transform: translateY(-50%);
-            max-width: 45%;
-            color: #4A3728;
-        }
-        .banner-text h2 {
-            font-size: 2vw;
+        h1 {
+            font-size: 48px;
             font-weight: 900;
-            margin: 0 0 8px 0;
-            line-height: 1.2;
+            margin: 0 0 16px 0;
+            letter-spacing: -1px;
         }
-        .banner-text p {
-            font-size: 1.2vw;
-            margin: 0;
-            opacity: 0.9;
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.8;
+            margin-bottom: 32px;
         }
-        @media (max-width: 768px) {
-            .banner-text h2 { font-size: 24px; }
-            .banner-text p { font-size: 14px; }
-            .banner-text { max-width: 60%; }
-            .hero-banner img { aspect-ratio: 16/7; }
+        .badge {
+            display: inline-block;
+            background: #E0A071;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 99px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
         }
-
-        /* Color variants for fun */
-        .card-baby .icon { text-shadow: 0 4px 12px rgba(212, 163, 115, 0.4); }
-        .card-baby .price { color: #db684c; } /* Coral */
-        
-        .card-lumina .icon { text-shadow: 0 4px 12px rgba(232, 163, 23, 0.4); }
-        .card-lumina .price { color: #e8a317; } /* Gold */
-        
-        .card-massage .icon { text-shadow: 0 4px 12px rgba(58, 175, 169, 0.4); }
-        .card-massage .price { color: #3AAFA9; } /* Teal */
-        
-        .card-dev .icon { text-shadow: 0 4px 12px rgba(108, 117, 125, 0.4); }
-        .card-dev .price { color: #6c757d; font-weight: 500; }
-        
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            font-size: 14px;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="store-nav">
-        <!-- We will tell the user to save their nice transparent logo here -->
-        <img src="./logo.png" alt="Bambi Room Logo" class="store-logo" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'80\'>🦌</text></svg>'">
-        <h1 class="store-title">Bambi Room</h1>
-    </nav>
-
-    <div class="hero-banner">
-        <img src="./bambi_store_banner.png" alt="Bambi Room Store Banner">
-        <div class="banner-text">
-            <h2>Бяцхан үрсийнхээ ертөнцөд тавтай морил 🍂</h2>
-            <p>Хамгийн эгдүүтэй, аюулгүй, хэрэгцээт бүтээгдэхүүнүүд.</p>
-        </div>
+    <div class="container">
+        <div class="badge">Удахгүй нээгдэнэ</div>
+        <img src="./logo.png" alt="Bambi Room" class="logo" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'80\'>🦌</text></svg>'">
+        <h1>Bambi Room</h1>
+        <p>Бид бяцхан үрсийнхээ ертөнцөд хамгийн эгдүүтэй, аюулгүй, хэрэгцээт бүтээгдэхүүнүүдийг бэлтгэж байна. Тун удахгүй уулзацгаая. 🍂</p>
     </div>
 
-    <div class="header" style="margin-bottom: 24px; margin-top: 10px;">
-        <p style="font-weight: 600;">Идэвхтэй байгаа бүтээгдэхүүний хуудаснууд 👇</p>
-    </div>
-
-    <div class="product-grid">
-        <!-- Baby Chair -->
-        <div class="product-card card-baby">
-            <span class="icon">🦌</span>
-            <h2 class="title">Хүүхдийн Сандал</h2>
-            <p class="desc">3-ыг 1-ээр (Хооллох, үс угаах, хөл угаах) олон үйлдэлт бяцхан сандал. Зай талбай хэмнэнэ.</p>
-            <div class="price">₮69,000</div>
-            <a href="./products/baby-chair/" class="view-btn">Хуудас руу очих →</a>
-        </div>
-
-        <!-- Lumina -->
-        <div class="product-card card-lumina">
-            <span class="icon">✨</span>
-            <h2 class="title">Lumina Korea</h2>
-            <p class="desc">Бүсгүйчүүдийн өдөр тутмын арьс арчилгаанд зориулсан үр дүнтэй гоо сайхны багц.</p>
-            <div class="price">₮89,900</div>
-            <a href="./products/lumina/" class="view-btn">Хуудас руу очих →</a>
-        </div>
-
-        <!-- Massager -->
-        <div class="product-card card-massage">
-            <span class="icon">💆‍♀️</span>
-            <h2 class="title">Цахилгаан Иллэгч</h2>
-            <p class="desc">Хүзүү, хуян, ядаргаа тайлагч хүчирхэг ухаалаг иллэгчний аппарат.</p>
-            <div class="price">₮59,000</div>
-            <a href="./products/massager/" class="view-btn">Хуудас руу очих →</a>
-        </div>
-
-        <!-- Template -->
-        <div class="product-card card-dev">
-            <span class="icon">🛠️</span>
-            <h2 class="title">Дэлгүүрийн Загвар</h2>
-            <p class="desc">Шинэ бүтээгдэхүүн нэмэхэд зориулсан хоосон, суурь CSS бүхий загвар хуудас.</p>
-            <div class="price">Хөгжүүлэлт</div>
-            <a href="./products/template/" class="view-btn">Загварт орох →</a>
-        </div>
+    <div class="footer">
+        &copy; 2026 Bambi Room. Бүх эрх хуулиар хамгаалагдсан.
     </div>
 
 </body>

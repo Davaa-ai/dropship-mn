@@ -38,7 +38,7 @@ Have three clear models ready when speaking to a client:
 ## 4. The Outreach Script (Facebook / DM Strategy)
 When approaching a wholesaler sitting on Dead Stock:
 
-*"Сайн байна уу? Таны энэ бараа хэрхэн зарагдаж байна? Би яг фэйсбүүкээс орж ирсэн хүмүүсийг шууд худалдан авагч болгох зориулалттай, захиалгыг автоматаар Telegram руу шиддэг өндөр хувиргалттай борлуулалтын систем (landing page) хийдэг юм. Жишээ нь: [https://davaa-ai.github.io/dropship-mn/products/baby-chair/]. Хэрвээ та барааныхаа борлуулалтыг хурдасгаж, нөөцөө хурдан дуусгахыг хүсвэл 2-хон өдрийн дотор ийм хуудас хийж өгөөд, борлуулалтын системээ углаад өгье. Сонирхвол хариу бичээрэй."*
+*"Сайн байна уу? Таны энэ бараа хэрхэн зарагдаж байна? Би яг фэйсбүүкээс орж ирсэн хүмүүсийг шууд худалдан авагч болгох зориулалттай, захиалгыг автоматаар Telegram руу шиддэг өндөр хувиргалттай борлуулалтын систем (landing page) хийдэг юм. Жишээ нь: [https://spinphysics.store/products/baby-chair/]. Хэрвээ та барааныхаа борлуулалтыг хурдасгаж, нөөцөө хурдан дуусгахыг хүсвэл 2-хон өдрийн дотор ийм хуудас хийж өгөөд, борлуулалтын системээ углаад өгье. Сонирхвол хариу бичээрэй."*
 
 ## 5. Next Steps & Execution Logic
 1.  **Keep the codebase modular:** In your `dropship-mn` folder, treat `products/baby-chair/` as a template. For a new client, duplicate it to `products/new-product/` and swap out images/CSS variables. This allows you to build a ₮500k page in under 3 hours.
