@@ -7,20 +7,21 @@
   <title>Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)</title>
   <meta name="description"
     content="Хоолны болон үс, хөл угаах олон үйлдэлт хүүхдийн сандал. 3 үйлдэлт! ₮69,000. Үнэгүй хүргэлт.">
-  
+
   <meta property="og:title" content="Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)">
   <meta property="og:description"
     content="Хооллох, үс болон хөл угаах зориулалттай олон үйлдэлт сандал. Одоо -47% хямдралтай!">
-  <meta property="og:image" content="../../bambi_store_banner.png">
+  <meta property="og:image" content="https://spinphysics.store/bambi_store_banner.png">
   <meta property="og:type" content="product">
-  
+
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👶</text></svg>">
-  
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>B</text></svg>">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
   <script>
     // Static-site friendly tracking config.
     // Paste your real IDs here before deploying to GitHub Pages.
@@ -239,38 +240,39 @@
       };
     })();
 
-    window.trackOrderIntent = function(source) {
+    window.trackOrderIntent = function (source) {
       window.dispatchTrackingEvent('begin_checkout', { source: source }, { onceKey: 'checkout_' + source });
     };
 
-    window.trackCopyBank = function() {
+    window.trackCopyBank = function () {
       window.dispatchTrackingEvent('copy_bank', {});
     };
   </script>
   <style>
-    /* ===== BABY PLANET 3 — PREMIUM THEME ===== */
+    /* ===== BAMBI ROOM — CLEAN 3-COLOR THEME ===== */
     :root {
       --primary: #00D4C5;
       --primary-soft: #E8FAF9;
       --primary-dark: #009E93;
-      --accent: #EF7B84;
-      --accent-soft: #FFF0F1;
-      --warm: #685F52;
-      --warm-light: #A39887;
-      --bg: #F7F8FA;
+      
+      --secondary: #3B82F6;
+      --secondary-soft: #EFF6FF;
+      --secondary-dark: #1D4ED8;
+      
+      --safe: #10B981;
+      --safe-soft: #ECFDF5;
+      --safe-dark: #047857;
+
+      --text: #1F2937;
+      --text-secondary: #4B5563;
+      --text-muted: #9CA3AF;
+      --bg: #F9FAFB;
       --white: #ffffff;
-      --border: #EDEAE7;
-      --green: #16a34a;
-      --gold: #F8B84E;
-      --pink: #EF7B84;
-      --lavender: #C4B5E0;
-      --text: #2D2A26;
-      --text-secondary: #6B6560;
-      --text-muted: #A39E99;
-      --shadow-sm: 0 2px 8px rgba(104, 95, 82, 0.06);
-      --shadow-md: 0 4px 20px rgba(104, 95, 82, 0.08);
-      --shadow-lg: 0 8px 40px rgba(104, 95, 82, 0.12);
-      --shadow-teal: 0 4px 24px rgba(0, 212, 197, 0.2);
+      --border: #F3F4F6;
+      
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-teal: 0 4px 20px rgba(0, 212, 197, 0.15);
     }
 
     body {
@@ -281,14 +283,37 @@
       margin: 0 auto;
     }
 
-    /* ===== SECTIONS — Elevated card style ===== */
+    /* ===== GLOBALLY ALIGN ICONS WITH TEXT ===== */
+    i[class^="hgi-"],
+    i[class*=" hgi-"] {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      vertical-align: middle !important;
+      transform: translateY(-1.5px);
+      /* Fine-tuned vertical alignment */
+    }
+
+    /* ===== SECTIONS — Clean flow ===== */
     section {
-      box-shadow: var(--shadow-sm);
-      border-radius: 20px;
-      margin: 10px 10px;
-      padding-bottom: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      transition: box-shadow 0.3s ease;
+      margin: 32px 0 24px;
+    }
+
+    .section-head {
+      margin: 0 16px 16px;
+    }
+
+    .section-head h2 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .section-head h2::after {
+      content: "";
+      flex: 1;
+      border-bottom: 2px solid rgba(220, 220, 225, 0.8);
     }
 
     .promo-tag {
@@ -308,7 +333,7 @@
     .submit-btn {
       background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
       box-shadow: var(--shadow-teal) !important;
-      border-radius: 14px !important;
+      border-radius: 8px !important;
       position: relative;
       overflow: hidden;
     }
@@ -316,7 +341,7 @@
     .cta-scroll-btn {
       background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
       box-shadow: var(--shadow-teal) !important;
-      border-radius: 14px !important;
+      border-radius: 8px !important;
       position: relative;
       overflow: hidden;
     }
@@ -335,22 +360,25 @@
       box-shadow: 0 2px 8px rgba(0, 212, 197, 0.3);
     }
 
-    /* ===== BABY DIVIDER — refined ===== */
-    .baby-divider {
-      text-align: center;
-      padding: 8px 0;
-      font-size: 12px;
-      letter-spacing: 14px;
-      color: var(--border);
-      user-select: none;
+    .btn-buy {
+      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      box-shadow: 0 4px 16px rgba(0, 212, 197, 0.3) !important;
+      transition: box-shadow 0.2s, transform 0.15s !important;
     }
+
+    .btn-buy:hover {
+      box-shadow: 0 6px 24px rgba(0, 212, 197, 0.45) !important;
+      transform: translateY(-1px);
+    }
+
+
 
     /* ===== EMOTIONAL HERO BANNER ===== */
     .emotional-banner {
       background: linear-gradient(160deg, var(--primary-soft) 0%, #FFF8F0 50%, var(--accent-soft) 100%);
       padding: 28px 24px;
       text-align: center;
-      border-radius: 0 0 20px 20px;
+      border-radius: 0 0 12px 12px;
       margin: 0 10px 10px;
       border: 1px solid rgba(0, 212, 197, 0.08);
     }
@@ -375,65 +403,54 @@
       line-height: 1.7;
     }
 
-    /* ===== PROBLEM → SOLUTION CARDS — Premium ===== */
-    .problem-solution {
+    /* ===== UNIFIED BENEFITS CARDS ===== */
+    .unified-benefits {
       padding: 0 16px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
-    .ps-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 12px;
+    .ub-card {
+      border-radius: 12px;
+      padding: 14px 14px 16px;
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      transition: all 0.25s ease;
+      flex-direction: column;
       position: relative;
-      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
 
-    .ps-card::before {
-      content: '';
+    .ub-card .ub-icon {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(180deg, var(--accent), var(--pink));
-      border-radius: 4px 0 0 4px;
-      opacity: 0.7;
-    }
-
-
-    .ps-card .ps-icon {
-      font-size: 24px;
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
+      top: 14px;
+      right: 14px;
+      font-size: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--accent-soft), #FFF5F2);
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(239, 123, 132, 0.1);
+      opacity: 0.8;
     }
 
+    .ub-card .ub-text {
+      margin-top: 0;
+    }
 
-    .ps-card .ps-text h4 {
-      font-size: 14.5px;
+    .ub-card .ub-text h4 {
+      font-size: 13.5px;
       font-weight: 800;
       color: var(--text);
       margin-bottom: 6px;
-      line-height: 1.4;
+      margin-top: 0;
+      line-height: 1.25;
+      padding-right: 22px;
     }
 
-    .ps-card .ps-text p {
-      font-size: 13px;
+    .ub-card .ub-text p {
+      font-size: 12px;
       color: var(--text-secondary);
-      line-height: 1.65;
+      line-height: 1.5;
+      margin: 0;
     }
 
     /* ===== SAVINGS COMPARISON — Premium ===== */
@@ -443,7 +460,7 @@
 
     .savings-grid {
       background: var(--white);
-      border-radius: 16px;
+      border-radius: 10px;
       padding: 20px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
@@ -484,7 +501,7 @@
     .savings-total {
       margin-top: 16px;
       background: linear-gradient(135deg, #00D4C5, #00B4A6);
-      border-radius: 16px;
+      border-radius: 10px;
       padding: 22px;
       text-align: center;
       color: #fff;
@@ -524,61 +541,7 @@
       font-weight: 600;
     }
 
-    /* ===== MONGOLIAN MOM SCENARIOS — Premium ===== */
-    .scenario-cards {
-      padding: 0 16px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
 
-    .scenario-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 20px 16px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.25s ease;
-    }
-
-    .scenario-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--lavender));
-      opacity: 0.6;
-    }
-
-    .scenario-card:nth-child(2)::before {
-      background: linear-gradient(90deg, var(--gold), var(--accent));
-    }
-
-    .scenario-card:nth-child(3)::before {
-      background: linear-gradient(90deg, var(--lavender), var(--pink));
-    }
-
-    .scenario-card:nth-child(4)::before {
-      background: linear-gradient(90deg, var(--primary), var(--green));
-    }
-
-    .scenario-card .sc-title {
-      font-size: 13.5px;
-      font-weight: 800;
-      color: var(--text);
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-
-    .scenario-card .sc-body {
-      font-size: 12.5px;
-      color: var(--text-secondary);
-      line-height: 1.65;
-    }
 
     /* ===== SAFETY HIGHLIGHT — Premium Glass ===== */
     .safety-section {
@@ -593,7 +556,7 @@
 
     .safety-item {
       background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);
-      border-radius: 16px;
+      border-radius: 10px;
       padding: 22px 16px;
       text-align: center;
       border: 1px solid var(--border);
@@ -610,7 +573,7 @@
       width: 52px;
       height: 52px;
       background: var(--primary-soft);
-      border-radius: 16px;
+      border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 212, 197, 0.1);
     }
 
@@ -662,7 +625,7 @@
       align-items: center;
       padding: 16px;
       border: 1.5px solid var(--border);
-      border-radius: 14px;
+      border-radius: 8px;
       cursor: pointer;
       gap: 12px;
       transition: all 0.25s ease;
@@ -670,37 +633,30 @@
     }
 
     .payment-option-label.active {
-      border-color: var(--primary);
-      background: var(--primary-soft);
-      box-shadow: 0 2px 12px rgba(0, 212, 197, 0.1);
-    }
-
-    .payment-option-label input {
-      display: none;
-    }
-
-    .payment-radio {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.2s;
+      border-color: var(--safe);
+      background: var(--safe-soft);
+      box-shadow: 0 2px 12px rgba(16, 185, 129, 0.1);
     }
 
     .payment-option-label.active .payment-radio {
-      border-color: var(--primary);
+      border-color: var(--safe);
     }
 
     .payment-option-label.active .payment-radio::after {
       content: "";
       width: 10px;
       height: 10px;
-      background: var(--primary);
+      background: var(--safe);
       border-radius: 50%;
+    }
+
+    .payment-option-label.active .payment-title {
+      color: var(--safe-dark);
+    }
+
+    .payment-option-label.active .payment-desc {
+      color: var(--safe-dark);
+      opacity: 0.8;
     }
 
     .payment-info {
@@ -722,7 +678,7 @@
     .cod-message {
       background: var(--accent-soft);
       padding: 16px;
-      border-radius: 14px;
+      border-radius: 8px;
       font-size: 13px;
       color: var(--text-secondary);
       margin-bottom: 24px;
@@ -766,7 +722,7 @@
       max-width: 340px;
       background: rgba(255, 255, 255, 0.94);
       border: 1.5px dashed rgba(0, 212, 197, 0.35);
-      border-radius: 24px;
+      border-radius: 12px;
       padding: 24px 20px;
       text-align: center;
       box-shadow: var(--shadow-md);
@@ -820,7 +776,7 @@
       padding: 12px 16px;
       background: rgba(255, 255, 255, 0.82);
       border: 1.5px dashed rgba(0, 212, 197, 0.28);
-      border-radius: 16px;
+      border-radius: 8px;
       text-align: center;
       font-size: 12.5px;
       line-height: 1.65;
@@ -842,14 +798,14 @@
       padding: 18px 16px;
       background: linear-gradient(160deg, #ffffff 30%, var(--primary-soft) 100%);
       border: 1px solid rgba(0, 212, 197, 0.18);
-      border-radius: 18px;
+      border-radius: 10px;
       box-shadow: var(--shadow-sm);
     }
 
     .mode-placeholder-icon {
       width: 46px;
       height: 46px;
-      border-radius: 14px;
+      border-radius: 8px;
       background: rgba(0, 212, 197, 0.12);
       color: var(--primary-dark);
       display: flex;
@@ -877,21 +833,17 @@
       padding: 14px 16px;
       background: rgba(239, 123, 132, 0.08);
       border: 1px dashed rgba(239, 123, 132, 0.28);
-      border-radius: 16px;
+      border-radius: 10px;
       text-align: center;
       font-size: 12.5px;
       line-height: 1.65;
       color: var(--text-secondary);
     }
 
-    /* ===== PRICE BLOCK — PREMIUM ===== */
+    /* ===== PRICE BLOCK — Clean flow ===== */
     .price-block {
-      background: var(--white);
-      border-radius: 20px;
-      margin: 10px;
-      padding: 28px 22px;
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      margin: 16px;
+      padding: 12px 0 24px;
     }
 
     .price-block .price-row {
@@ -941,8 +893,15 @@
       gap: 8px;
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      margin-bottom: 0px;
       margin-top: 0;
+    }
+
+    .price-block .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 18px 0;
+      opacity: 0.8;
     }
 
     .price-block .stars {
@@ -961,7 +920,7 @@
       flex: 1;
       background: linear-gradient(160deg, var(--bg), var(--white));
       padding: 14px 8px;
-      border-radius: 14px;
+      border-radius: 8px;
       border: 1px solid var(--border);
     }
 
@@ -978,6 +937,56 @@
       font-weight: 600;
       color: var(--text-muted);
     }
+
+    /* ===== FEATURE PILLS ===== */
+    .feature-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    /* ===== BENEFIT LIST ===== */
+    .benefit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .benefit-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1.5px solid var(--primary);
+      color: var(--primary-dark);
+      font-size: 17px;
+    }
+
+    .benefit-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .benefit-text strong {
+      color: var(--warm);
+      font-weight: 700;
+    }
+
 
     /* ===== FEATURE CHIPS ===== */
     .feature-chips {
@@ -1012,7 +1021,7 @@
       margin: 0 10px 20px;
       background: linear-gradient(160deg, var(--white) 30%, var(--primary-soft) 100%);
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 10px;
       padding: 24px 20px;
       text-align: center;
       box-shadow: var(--shadow-sm);
@@ -1177,7 +1186,7 @@
       margin-top: 24px;
       padding: 18px;
       background: linear-gradient(135deg, var(--primary-soft), #F0FDFA);
-      border-radius: 16px;
+      border-radius: 10px;
       border: 1.5px dashed rgba(0, 212, 197, 0.3);
     }
 
@@ -1203,7 +1212,7 @@
       color: var(--warm);
       background: linear-gradient(135deg, var(--primary-soft), #FFF8F0);
       border: 1.5px dashed rgba(0, 212, 197, 0.3);
-      border-radius: 14px;
+      border-radius: 8px;
       padding: 14px;
       animation: bonusPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
@@ -1222,9 +1231,11 @@
 
     /* ===== SECTION HEADERS — Premium ===== */
     .section-head h2 {
-      font-weight: 900;
-      color: var(--warm);
-      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-secondary);
+      font-size: 13.5px !important;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
     }
 
     /* ===== Q&A — Premium Cards ===== */
@@ -1247,7 +1258,7 @@
     .trust-item {
       background: var(--white) !important;
       border: 1px solid var(--border) !important;
-      border-radius: 14px !important;
+      border-radius: 8px !important;
       box-shadow: var(--shadow-sm);
       padding: 16px !important;
       font-weight: 700 !important;
@@ -1257,113 +1268,73 @@
     /* ===== BOTTOM BAR — Elevated ===== */
     .bottom-bar {
       box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06) !important;
-      border-radius: 20px 20px 0 0;
+      border-radius: 0 !important;
+      border-top: 2px solid var(--primary) !important;
     }
 
     .btn-buy {
-      border-radius: 14px !important;
+      border-radius: 8px !important;
       background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
       font-weight: 800 !important;
       box-shadow: var(--shadow-teal) !important;
     }
 
     .btn-add {
-      border-radius: 14px !important;
+      border-radius: 8px !important;
       font-weight: 700 !important;
     }
 
-    /* ===== REVIEW CARDS — Premium ===== */
-    .review {
-      border-top: 1px solid rgba(237, 234, 231, 0.5) !important;
-    }
-
-    .review-author {
-      font-weight: 700 !important;
-      color: var(--warm) !important;
-    }
-
-    .reviews-summary-polished {
-      align-items: stretch !important;
-      gap: 12px !important;
-      padding: 0 16px 16px !important;
-    }
-
-    .reviews-score-card {
-      min-width: 122px;
-      padding: 18px 16px;
-      border-radius: 18px;
-      border: 1px solid rgba(0, 212, 197, 0.18);
-      background: linear-gradient(160deg, #ffffff 30%, var(--primary-soft) 100%);
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .reviews-stars-lg {
-      color: var(--gold);
-      font-size: 14px;
-      letter-spacing: 1px;
-      margin: 6px 0;
-    }
-
-    .reviews-caption {
-      font-size: 11.5px;
-      line-height: 1.55;
-      color: var(--text-secondary);
-    }
-
-    .review-highlights {
-      flex: 1;
-      display: grid;
-      gap: 8px;
-    }
-
-    .review-highlight {
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: #fff;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .review-highlight-title {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: var(--text);
-      margin-bottom: 3px;
-    }
-
-    .review-highlight-copy {
-      font-size: 11.5px;
-      line-height: 1.55;
-      color: var(--text-secondary);
-    }
-
+    /* ===== REVIEW CARDS — COMPACT & EXPANDABLE ===== */
     .review-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       padding: 0 16px 16px;
     }
 
     .review-card {
       border: 1px solid var(--border) !important;
-      border-radius: 18px;
-      padding: 18px;
-      background: linear-gradient(160deg, #ffffff 45%, rgba(232, 250, 249, 0.68) 100%);
-      box-shadow: var(--shadow-sm);
+      border-radius: 14px;
+      padding: 16px;
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border-left: 4px solid transparent !important;
+    }
+
+    .review-card:hover {
+      border-color: var(--primary-soft) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .review-card.is-expanded {
+      border-left-color: var(--primary) !important;
+      background: linear-gradient(160deg, #ffffff 60%, var(--primary-soft) 100%);
     }
 
     .review-card .review-top {
-      align-items: flex-start;
-      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 0; /* Changed from 10px */
+      transition: margin 0.3s ease;
     }
 
-    .review-av-text {
-      background: linear-gradient(135deg, var(--primary-soft), #d4faf7) !important;
-      color: var(--primary-dark);
-      font-size: 12px !important;
-      font-weight: 900 !important;
-      letter-spacing: 0.8px;
+    .review-card.is-expanded .review-top {
+      margin-bottom: 12px;
+    }
+
+    .review-av {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      overflow: hidden;
+      border: 1.5px solid var(--primary-soft);
     }
 
     .review-meta {
@@ -1374,37 +1345,99 @@
     .review-author-row {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 8px;
-      flex-wrap: wrap;
+    }
+
+    .review-author {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 2px;
+      font-size: 11px;
+      color: var(--gold);
     }
 
     .review-badge {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 212, 197, 0.22);
-      background: rgba(0, 212, 197, 0.1);
-      color: var(--primary-dark);
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text-secondary);
       font-size: 10.5px;
-      font-weight: 800;
-      line-height: 1;
+      font-weight: 700;
+      margin-top: 2px;
+      border: 1px solid var(--border);
+    }
+
+    .review-card.is-expanded .review-badge {
+      background: var(--primary-soft);
+      border-color: rgba(0, 212, 197, 0.2);
+      color: var(--primary-dark);
+    }
+
+    .review-expand-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+    }
+
+    .review-card.is-expanded .review-expand-icon {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+
+    .review-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      opacity: 0;
+    }
+
+    .review-card.is-expanded .review-body {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 4px;
     }
 
     .review-submeta {
-      font-size: 11.5px;
+      font-size: 11px;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 8px;
+      display: none; /* Hide by default */
     }
 
-    .review-card .review-stars {
-      font-size: 12px;
-      margin-bottom: 8px;
+    .review-card.is-expanded .review-submeta {
+      display: block;
     }
 
-    .review-card .review-body {
-      color: var(--text-secondary);
+    /* Review Card Color Themes — rotating for variety */
+    .review-card.theme-blue {
+      border-left-color: transparent !important;
+    }
+    .review-card.theme-blue.is-expanded {
+      border-left-color: var(--secondary) !important;
+      background: linear-gradient(160deg, #ffffff 60%, var(--secondary-soft) 100%);
+    }
+
+    .review-card.theme-green {
+      border-left-color: transparent !important;
+    }
+    .review-card.theme-green.is-expanded {
+      border-left-color: var(--safe) !important;
+      background: linear-gradient(160deg, #ffffff 60%, var(--safe-soft) 100%);
     }
 
     .review-tags {
@@ -1431,7 +1464,7 @@
     }
 
     .seller-btn {
-      border-radius: 12px !important;
+      border-radius: 8px !important;
       border-color: var(--primary) !important;
       color: var(--primary-dark) !important;
       font-weight: 700 !important;
@@ -1440,12 +1473,13 @@
     /* ===== BANK DETAILS — Premium ===== */
     .bank-details-card {
       border-color: rgba(0, 212, 197, 0.15) !important;
-      border-radius: 20px !important;
+      border-radius: 12px !important;
       box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.03) !important;
     }
 
     .bank-header {
-      background: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #1a2332 100%) !important;
+      background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .bank-value.bank-note {
@@ -1466,7 +1500,7 @@
     }
 
     .copy-btn {
-      border-radius: 12px !important;
+      border-radius: 8px !important;
     }
 
     .copy-btn:hover {
@@ -1492,7 +1526,7 @@
     .secure-payment-wrapper {
       background: #f0fdf4;
       border: 1.5px solid #bdf2d0;
-      border-radius: 28px;
+      border-radius: 16px;
       padding: 12px;
       margin-top: 14px;
       box-shadow: 0 4px 15px rgba(22, 163, 74, 0.05);
@@ -1513,13 +1547,243 @@
 
     /* ===== ORDER FORM — Premium ===== */
     .order-form h2 {
-      color: var(--warm) !important;
+      color: #111827 !important;
+      font-size: 28px !important;
+      font-weight: 900 !important;
+      letter-spacing: -1px !important;
+      margin-bottom: 4px !important;
     }
 
     .form-group input:focus,
     .form-group select:focus {
       border-color: var(--primary) !important;
       box-shadow: 0 0 0 3px rgba(0, 212, 197, 0.1);
+    }
+
+    /* ===== WHY MOMS LOVE IT — Editorial Cards ===== */
+    .mom-love-section {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mom-love-intro {
+      position: relative;
+      overflow: hidden;
+      padding: 18px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.14), transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(232, 250, 249, 0.96) 58%, rgba(239, 246, 255, 0.98) 100%);
+      border: 1px solid rgba(0, 212, 197, 0.16);
+      box-shadow: 0 10px 28px rgba(17, 24, 39, 0.05);
+    }
+
+    .mom-love-intro::after {
+      content: "";
+      position: absolute;
+      right: -34px;
+      bottom: -46px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(0, 212, 197, 0.1);
+    }
+
+    .mom-love-kicker {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(0, 212, 197, 0.18);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 12px;
+    }
+
+    .mom-love-kicker i {
+      font-size: 14px;
+      color: var(--primary);
+    }
+
+    .mom-love-intro h3 {
+      position: relative;
+      z-index: 1;
+      max-width: 290px;
+      margin: 0 0 8px;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      color: #111827;
+    }
+
+    .mom-love-intro p {
+      position: relative;
+      z-index: 1;
+      max-width: 330px;
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    .mom-love-chips {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .mom-love-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(17, 24, 39, 0.06);
+      box-shadow: 0 3px 10px rgba(17, 24, 39, 0.04);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .mom-love-chip i {
+      font-size: 13px;
+      color: var(--primary);
+    }
+
+    .mom-love-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mom-love-card {
+      --card-accent: var(--primary);
+      --card-accent-dark: var(--primary-dark);
+      --card-soft: var(--primary-soft);
+      --card-border: rgba(0, 212, 197, 0.16);
+      position: relative;
+      overflow: hidden;
+      padding: 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--card-soft) 160%);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
+    }
+
+    .mom-love-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--card-accent), transparent 72%);
+      opacity: 0.85;
+    }
+
+    .mom-love-card.theme-clean {
+      --card-accent: var(--secondary);
+      --card-accent-dark: var(--secondary-dark);
+      --card-soft: rgba(239, 246, 255, 0.92);
+      --card-border: rgba(59, 130, 246, 0.16);
+    }
+
+    .mom-love-card.theme-space {
+      --card-accent: var(--safe);
+      --card-accent-dark: var(--safe-dark);
+      --card-soft: rgba(236, 253, 245, 0.94);
+      --card-border: rgba(16, 185, 129, 0.16);
+    }
+
+    .mom-love-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .mom-love-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: var(--card-soft);
+      color: var(--card-accent-dark);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+      font-size: 22px;
+    }
+
+    .mom-love-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--card-border);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--card-accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .mom-love-card h4 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.28;
+      letter-spacing: -0.3px;
+      color: #111827;
+    }
+
+    .mom-love-card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .mom-love-points {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(17, 24, 39, 0.08);
+    }
+
+    .mom-love-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .mom-love-point i {
+      margin-top: 1px;
+      font-size: 15px;
+      color: var(--card-accent-dark);
     }
 
     /* ===== INFO ROWS — Premium ===== */
@@ -1539,425 +1803,619 @@
 
     /* ===== TOAST — Premium ===== */
     .toast {
-      border-radius: 16px !important;
+      border-radius: 10px !important;
       box-shadow: var(--shadow-lg) !important;
     }
+
+    /* ===== SNAPPY PERFORMANCE ANIMATIONS ===== */
+    .faq-item {
+      display: grid;
+      grid-template-rows: auto 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item.is-open {
+      grid-template-rows: auto 1fr;
+    }
+    .faq-answer {
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .faq-answer-inner {
+      padding: 0 16px 16px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    #reviews-container {
+      display: grid;
+      grid-template-rows: 280px; /* Fixed height for preview */
+      transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      position: relative;
+    }
+    #reviews-container.is-expanded {
+      grid-template-rows: 1fr;
+    }
+    .review-list-wrapper {
+      min-height: 0;
+    }
+
+    /* ===== PROMO & URGENCY CARD ===== */
+    .promo-card {
+      margin: 0 16px 20px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .promo-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 16px;
+      background: #ffffff;
+    }
+
+    .promo-text {
+      color: #71717A;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .promo-text i {
+      color: #71717A;
+    }
+
+    .timer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timer b {
+      background: #2D2926;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 5px 6px;
+      border-radius: 6px;
+      min-width: 25px;
+      text-align: center;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .timer .colon {
+      color: #2D2926;
+      font-weight: 700;
+      font-size: 15px;
+      transform: translateY(-1px);
+    }
+
+    .urgency {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(0, 212, 197, 0.08);
+      border-top: 1px dashed rgba(0, 212, 197, 0.2);
+    }
+
+    .urgency span {
+      font-size: 13.5px;
+      color: #52525B;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .urgency b {
+      color: #3F3F46;
+      font-weight: 700;
+      margin: 0 4px;
+    }
+
+    .live-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #00D4C5;
+      margin-right: 8px;
+    }
+
+    .stock-low {
+      font-weight: 600 !important;
+      color: #00D4C5 !important;
+    }
   </style>
-  <script type="module" crossorigin src="/dropship-mn/assets/main-COv_EJB5.js"></script>
-  <link rel="stylesheet" crossorigin href="/dropship-mn/assets/main-CQ2Dh73C.css">
+  <script type="module" crossorigin src="/bambiroom/assets/main-Ddc8q8DZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/bambiroom/assets/main-Bpx8M_xW.css">
 </head>
 
 <body>
 
-  
-  <header class="header" style="position: relative; justify-content: center;">
-    
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <div style="width: 28px; height: 28px; border-radius: 50%; overflow: hidden;">
-        <img src="../../baby-chair/store_logo.webp" alt="Bambi Room Logo"
-          style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <span style="font-weight: 800; color: var(--text); font-size: 16px;">Bambi Room | Бэмбигийн Өрөө</span>
-    </div>
-    
-    <a href="#"
-      onclick="event.preventDefault(); trackOrderIntent('header_cart'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
-      style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); text-decoration: none; font-size: 20px; display: flex; align-items: center;">
-      🛒<span class="badge">1</span>
-    </a>
-  </header>
 
-  
-  <div class="gallery" id="gallery">
-    <div class="gallery-item" style="flex: 0 0 100%; width: 100%; aspect-ratio: 1/1;">
-      <img src="../../baby-chair/img_hero.png" alt="Олон үйлдэлт хүүхдийн сандал" style="width: 100%; height: 100%; object-fit: contain;">
+  <div class="product-hero-section"
+    style="background: #ffffff; padding-bottom: 24px; border-bottom: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: 8px;">
+    <header class="header" style="position: relative; justify-content: center; border-bottom: none;">
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 28px; height: 28px; border-radius: 50%; overflow: hidden;">
+          <img src="/bambiroom/assets/store_logo-BjoR_NiG.webp" alt="Bambi Room Logo"
+            style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span style="font-weight: 800; color: var(--text); font-size: 16px;">Bambi Room</span>
+      </div>
+
+      <a href="#"
+        onclick="event.preventDefault(); trackOrderIntent('header_cart'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+        style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); text-decoration: none; font-size: 20px; display: flex; align-items: center; color: var(--text);">
+        <i class="hgi-stroke hgi-shopping-cart-add-01" style="font-size: 24px;"></i>
+      </a>
+    </header>
+
+
+    <div class="gallery" id="gallery"
+      style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
+      <img src="/bambiroom/assets/core-image-CK1CehS4.webp" alt="Олон үйлдэлт хүүхдийн сандал"
+        style="flex: 0 0 100%; width: 100%; aspect-ratio: 1/1; object-fit: contain; scroll-snap-align: start;">
+    </div>
+    <div class="gallery-dots" id="dots" style="background: transparent;">
+      <span class="active"></span>
+    </div>
+
+
+    <div class="price-block" style="margin: 0; padding: 24px 16px 16px;">
+
+
+      <h1 class="product-title"
+        style="font-size: 26px; font-weight: 900; margin-bottom: 12px; margin-top: 0; line-height: 1.2; color: #111827; letter-spacing: -0.8px;">
+        Олон үйлдэлт хүүхдийн сандал</h1>
+
+      <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border: 1.5px solid rgba(239, 123, 132, 0.3); padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: 0 4px 12px rgba(239, 123, 132, 0.15);">
+        <i class="hgi-stroke hgi-fire" style="font-size: 16px;"></i> Дэлхийд трэнд болж буй
+      </div>
+
+      <div class="rating-row"
+        style="margin-bottom: 20px; display: flex; align-items: center; gap: 12px; font-size: 13px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span class="stars" style="display: flex; gap: 3px; align-items: center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="starGradient48" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="80%" stop-color="#F59E0B" />
+                  <stop offset="80%" stop-color="#E5E7EB" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#starGradient48)" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span style="font-weight: 800; font-size: 14px; line-height: 1; margin-left: 2px;">4.8</span>
+          </span>
+        </div>
+        
+        <div style="height: 14px; width: 1px; background: #E5E7EB;"></div>
+        
+        <span style="color: var(--primary-dark); font-weight: 700; display: flex; align-items: center; gap: 4px;">
+          <i class="hgi-stroke hgi-user-group" style="font-size: 14px; color: var(--primary-dark);"></i>
+          <span>Мянга мянган ээжүүдийн сонголт</span>
+        </span>
+      </div>
+
+      <div class="price-row" style="display: flex; align-items: flex-end; gap: 12px; margin-bottom: 8px;">
+        <span class="price-now"
+          style="font-size: 38px; font-weight: 900; line-height: 1; color: #111827; letter-spacing: -1.5px;">₮69,000</span>
+        <div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 2px;">
+          <span style="font-size: 11px; font-weight: 800; color: #DC2626; background: rgba(239, 68, 68, 0.08); padding: 3px 6px; border-radius: 4px; line-height: 1; display: inline-flex; align-items: center; width: max-content; border: 1px solid rgba(239, 68, 68, 0.15);">
+            <i class="hgi-stroke hgi-sale-tag-02" style="font-size: 12px; margin-right: 3px;"></i>-47% ХЯМДРАЛ
+          </span>
+          <span class="price-was"
+            style="font-size: 16px; color: #9CA3AF; text-decoration: line-through; font-weight: 500; line-height: 1;">₮129,000</span>
+        </div>
+      </div>
+
+
+
+      <div class="feature-chips" style="gap: 8px; margin-bottom: 20px; display: flex; flex-wrap: wrap; align-items: center;">
+        <!-- 3 үйлдэлт — Teal Highlight -->
+        <span class="feature-chip" style="background: linear-gradient(135deg, #00D4C5, #00B4A6); color: #fff; border: none; padding: 4px 12px; border-radius: 8px; font-weight: 800; font-size: 11px; box-shadow: 0 4px 12px rgba(0,212,197,0.15); display: inline-flex; align-items: center;">
+          <i class="hgi-stroke hgi-sparkles" style="color: #fff; font-size: 13px; margin-right: 4px;"></i>3 үйлдэлт
+        </span>
+      </div>
+
+      <div class="divider"></div>
+
+    <div class="inline-cta" style="margin-bottom: 24px; padding: 0 16px;">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="background: #ECFDF5; border: 1.5px solid #10B981; border-bottom: none; border-radius: 10px 10px 0 0; padding: 5px 16px 14px; margin-bottom: -10px; display: inline-flex; align-items: center; gap: 6px; position: relative; z-index: 0;">
+          <i class="hgi-stroke hgi-shield-tick" style="font-size: 15px; color: #047857;"></i>
+          <span style="color: #047857; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Эрсдэлгүй захиалга</span>
+        </div>
+        <button class="cta-scroll-btn"
+          onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+          style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 18px; font-size: 16px; font-weight: 800; color: #fff; border: none; cursor: pointer; position: relative; z-index: 1;">
+          <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 20px;"></i>
+          Захиалах
+          <span style="font-size: 12.5px; opacity: 0.9; font-weight: 600; margin-left: 2px;">— Хүргэлт үнэгүй</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="promo-card"
+      style="margin: 0 16px 24px; box-shadow: 0 6px 20px rgba(239, 123, 132, 0.15); border: 2px solid var(--accent); background: var(--accent-soft); border-radius: 12px; overflow: hidden;">
+      <div class="promo-strip" style="background: transparent; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 14px;">
+        <div class="promo-left">
+          <span class="promo-text" style="color: var(--text); font-size: 13.5px; font-weight: 800; display: flex; align-items: center; gap: 6px; letter-spacing: -0.2px;">
+            <i class="hgi-stroke hgi-delivery-truck-01" style="font-size: 20px; color: var(--accent);"></i> Маргааш хүргүүлэх:
+          </span>
+        </div>
+        <div class="timer" style="display: flex; align-items: center; gap: 4px;">
+          <b id="h" style="background: var(--text); color: #ffffff; font-size: 14px; font-weight: 800; padding: 4px 6px; border-radius: 6px; min-width: 26px; text-align: center; display: inline-block; line-height: 1.2;">12</b><span class="colon" style="color: var(--text); font-weight: 800; font-size: 14px;">:</span>
+          <b id="m" style="background: var(--text); color: #ffffff; font-size: 14px; font-weight: 800; padding: 4px 6px; border-radius: 6px; min-width: 26px; text-align: center; display: inline-block; line-height: 1.2;">39</b><span class="colon" style="color: var(--text); font-weight: 800; font-size: 14px;">:</span>
+          <b id="s" style="background: var(--text); color: #ffffff; font-size: 14px; font-weight: 800; padding: 4px 6px; border-radius: 6px; min-width: 26px; text-align: center; display: inline-block; line-height: 1.2;">28</b>
+        </div>
+      </div>
+      <div class="urgency" style="background: rgba(239, 123, 132, 0.08); border-top: 1px dashed rgba(239, 123, 132, 0.25); padding: 12px 16px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <span style="font-size: 13px; color: var(--text-secondary); font-weight: 600; display: flex; align-items: center;">
+          <span class="live-dot" style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 8px; box-shadow: 0 0 0 rgba(239, 123, 132, 0.7);"></span>
+          Одоо <b>45 хүн</b> үзэж байна
+        </span>
+        <span class="stock-low" style="font-weight: 800; color: var(--accent) !important; font-size: 13px;">(Цөөн үлдлээ!)</span>
+      </div>
     </div>
   </div>
 
-  
-  <section class="price-block">
-    <div class="price-row">
-      <span class="price-now">₮69,000</span>
-      <span class="price-was">₮129,000</span>
-      <span class="price-badge">−47%</span>
+
+
+
+  <section style="padding: 0 16px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
+      <h2>Яагаад ээжүүд дуртай вэ?</h2>
     </div>
-    <h1 class="product-title">Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)</h1>
-    <div class="feature-chips">
-      <span class="feature-chip">🍼 Хооллох</span>
-      <span class="feature-chip">💇 Үс угаах</span>
-      <span class="feature-chip">🦶 Хөл угаах</span>
-      <span class="feature-chip feature-chip-highlight">3 үйлдэлт</span>
-    </div>
-    <div class="rating-row">
-      <span class="stars">★★★★★</span>
-      <span class="rating-text">4.8</span>
-      <span class="rating-divider">·</span>
-      <span class="rating-text">94+ сэтгэгдэл</span>
-      <span class="rating-divider">·</span>
-      <span class="rating-text">564 борлуулсан</span>
-    </div>
-    
-    <div class="stats-row">
-      <div class="stat-badge">
-        <div class="sb-num">564+</div>
-        <div class="sb-label">Борлуулсан</div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+
+      <!-- Scenario 1 -->
+      <div style="border: 1.5px solid var(--primary); border-radius: 12px; background: transparent; overflow: hidden; display: flex; flex-direction: column;">
+        <!-- Problem -->
+        <div style="padding: 14px 16px 12px 38px; position: relative; opacity: 0.75; border-bottom: 1px dashed rgba(0, 212, 197, 0.3);">
+          <div style="position: absolute; top: 14px; left: 14px; color: #EF4444;">
+            <i class="hgi-stroke hgi-sad-01" style="font-size: 15px;"></i>
+          </div>
+          <span style="font-size: 10px; font-weight: 700; color: #EF4444; text-transform: uppercase; letter-spacing: 0.5px;">Асуудал</span>
+          <h4 style="margin: 2px 0 2px; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); line-height: 1.3;">Үсээ угаалгахдаа уйлж, цааргалдаг</h4>
+          <p style="margin: 0; font-size: 11.5px; color: var(--text-muted); line-height: 1.4;">Нүд рүү нь ус орох гээд байдаг тул эвгүйцэж хүүхэд уурладаг.</p>
+        </div>
+        
+        <!-- Solution -->
+        <div style="padding: 14px 16px 16px 36px; position: relative; background: rgba(0, 212, 197, 0.04);">
+          <div style="position: absolute; top: 14px; left: 12px; color: var(--primary-dark);">
+            <i class="hgi-stroke hgi-smile" style="font-size: 18px;"></i>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px;">Шийдэл</span>
+          <h4 style="margin: 2px 0 4px; font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.3;">Тайван хэвтэх налуу түшлэг</h4>
+          <p style="margin: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.45;">Ус нүд рүү нь орохгүй бүтцээр хийгдсэн тул хүүхэд тайван хэвтэнэ.</p>
+        </div>
       </div>
-      <div class="stat-badge">
-        <div class="sb-num">4.8</div>
-        <div class="sb-label">Үнэлгээ</div>
+
+      <!-- Scenario 2 -->
+      <div style="border: 1.5px solid var(--primary); border-radius: 12px; background: transparent; overflow: hidden; display: flex; flex-direction: column;">
+        <!-- Problem -->
+        <div style="padding: 14px 16px 12px 38px; position: relative; opacity: 0.75; border-bottom: 1px dashed rgba(0, 212, 197, 0.3);">
+          <div style="position: absolute; top: 14px; left: 14px; color: #EF4444;">
+            <i class="hgi-stroke hgi-sad-01" style="font-size: 15px;"></i>
+          </div>
+          <span style="font-size: 10px; font-weight: 700; color: #EF4444; text-transform: uppercase; letter-spacing: 0.5px;">Асуудал</span>
+          <h4 style="margin: 2px 0 2px; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); line-height: 1.3;">Хоолны дараах замбараагүй цэвэрлэгээ</h4>
+          <p style="margin: 0; font-size: 11.5px; color: var(--text-muted); line-height: 1.4;">Даавуун сандалны завсраар хоолны үлдэгдэл орж цэвэрлэхэд их цаг ордог.</p>
+        </div>
+        
+        <!-- Solution -->
+        <div style="padding: 14px 16px 16px 36px; position: relative; background: rgba(0, 212, 197, 0.04);">
+          <div style="position: absolute; top: 14px; left: 12px; color: var(--primary-dark);">
+            <i class="hgi-stroke hgi-smile" style="font-size: 18px;"></i>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px;">Шийдэл</span>
+          <h4 style="margin: 2px 0 4px; font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.3;">Ус нэвтэрдэггүй дээд зэргийн чанар</h4>
+          <p style="margin: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.45;">BPA-free үлдэгдэл тээглэхгүй гадаргууг чийгтэй алчуураар шууд арчина.</p>
+        </div>
       </div>
-      <div class="stat-badge">
-        <div class="sb-num">98%</div>
-        <div class="sb-label">Сэтгэл ханамж</div>
+
+      <!-- Scenario 3 -->
+      <div style="border: 1.5px solid var(--primary); border-radius: 12px; background: transparent; overflow: hidden; display: flex; flex-direction: column;">
+        <!-- Problem -->
+        <div style="padding: 14px 16px 12px 38px; position: relative; opacity: 0.75; border-bottom: 1px dashed rgba(0, 212, 197, 0.3);">
+          <div style="position: absolute; top: 14px; left: 14px; color: #EF4444;">
+            <i class="hgi-stroke hgi-sad-01" style="font-size: 15px;"></i>
+          </div>
+          <span style="font-size: 10px; font-weight: 700; color: #EF4444; text-transform: uppercase; letter-spacing: 0.5px;">Асуудал</span>
+          <h4 style="margin: 2px 0 2px; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); line-height: 1.3;">Олон төрлийн хэрэглэлд багтрах</h4>
+          <p style="margin: 0; font-size: 11.5px; color: var(--text-muted); line-height: 1.4;">Хоолны сандал, угаалгын суудал гээд олон зүйлс гэрт маш их зай эзэлдэг.</p>
+        </div>
+        
+        <!-- Solution -->
+        <div style="padding: 14px 16px 16px 36px; position: relative; background: rgba(0, 212, 197, 0.04);">
+          <div style="position: absolute; top: 14px; left: 12px; color: var(--primary-dark);">
+            <i class="hgi-stroke hgi-smile" style="font-size: 18px;"></i>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px;">Шийдэл</span>
+          <h4 style="margin: 2px 0 4px; font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.3;">Олон үйлдэлт авсаархан хэмжээ</h4>
+          <p style="margin: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.45;">Бүх зориулалтыг нэгтгэсэн тул илүү зай эзлэхгүй, гэрт авсаархан.</p>
+        </div>
       </div>
+
+      <!-- Scenario 4 -->
+      <div style="border: 1.5px solid var(--primary); border-radius: 12px; background: transparent; overflow: hidden; display: flex; flex-direction: column;">
+        <!-- Problem -->
+        <div style="padding: 14px 16px 12px 38px; position: relative; opacity: 0.75; border-bottom: 1px dashed rgba(0, 212, 197, 0.3);">
+          <div style="position: absolute; top: 14px; left: 14px; color: #EF4444;">
+            <i class="hgi-stroke hgi-sad-01" style="font-size: 15px;"></i>
+          </div>
+          <span style="font-size: 10px; font-weight: 700; color: #EF4444; text-transform: uppercase; letter-spacing: 0.5px;">Асуудал</span>
+          <h4 style="margin: 2px 0 2px; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); line-height: 1.3;">Унаж бэртэх вий гэсэн айдас</h4>
+          <p style="margin: 0; font-size: 11.5px; color: var(--text-muted); line-height: 1.4;">Огцом хөдлөх үед хямдхан хуванцар сандал амархан хөмөрч, хүүхэдтэйгээ унах эрсдэлтэй.</p>
+        </div>
+        
+        <!-- Solution -->
+        <div style="padding: 14px 16px 16px 36px; position: relative; background: rgba(0, 212, 197, 0.04);">
+          <div style="position: absolute; top: 14px; left: 12px; color: var(--primary-dark);">
+            <i class="hgi-stroke hgi-smile" style="font-size: 18px;"></i>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.5px;">Шийдэл</span>
+          <h4 style="margin: 2px 0 4px; font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.3;">Хальтирдаггүй, тогтвортой бүтэц</h4>
+          <p style="margin: 0; font-size: 12.5px; color: var(--text-secondary); line-height: 1.45;">Хальтирдаггүй резин болон өргөн суурь нь хүүхэд яаж ч хөдөлсөн хажуу тийш хөмрөхгүй тогтвортой байлгана.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  
-  <section class="inline-cta">
-    <button class="cta-scroll-btn"
-      onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
-      🍼 Одоо захиалах — Хүргэлт үнэгүй
-    </button>
-  </section>
-
-  
-  <section>
-    <div class="promo-strip">
-      <div class="promo-left">
-        <span class="promo-text">🔥 Хямдрал дуусахад</span>
-      </div>
-      <div class="timer">
-        <b id="h">24</b><span class="colon">:</span>
-        <b id="m">00</b><span class="colon">:</span>
-        <b id="s">00</b>
-      </div>
-    </div>
-    <div class="urgency">
-      <span><span class="live-dot"></span>Одоо <b>24 хүн</b> үзэж байна</span>
-      <span class="stock-low">Цөөн үлдлээ!</span>
-    </div>
-  </section>
 
 
 
-  
+
   <section>
     <div class="section-head">
-      <h2>👶 Ээж нарт тулгардаг асуудлууд</h2>
-    </div>
-    <div class="problem-solution">
-      <div class="ps-card">
-        <div class="ps-icon">🏠</div>
-        <div class="ps-text">
-          <h4>Овор хэмжээ ихтэй сандлууд</h4>
-          <p>Хоолны болон угаалгын сандлыг тус тусад нь авбал гэрийн зайг ихээр эзэлдэг.</p>
-        </div>
-      </div>
-      <div class="ps-card">
-        <div class="ps-icon">💦</div>
-        <div class="ps-text">
-          <h4>Үс угаах үеийн бэрхшээл</h4>
-          <p>Хүүхэд үсээ угаалгахдаа дургүйцдэг бөгөөд ус нүд рүү нь орох вий гэж ээжүүд их санаа зовдог.</p>
-        </div>
-      </div>
-      <div class="ps-card">
-        <div class="ps-icon">💸</div>
-        <div class="ps-text">
-          <h4>Тус тусдаа авбал үнэтэй тусна</h4>
-          <p>Хоолны, үс угаах болон хөл угаах сандлыг тус тусад нь авбал ₮150,000 орчим болно.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  
-
-  
-  <section>
-    <div class="section-head">
-      <h2>💰 Хэдэн төгрөг хэмнэх вэ?</h2>
+      <h2>Хэдэн төгрөг хэмнэх вэ?</h2>
     </div>
     <div class="savings-section">
-      <div class="savings-grid">
-        <div class="savings-item">
-          <span class="s-name"><span style="color:#FF4B4B; font-size:12px; margin-right:4px;">❌</span>🪑 Хоолны
-            сандал</span>
-          <span class="s-price crossed">₮80,000 — 120,000</span>
-        </div>
-        <div class="savings-item">
-          <span class="s-name"><span style="color:#FF4B4B; font-size:12px; margin-right:4px;">❌</span>💇 Үс угаах
-            сандал</span>
-          <span class="s-price crossed">₮40,000 — 60,000</span>
-        </div>
-        <div class="savings-item">
-          <span class="s-name"><span style="color:#FF4B4B; font-size:12px; margin-right:4px;">❌</span>🦶 Хөл угаах
-            тавиур</span>
-          <span class="s-price crossed">₮30,000 — 50,000</span>
-        </div>
-        <div class="savings-item" style="padding-top:14px; border-top: 2px solid var(--border);">
-          <span class="s-name" style="font-weight:700; color:var(--text);">📊 Нийт зардал</span>
-          <span class="s-price crossed" style="font-size:15px;">₮150,000 — 230,000</span>
-        </div>
-      </div>
-      <div class="savings-total">
-        <div class="st-label"><span style="font-size:14px; margin-right:4px;">✅</span>Олон үйлдэлт сандлын үнэ:</div>
-        <div class="st-amount">₮69,000</div>
-        <div class="st-vs">🎉 ₮80,000 - ₮160,000 хэмнэх боломж!</div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="inline-cta cta-savings">
-    <div class="cta-urgency-text">💰 ₮81,000 — ₮161,000 хэмнэх боломж — Зөвхөн энэ долоо хоногт!</div>
-    <button class="cta-scroll-btn"
-      onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
-      🔥 Хямдралтай үнээр авах
-    </button>
-  </section>
-
-  <div class="baby-divider">🧸 🧸 🧸</div>
-
-  
-  <section>
-    <div class="section-head">
-      <h2>🛡️ Аюулгүй, найдвартай</h2>
-    </div>
-    <div class="safety-section">
-      <div class="safety-grid">
-        <div class="safety-item">
-          <div class="si-icon">🧪</div>
-          <div class="si-title">BPA-free PP хуванцар</div>
-          <div class="si-desc">Хүүхдэд аюулгүй, хортой бодисгүй материал</div>
-        </div>
-        <div class="safety-item">
-          <div class="si-icon">🔒</div>
-          <div class="si-title">Гулсахгүй суурь</div>
-          <div class="si-desc">Шалан дээр бат суудаг, хүүхэд унахгүй</div>
-        </div>
-        <div class="safety-item">
-          <div class="si-icon">🧽</div>
-          <div class="si-title">Угааж цэвэрлэхэд хялбар</div>
-          <div class="si-desc">Усаар зайлж, алчуураар арчихад л болно</div>
-        </div>
-        <div class="safety-item">
-          <div class="si-icon">⚖️</div>
-          <div class="si-title">75 кг даац</div>
-          <div class="si-desc">0-8 нас хүртэл хэрэглэнэ</div>
-        </div>
-      </div>
-  </section>
-
-  
-  <section>
-    <div class="section-head">
-      <h2>🏠 Яагаад энэхүү сандал танд хэрэгтэй вэ?</h2>
-    </div>
-    <div class="scenario-cards">
-      <div class="scenario-card"
-        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
-        <div class="sc-title">🏢 Зай хэмнэнэ</div>
-        <div class="sc-body">Олон зориулалтаар ашиглах боломжтой тул тус тусад нь сандал авах шаардлагагүй. Мөн эвхэж
-          хадгалахад хялбар!</div>
-      </div>
-      <div class="scenario-card"
-        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
-        <div class="sc-title">👴 Эмээ, өвөө ч хялбар хэрэглэнэ</div>
-        <div class="sc-body">Ажилдаа явсан үед эмээ, өвөө хүүхдийг харахад энэхүү сандал маш энгийн, хэрэглэхэд хялбар.
-        </div>
-      </div>
-      <div class="scenario-card"
-        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
-        <div class="sc-title">❄️ Өдрийн турш ашиглах боломжтой</div>
-        <div class="sc-body">Хооллох, угаалгах зэрэг хүүхдийн өдөр тутмын хэрэгцээг нэг дор шийдсэн тул ээжүүдэд хамгаас
-          ээлтэй.</div>
-      </div>
-      <div class="scenario-card"
-        style="background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);">
-        <div class="sc-title">👶👧 Ах дүү нарт ч хэрэглэнэ</div>
-        <div class="sc-body">0-8 нас хүртэл 75 кг даацтай тул ах дүү нар ээлжлэн хэрэглэж болно. Нэг удаагийн
-          хөрөнгө оруулалт!</div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section>
-    <div class="section-head">
-      <h2>📋 Дэлгэрэнгүй</h2>
-    </div>
-    <div class="info-rows">
-      <div class="info-row" style="flex-direction:column; align-items:flex-start; gap:10px;">
-        <div style="display:flex; justify-content:space-between; width:100%;">
-          <span class="label">Материал</span><span class="value">PP хуванцар (BPA-free)</span>
-        </div>
-        <div style="
-          display:flex; align-items:flex-start; gap:10px;
-          background: linear-gradient(135deg, #E8FAF9, #D4FAF7);
-          border: 1.5px solid rgba(0,212,197,0.35);
-          border-left: 4px solid var(--primary);
-          border-radius: 12px;
-          padding: 12px 14px;
-          width: 100%;
-          box-sizing: border-box;
-        ">
-          <span style="font-size:20px; flex-shrink:0; line-height:1;">🛡️</span>
-          <div>
-            <div
-              style="font-size:11.5px; font-weight:800; color:var(--primary-dark); margin-bottom:3px; text-transform:uppercase; letter-spacing:0.4px;">
-              Хүнсний зэрэглэлийн хуванцар</div>
-            <div style="font-size:12px; color:var(--text-secondary); line-height:1.6;">Полипропилен (PP) бол хүнсний
-              зэрэглэлийн хуванцар бөгөөд хүүхдийн сав суулга, эмнэлгийн хэрэгсэлд ашигладаг <strong
-                style="color:var(--primary-dark);">аюулгүй материал</strong> юм.</div>
+      <div style="background: transparent; border: 1px dotted #16A34A; padding: 20px;">
+        <!-- Compact & Simple Breakdown -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <!-- Item 1 -->
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 14px; color: #4B5563;">Хоолны сандал</span>
+            <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮80k — 120k</span>
           </div>
-        </div>
-      </div>
-      <div class="info-row"><span class="label">Насны ангилал</span><span class="value">0-8 нас</span></div>
-      <div class="info-row"><span class="label">Жин даац</span><span class="value">75 кг хүртэл</span></div>
-      <div class="info-row"><span class="label">Өнгө</span><span class="value"> ягаан-цайвар, шар-цэнхэр</span>
-      </div>
-      <div class="info-row"><span class="label">Горим</span><span class="value">Хооллох, үс угаах, хөл угаах</span>
-      </div>
-      <div class="info-row"><span class="label">Хүргэлт</span><span class="value highlight">Үнэгүй 🎉</span></div>
-    </div>
-  </section>
+          <div style="border-top: 1px dotted #16A34A;"></div>
 
-  
-  <section>
-    <div class="section-head">
-      <h2>💬 Ээжүүдийн сэтгэгдэл</h2><span class="see-all">Сонгосон 3</span>
-    </div>
+          <!-- Item 2 -->
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 14px; color: #4B5563;">Үс угаах сандал</span>
+            <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮40k — 60k</span>
+          </div>
+          <div style="border-top: 1px dotted #16A34A;"></div>
 
-    <div class="review-list">
-      <article class="review review-card">
-        <div class="review-top">
-          <div class="review-av review-av-text">ЭБ</div>
-          <div class="review-meta">
-            <div class="review-author-row">
-              <span class="review-author">Энхтуяа Б.</span>
-              <span class="review-badge">2 настай охинд авсан</span>
+          <!-- Item 3 -->
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 14px; color: #4B5563;">Хөл угаах тавиур</span>
+            <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮30k — 50k</span>
+          </div>
+          
+          <div style="border-top: 2px dotted #16A34A; margin-top: 4px;"></div>
+
+          <!-- Summary -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+            <span style="font-size: 15px; font-weight: 800; color: #111827;">Нийт зардал</span>
+            <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮150k — 230k</span>
+          </div>
+
+          <div style="margin-top: 20px; text-align: center;">
+            <div style="color: #16A34A; font-weight: 900; font-size: 16px; margin-bottom: 20px;">
+              ₮81,000 — ₮161,000 хэмнэх боломж!
             </div>
-            <div class="review-submeta">Улаанбаатар • 3 өдрийн өмнө</div>
+            <button class="cta-scroll-btn"
+              onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
+              <i class="hgi-stroke hgi-fire"></i> Хямдралтай үнээр авах
+            </button>
           </div>
         </div>
-        <div class="review-stars">★★★★★</div>
-        <div class="review-body">Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад
-          илүү тайван болсон. Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна.</div>
-        <div class="review-tags">
-          <span class="review-tag">Үс угаахад амар</span>
-          <span class="review-tag">Хооллохдоо давхар ашигласан</span>
-        </div>
-      </article>
-
-      <article class="review review-card">
-        <div class="review-top">
-          <div class="review-av review-av-text">СМ</div>
-          <div class="review-meta">
-            <div class="review-author-row">
-              <span class="review-author">Саран М.</span>
-              <span class="review-badge">Зай багатай байранд тохирсон</span>
-            </div>
-            <div class="review-submeta">ХУД • 5 өдрийн өмнө</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★★</div>
-        <div class="review-body">Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас
-          зайлсхийж байсан. Энэ нэг сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан.</div>
-        <div class="review-tags">
-          <span class="review-tag">Зай хэмнэсэн</span>
-          <span class="review-tag">Нэг дор 3 хэрэглээ</span>
-        </div>
-      </article>
-
-      <article class="review review-card">
-        <div class="review-top">
-          <div class="review-av review-av-text">ОД</div>
-          <div class="review-meta">
-            <div class="review-author-row">
-              <span class="review-author">Oyun Oyun</span>
-              <span class="review-badge">Өдөр тутам ашиглаж байна</span>
-            </div>
-            <div class="review-submeta">Дархан • 2 долоо хоногийн өмнө</div>
-          </div>
-        </div>
-        <div class="review-stars">★★★★☆</div>
-        <div class="review-body">Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч
-          хэрэгтэй юм байна. Бас авсаархан амар эд байна..</div>
-        <div class="review-tags">
-          <span class="review-tag">Арчилгаа амар</span>
-          <span class="review-tag">Өдөр тутмын хэрэглээ</span>
-        </div>
-      </article>
+      </div>
     </div>
   </section>
 
-  
+
+
+
+  <section style="padding: 0 16px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 16px;">
+      <h2>Бүтээгдэхүүний дэлгэрэнгүй</h2>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <!-- Spec 1: Material -->
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+        <i class="hgi-stroke hgi-test-tube-01" style="font-size: 18px; color: var(--primary-dark); opacity: 0.8;"></i>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Материал</span>
+          <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">PP (BPA-free)</span>
+        </div>
+      </div>
+
+      <!-- Spec 2: Age -->
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+        <i class="hgi-stroke hgi-infant-01" style="font-size: 18px; color: var(--secondary-dark); opacity: 0.8;"></i>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Нас</span>
+          <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">0-8 нас</span>
+        </div>
+      </div>
+
+      <!-- Spec 3: Capacity -->
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+        <i class="hgi-stroke hgi-justice-scale-01" style="font-size: 18px; color: var(--safe-dark); opacity: 0.8;"></i>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Даац</span>
+          <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">75 кг хүртэл</span>
+        </div>
+      </div>
+
+      <!-- Spec 4: Modes -->
+      <div style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+        <i class="hgi-stroke hgi-sparkles" style="font-size: 18px; color: var(--primary-dark); opacity: 0.8;"></i>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Горим</span>
+          <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">3 үйлдэлт</span>
+        </div>
+      </div>
+
+      <!-- Spec 5: Colors -->
+      <div style="grid-column: span 2; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
+        <i class="hgi-stroke hgi-paint-board" style="font-size: 18px; color: var(--secondary-dark); opacity: 0.8;"></i>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Боломжит өнгө</span>
+          <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">Ягаан-цайвар, Шар-цэнхэр</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews-section" style="padding: 0 16px 24px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
+      <h2>Ээжүүдийн сэтгэгдэл</h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <!-- Review 1 -->
+      <div style="background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down" style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: var(--primary-soft); opacity: 0.6; z-index: 0;"></i>
+        
+        <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid var(--primary-soft); flex-shrink: 0;">
+            <img src="/bambiroom/assets/new-mom1-cXItV-D4.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Энхтуяа Б.</span>
+              <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div style="display: inline-block; background: var(--primary-soft); color: var(--primary-dark); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">3 настай охинд авсан</div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад илүү тайван болсон. Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна. Хамгийн гол нь хүүхэд өөрөө дуртай байгаа нь чухал юм."
+        </div>
+        
+        <div data-review-date="2" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          Улаанбаатар • ...
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div style="background: #fff; border: 1.5px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down" style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(59, 130, 246, 0.1); opacity: 0.8; z-index: 0;"></i>
+        
+        <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.2); flex-shrink: 0;">
+            <img src="/bambiroom/assets/new-mom2-BDGL7pOW.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Саран М.</span>
+              <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div style="display: inline-block; background: rgba(59, 130, 246, 0.1); color: #2563EB; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">Зай багатай байранд тохирсон</div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас зайлсхийж байсан. Энэ нэг сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан. Чанартай бас их авсаархан юм."
+        </div>
+        
+        <div data-review-date="4" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          ХУД • ...
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div style="background: #fff; border: 1.5px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down" style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(16, 185, 129, 0.1); opacity: 0.8; z-index: 0;"></i>
+        
+        <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.2); flex-shrink: 0;">
+            <img src="/bambiroom/assets/new-mom3-DiuLk5_2.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Oyun Oyun</span>
+              <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div style="display: inline-block; background: rgba(16, 185, 129, 0.1); color: #059669; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">Өдөр тутам ашиглаж байна</div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч хэрэгтэй юм байна. Бас авсаархан амар эд байна. Материал нь их гоё зөөлөн хэрнээ бат бөх санагдлаа."
+        </div>
+        
+        <div data-review-date="12" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          Дархан • ...
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section class="inline-cta cta-reviews">
-    <div class="cta-social-text">✅ 564+ ээж аль хэдийн захиалсан</div>
+    <div class="cta-social-text"><i class="hgi-stroke hgi-tick-01"></i> Мянга мянган ээжүүдийн итгэлийг хүлээсэн</div>
     <button class="cta-scroll-btn"
       onclick="trackOrderIntent('reviews_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
-      👶 Хүүхэддээ авах →
+      <i class="hgi-stroke hgi-infant-01"></i> Хүүхэддээ авах <i class="hgi-stroke hgi-arrow-right-01"
+        style="font-size: 14px; vertical-align: middle;"></i>
     </button>
   </section>
 
-  
-  <section>
-    <div class="section-head">
-      <h2>❓ Асуулт & Хариулт</h2>
-    </div>
-    <div class="qa">
-      <div class="qa-q">Хэдэн настай хүүхдэд тохирох вэ?</div>
-      <div class="qa-a">0-8 нас хүртэл, 75 кг хүртэл даацтай.</div>
-    </div>
-    <div class="qa">
-      <div class="qa-q">Хүүхдэд аюулгүй юу?</div>
-      <div class="qa-a">Тийм, BPA-free PP хуванцраар хийгдсэн. Хортой бодисгүй, гулсахгүй суурьтай, тогтвортой
-        бүтэцтэй.</div>
-    </div>
-    <div class="qa">
-      <div class="qa-q">Угааж цэвэрлэхэд хэцүү юу?</div>
-      <div class="qa-a">Маш хялбар. Усаар зайлж, алчуураар арчихад л болно. Ямар ч тусгай цэвэрлэгээ шаарддаггүй.</div>
-    </div>
-    <div class="qa">
-      <div class="qa-q">Хүргэлт хэдэн хоногт ирэх вэ?</div>
-      <div class="qa-a">УБ хотод дансаар шилжүүлбэл өдөртөө, бэлнээр төлбөл 1-2 хоног. Орон нутагт 3-5 хоног.</div>
-    </div>
-  </section>
 
-  <div class="baby-divider">🐾 🐾 🐾</div>
 
-  
-  <section>
-    <div class="seller">
-      <div class="seller-av" style="background:none; border-radius: 50%; overflow: hidden; padding: 0;">
-        <img src="../../baby-chair/store_logo.webp" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <div class="seller-body">
-        <div class="seller-name">Bambi Room <svg class="fb-verify" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24" fill="#1877F2">
-            <path
-              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-          </svg></div>
-        <div class="seller-meta">Ухаалаг ээжүүдэд зориулав</div>
-      </div>
-      <button class="seller-btn"
-        onclick="window.open('https://www.facebook.com/bambibabyroom', '_blank')">Дагах</button>
-    </div>
-  </section>
 
-  
+
+
+
+
+
   <section id="order-section">
     <div class="order-form">
-      <h2>📦 Захиалга өгөх</h2>
-      <div class="subtitle">3-хан алхмаар хялбар захиалаарай 👶</div>
+      <h2>Захиалга өгөх</h2>
+      <div class="subtitle">3-хан алхмаар хялбар захиалаарай <i class="hgi-stroke hgi-infant-01"
+          style="font-size: 16px; vertical-align: middle;"></i></div>
 
       <div style="
         margin: 8px 0 18px;
-        background: rgba(0,212,197,0.07);
+        background: transparent;
         border: 2px solid rgba(0,212,197,0.45);
-        border-radius: 18px;
+        border-radius: 10px;
         padding: 18px 18px 18px 16px;
         display: flex;
         align-items: center;
@@ -1968,12 +2426,13 @@
         <span style="
           position: absolute; top: -30px; right: -30px;
           width: 120px; height: 120px;
-          background: rgba(0,212,197,0.06);
+          border: 1px solid rgba(0,212,197,0.2);
+          background: transparent;
           border-radius: 50%;
         "></span>
         <div style="
           width: 38px; height: 38px; border-radius: 50%;
-          background: rgba(0,212,197,0.15);
+          background: transparent;
           border: 2px solid var(--primary);
           display: flex; align-items: center; justify-content: center;
           font-size: 18px; font-weight: 900; color: var(--primary-dark);
@@ -1981,34 +2440,33 @@
         ">1</div>
         <div style="flex:1;">
           <div
-            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3; margin-bottom: 3px;">
-            Тоогоо оруулна уу
-          </div>
-          <div style="font-size: 12px; color: var(--text-secondary); font-weight: 600; line-height: 1.4;">
-            🧸 Авах ширхэгийн тоогоо сонгоно уу
+            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3;">
+            Авах тоогоо оруулна уу
           </div>
         </div>
         <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
       </div>
       <div class="form-group">
-        
-        <div class="qty-stepper qty-stepper--sm">
-          <button class="qty-btn" onclick="changeQty(-1)">−</button>
-          <div class="qty-display">
-            <span class="qty-num" id="qtyNumForm">1</span>
-            <span class="qty-unit">ширхэг</span>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 32px; padding: 4px 0;">
+          <div class="qty-stepper qty-stepper--sm" style="margin: 0; flex-shrink: 0;">
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <div class="qty-display">
+              <span class="qty-num" id="qtyNumForm">1</span>
+              <span class="qty-unit">ширхэг</span>
+            </div>
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
           </div>
-          <button class="qty-btn" onclick="changeQty(1)">+</button>
+          <div
+            style="font-size: 16px; color: var(--primary-dark); font-weight: 800; margin-top: 0; width: 140px; text-align: left;"
+            id="formQtyTotal">Нийт: ₮69,000</div>
         </div>
-        <div style="text-align:center; margin-top:8px; font-size:13px; color:var(--primary-dark); font-weight:700;"
-          id="formQtyTotal">Нийт: ₮69,000</div>
       </div>
 
       <div style="
         margin: 8px 0 18px;
-        background: rgba(0,212,197,0.07);
+        background: transparent;
         border: 2px solid rgba(0,212,197,0.45);
-        border-radius: 18px;
+        border-radius: 10px;
         padding: 18px 18px 18px 16px;
         display: flex;
         align-items: center;
@@ -2019,12 +2477,13 @@
         <span style="
           position: absolute; top: -30px; right: -30px;
           width: 120px; height: 120px;
-          background: rgba(0,212,197,0.06);
+          border: 1px solid rgba(0,212,197,0.2);
+          background: transparent;
           border-radius: 50%;
         "></span>
         <div style="
           width: 38px; height: 38px; border-radius: 50%;
-          background: rgba(0,212,197,0.15);
+          background: transparent;
           border: 2px solid var(--primary);
           display: flex; align-items: center; justify-content: center;
           font-size: 18px; font-weight: 900; color: var(--primary-dark);
@@ -2032,11 +2491,8 @@
         ">2</div>
         <div style="flex:1;">
           <div
-            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3; margin-bottom: 3px;">
+            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3;">
             Төлбөрийн нөхцөл сонгох
-          </div>
-          <div style="font-size: 12px; color: var(--text-secondary); font-weight: 600; line-height: 1.4;">
-            💳 Дансаар шилжүүлэх эсвэл хүргүүлж авахдаа төлөх
           </div>
         </div>
         <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
@@ -2048,57 +2504,63 @@
           <div class="payment-radio"></div>
           <div class="payment-info">
             <div class="payment-title">Дансаар шилжүүлэх</div>
-            <div class="payment-desc">Өдөртөө хүргэгдэнэ 🚚</div>
+            <div class="payment-desc">Өдөртөө хүргэгдэнэ <i class="hgi-stroke hgi-delivery-truck-01"
+                style="font-size: 14px; vertical-align: middle;"></i></div>
           </div>
         </label>
 
-        <label class="payment-option-label" id="lbl-cod">
+        <label class="payment-option-label" id="lbl-cod"
+          style="padding: 12px; margin-top: 8px; border: 1px dashed rgba(0,0,0,0.1); background: transparent; opacity: 0.7; transform: scale(0.96); transform-origin: top center;">
           <input type="radio" name="payment_method" value="Хүргүүлж авахдаа төлөх" onchange="togglePayment()">
-          <div class="payment-radio"></div>
+          <div class="payment-radio" style="width: 16px; height: 16px; border-width: 1px;"></div>
           <div class="payment-info">
-            <div class="payment-title">Хүргүүлж авахдаа төлөх (Бэлнээр)</div>
-            <div class="payment-desc">1-2 хоногийн дотор хүргэгдэнэ</div>
+            <div class="payment-title" style="font-size: 13px; font-weight: 500; color: #6B6560;">Хүргүүлж авахдаа төлөх
+              (Бэлнээр)</div>
+            <div class="payment-desc" style="font-size: 11px;">1-2 хоногийн дотор хүргэгдэнэ</div>
           </div>
         </label>
       </div>
 
       <div class="cod-message" id="codDetails">
-        📦 Та бараагаа хүлээж авах үедээ бэлнээр эсвэл түрүүлж утсаар холбогдох үед төлбөрөө хийх боломжтой.
+        <i class="hgi-stroke hgi-package-box"></i> Та бараагаа хүлээж авах үедээ бэлнээр эсвэл түрүүлж утсаар холбогдох
+        үед төлбөрөө хийх боломжтой.
         Хүргэлт 1-2 хоногт таны хаягаар очих болно.
       </div>
 
       <div id="transferSection">
         <div class="secure-payment-wrapper">
-          <div class="secure-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            Баталгаат төлбөр тооцоо
+          <div class="secure-badge" style="text-transform: uppercase;">
+            БАТАЛГААТ ТӨЛБӨР ТООЦОО
           </div>
           <div class="bank-details-card" style="margin-bottom: 0;">
-            <div class="bank-header">
-              <span class="bank-icon">🏦</span>
-              <span class="bank-name">ХААН Банк</span>
+            <div class="bank-header"
+              style="position: relative; justify-content: center; display: flex; align-items: center; padding: 16px;">
+              <span class="bank-name" style="font-size: 16px; font-weight: 800; color: #ffffff;">ХААН Банк</span>
+              <div style="position: absolute; right: 16px; background: #ffffff; border-radius: 6px; padding: 4px; display: flex; align-items: center; justify-content: center;">
+                <img src="data:image/webp;base64,UklGRioKAABXRUJQVlA4WAoAAAAQAAAAWwAAWwAAQUxQSA8DAAABkNxsm9RIhEAIhOAQHAIhEAIhEAIhEIKPcyQEApilhOzukhBMzVaePv29wF/f/7mkvkaEQwlI6wbh+u5YlqRln1AgVdbdOMmuxkt3Lt6L7g632kySqnCpEXct5M6MaggCletKljvTGb3gFVqSuwZHHcRU04nlDkQv1goNyx102iSEGkjuekiU+vJVKDWw5Wcnx4pu3ri0KgpQ/4kHB7HWihixVq19qoidbEmojicFYZAskVHbR2FapF2VCIlkiTssaeRKpPk4LsIjVzK9oxUmqRI5fQxXKqmS/v3sfMsVTcaQqs8Z9ZgzupAzLpIzxs8P2xx3WGJ+8KLVkhk88tj+w0EgAHF2F/H3fwQMhMWCN+CdMGZ7M1a8TzHm+bqx4jnxPXxQzrl+vC9ZUZbMKxbtl7nKxnjgEZ9JqeZxh+5lPKI9S/8Q7hA0zAIx+QUq9Y1rhRoogX/at3Ti7a06au8u7kjayJ/hRUy8dFU7XIX68hAV7xskr74sdntzAL0Bd/yzotKUh6Bb7vMCwCuORf0NfEJK570UhzqLRv6r17eEjghawu24DKLv84D2+7S60Lhdt2S/BdUkMpwa/H6i8HvPHA1FCubFVbkdPthWHJMq3PDizV0LzodmBcvc4FTLYD40azH1rBlZdWg+XLHfNto67SYAnZ4P4blmU/YZn/cAr/t8SJsjF8sS4pbOhw6ST494F9MIwKo+bivFjb2XBMRchD4UyocvIgIu3LF/b9igQOqFlg/NWB6bD+/GjX+Pzoer7ZQoxqoGMdM042aQD1d8zMYs8mH8h42LkEs+hHZFimSUh3ALmeVD5ZkUrz7vXPsJIuSMYcwZXZ8z6iZnlGXGmNj/HcaVirYoWqpEONTzIVUcJvIhUwwmY0VFFI96PqSJyEQ+JInJRD7kiMpUPmSIzbMeWGzAXi/+QMDz4WReuKtTLMz2fjEUBUS72b07hpIcGGho7pBq7X3uTHOH1cnY0peS6g7bGXA4tRk6mztLlR3Y96aG5s5c9RCSjdCfaO44dWr7cfzoD+PYNdUD3RUAVlA4IPQGAACQJACdASpcAFwAPjEWiUMiISESuq5kIAMEtQBiTQje//YPxN/Lf5cqW/dv6L+kMpv8V/SOcB5gH6R/rn1gPMB+zno7frd7kfQA/vX969Yv1APQN81v/ffu/8FX7pewV+yf//ziP+N9ln+G5XD1dziP3j+zflf+VXODtNf5D8a+BW5N/P/8z+WGqkf5fjBqAH8Z/wv/I+0D4u/83+7/kd7R/zT+1f+f3BP4z/Nf93/ff3p/v3gS9CT9WT9LEhvfrLi/ffN98X1Is2pXoiq1cNYTlbXf9ExhivUe2xYepE/SSWGds2IfC5EYMxMerWHTF9pkwE5Ba48tWUZa7QSR7yJeMavKp4GKwTOmHdmoHh9wIARCWLtS/tjMfLn4/6rr03tmJwqrvIHD1sQnWJEAAP79IPv85IFjzQ9SCoNllHITnuvJGfZO2Sa1O12NSB6e+CszJDID4fybEjcLxXD/ycEdj//VLxEMhjonE2YCeihZYtMVFZWxvHsyk+H0M7GB3bNt55OSe6Q2BeCJhvVJaP8Kv7g2wwTQX7p2mG//1S2TeryL1cV2UkD2i1gm/u3BgIwD0loDOd4EgcRXSyCu1pulHLPurEEZC/+w2FbhbRqu+JtmSb+YY6eZvYWCVe3FXgWZHMHAJe1NFjpCXTvL8t9Kv/5BEF8/8PRO023GHoazuBoUshVkrq2RsO+3GOw6Zxm6cq6kbO4mPDuMP/PZVOqPU9JbqH/850eOiXxjKR7vkj2IZidvcIT91XVbPj1ag/GXVIouKA/QDmwS6jyFSfGT/fHi4sn7D9GZuislXJ8CR0eDzpWFsf6Kinkyp7pbflu0XTAwc0yFwA4f+VDTtVIcunNHlp85kIVn1r/Q06hoL6V1mVN8KPy/+ze/lnbGUvGveeO618QqEQiloMFj+ytAxDIL7IN9PEUO3qhYDaEl9IR0i2RPoFJJqqLY5kSE/XikUX52b8JCy331ZCk8j7H0u+XfMxhDP9lfpi/Gj/Mv1MAv33wePbk85RQHX8LYAohV+Whke+9x69RMJEVHPfuJLvuo1uZDZwb6FlYeCYrv4n8+qN45fs+gDSPMVPOovO/vvckhxZ91y/BxgeXIVM3OWgEUMsrgXwcgFoNe8/8mUX7MiWfh8tqQRxr1f9EZyxRY1oEEpg/KkXcwrpHF0FoSJ2AKh7lLijINmGiGYlI/YAYQLjuBn/JqdIceSpVAbb/Fv4xXDOvxJgKODoFoQgHIeWKpTSvsvjHC/K7pG+riYAe0RZLDK9R+m0Hx07qIL0DCGO8Ffs4++DN0MO81PHi9jHIwZUgjruOthWDp0kP+Lob+/HSDj7uq931iBKX3fPuBkT5B5FIVy4HmfI/GmCGErqQek0j4uGxQ7SXL24cIoGmjGyxamtAJom/2v/wah0li1bB3TCGer0+A6qiRbrQt7IABsb9z2j/71yy7X3PJCzWe4F8i4Zb+Pytgr06zq0rNYICyLnWoYNSDh8c57DliWe149VKQIyKYr8xldC0qIf8ILJGDP0b9HBHnEQKI33e06JF24Oi8l84/4NdrbCp4zGcYBE+viSySJxyGaW+L4KIn5PWnXcrYQvyEB60K8gqyfCsl4kxAX+xc74z0/qBR0MVqmbYNQTE4j526orRcjq2EkRCAYNTNpRp6uJJ8P7L+sxa1hmdvUEjkZN181LMqArOvTEQ2RmSkBqXaKJn4cWVOglmWnqUbBWFMBjgpdNeKw3FarlOw/k1+5Ib+oNdDkVLXf+KTI9ueW1pUJD8hw7phB0SVl9xmWjFKyqr1gXxJfqUTv1IjJN2U0qB2QWXCTsc1jH/lB93+JBYPuvs7XnrLHDZaLGnL35K7NXUKMbvflgCoMXDJ1qiYCKkbHwsu+epNjtM9KYuvpsZv89MitDEFeI/zn9RnOoySkpTleyz8UEd7YSVKxepF0MkFJEPwjXs6j7CZD3aVe8gzzRNO8gItYYZB6f//usCGguhJe6BEOW4WN+cykVuU8/e+dkB2RYAI8c8ZH8Rm2xb71TEWyZII67jrYVg6dJAHISFCXidvBlylQfGToXS9ZSqyuKa7fZV3Fm08WHytRAyjMtsDQLVCSML5QfP9cA4WhiLQrhhEqm6SPVAkLmNdckQXqtj2hhjeRrzzRMxBBsiqJGgAD1/wZ44NwX9RS//HwOFZA9lm5rSJe/skzQCeXQi2EVoj21IfodeNrgSw1g3aSG0oWZst3v64If3E9b7f/5gjQsx4uf1Z30W5UkV/BwxooTjlx6x/xUCF3EaURxstIhKpMsy6seqI4381vFmwZFFZfgfwuzEKIB7GvnCChV3rsr6g/emFSWTX/wa1+OWFkvJX/4+Db/8fAmn+hf8pcAEzx8a59gAA" alt="Khaan Bank"
+                  style="height: 24px; width: auto; object-fit: contain;">
+              </div>
             </div>
             <div class="bank-row">
               <span class="bank-label">Дансны дугаар</span>
               <div class="bank-value-row">
-                <span class="bank-value" id="bankAccount">5041 0338 49</span>
-                <button class="copy-btn" onclick="trackCopyBank(); copyBank()" id="copyBtn">📋 Хуулах</button>
+                <span class="bank-value" id="bankAccount" style="font-size: 20px;">5041 0338 49</span>
+                <button class="copy-btn" onclick="trackCopyBank(); copyBank()" id="copyBtn" style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: #374151; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"><i class="hgi-stroke hgi-clipboard" style="font-size: 14px; color: #9CA3AF;"></i> Хуулах</button>
               </div>
             </div>
             <div class="bank-row">
               <span class="bank-label">Данс эзэмшигч</span>
-              <span class="bank-value">ГАНЦЭЦЭГ.Ч</span>
+              <span class="bank-value" style="font-size: 18px;">ГАНЦЭЦЭГ.Ч</span>
             </div>
-            <div class="bank-row">
+            <div class="bank-row" style="padding-bottom: 20px;">
               <span class="bank-label">Гүйлгээний утга</span>
-              <span class="bank-value bank-note">Нэр + утасны дугаар</span>
+              <div style="margin-top: 4px;">
+                <span class="bank-value" style="display: inline-block; background: #ecfdf5; color: #059669; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 8px;">Нэр + утасны дугаар</span>
+              </div>
             </div>
-            <div class="bank-row" style="background: #fffbeb; border-top: 1px solid rgba(0,0,0,0.04);">
+            <div class="bank-row" style="background: #fffbeb; border-top: 1px solid rgba(0,0,0,0.04); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; padding: 16px;">
               <div style="font-size: 13px; color: #92400e; line-height: 1.5;">
-                ⚠️ <b>АНХААР:</b> Гүйлгээний утга дээрээ өөрийн <u>утасны дугаар, нэрээ</u> заавал зөв бичээрэй!
+                ⚠️ <b>АНХААР:</b> Гүйлгээний утга дээрээ өөрийн <u style="text-decoration: underline; text-decoration-color: #fca5a5; text-underline-offset: 2px;">утасны дугаар, нэрээ</u> заавал зөв бичээрэй!
               </div>
             </div>
           </div>
@@ -2107,9 +2569,9 @@
 
       <div style="
         margin: 8px 0 18px;
-        background: rgba(0,212,197,0.07);
+        background: transparent;
         border: 2px solid rgba(0,212,197,0.45);
-        border-radius: 18px;
+        border-radius: 10px;
         padding: 18px 18px 18px 16px;
         display: flex;
         align-items: center;
@@ -2117,87 +2579,116 @@
         position: relative;
         overflow: hidden;
       ">
-        
+
         <span style="
           position: absolute; top: -30px; right: -30px;
           width: 120px; height: 120px;
-          background: rgba(0,212,197,0.06);
+          border: 1px solid rgba(0,212,197,0.2);
+          background: transparent;
           border-radius: 50%;
         "></span>
-        
+
         <div style="
           width: 38px; height: 38px; border-radius: 50%;
-          background: rgba(0,212,197,0.15);
+          background: transparent;
           border: 2px solid var(--primary);
           display: flex; align-items: center; justify-content: center;
           font-size: 18px; font-weight: 900; color: var(--primary-dark);
           flex-shrink: 0;
         ">3</div>
-        
+
         <div style="flex:1;">
           <div
-            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3; margin-bottom: 3px;">
+            style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3;">
             Мэдээллээ бөглөж баталгаажуулна уу
           </div>
-          <div style="font-size: 12px; color: var(--text-secondary); font-weight: 600; line-height: 1.4;">
-            ✍️ Нэр, утас, хаягаа оруулаад захиалгаа баталгаажуулаарай!
-          </div>
         </div>
-        
+
         <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
       </div>
 
       <div class="form-group">
         <label>Нэр</label>
-        <input type="text" placeholder="Таны нэр" id="fname">
+        <input type="text" placeholder="Таны нэр..." id="fname">
       </div>
       <div class="form-group">
         <label>Утасны дугаар</label>
-        <input type="tel" placeholder="9911 2233" id="fphone">
+        <input type="tel" placeholder="9911 2233..." id="fphone">
       </div>
       <div class="form-group">
         <label>Хаяг (дүүрэг, хороо)</label>
-        <input type="text" placeholder="Баянгол, 4-р хороо" id="faddr">
+        <input type="text" placeholder="Баянгол, 4-р хороо..." id="faddr">
       </div>
 
-      <button class="submit-btn" id="submitBtn">✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ</button>
+      <button class="submit-btn" id="submitBtn"><i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА БАТАЛГААЖУУЛАХ</button>
+
+
       <div
         style="text-align:center; margin-top:14px; padding:12px 16px; background:linear-gradient(135deg, #F0FDFA, #ECFDF5); border-radius:12px; border:1.5px solid #bbf7d0; font-size:14px; font-weight:800; color:#16a34a; letter-spacing:0.5px;">
-        🚚 ӨНӨӨДӨР ЗАХИАЛБАЛ ХҮРГЭЛТ ҮНЭГҮЙ</div>
+        <i class="hgi-stroke hgi-delivery-truck-01"></i> ӨНӨӨДӨР ЗАХИАЛБАЛ ХҮРГЭЛТ ҮНЭГҮЙ
+      </div>
 
       <div class="payment-note">
-        <b>💡 Хэрхэн ажиллах вэ?</b>
+        <b><i class="hgi-stroke hgi-idea-01"></i> Хэрхэн ажиллах вэ?</b>
         <p>Шилжүүлэг хийсний дараа захиалгаа баталгаажуулснаар бид тантай 24 цагийн дотор холбогдож, хүргэлтийн мэдээлэл
           өгнө.</p>
       </div>
     </div>
   </section>
 
-  
+
   <div class="bottom-bar">
-    <button class="btn-add"
-      onclick="trackOrderIntent('bottom_add'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Сагслах</button>
+    <!-- Price + label -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding-left: 2px;">
+      <span style="font-size: 20px; font-weight: 900; color: #111827; letter-spacing: -0.5px; line-height: 1;">₮69,000</span>
+      <div style="display: flex;">
+        <span style="font-size: 10.5px; font-weight: 700; color: var(--green); background: #f0fdf4; padding: 3px 6px; border-radius: 4px; border: 1px solid #bbf7d0; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;"><i class="hgi-stroke hgi-delivery-truck-01" style="font-size: 12px;"></i> Үнэгүй хүргэлт</span>
+      </div>
+    </div>
+
+    <!-- Single CTA -->
     <button class="btn-buy"
-      onclick="trackOrderIntent('bottom_buy'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">Захиалах</button>
+      onclick="trackOrderIntent('bottom_buy'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+      style="flex: 1; min-width: 160px; padding: 14px 20px; border-radius: 12px; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 7px;">
+      <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 18px;"></i> Захиалах
+    </button>
   </div>
 
   <div class="toast-container" id="toasts"></div>
 
   <script>
-    // Buyers toast notifications — Mongolian mom/family names with districts
+    // Buyers toast notifications — Mongolian phone numbers with masked digits
     const buyers = [
-      { name: 'Оюунаа Б.', loc: 'БГД' },
-      { name: 'Нарангэрэл Д.', loc: 'ХУД' },
-      { name: 'Төгөлдөр О.', loc: 'Дархан' },
-      { name: 'Удвал С.', loc: 'СБД' },
-      { name: 'Ганбаатар Г.', loc: 'ЧД' },
-      { name: 'Батцэцэг Т.', loc: 'Эрдэнэт' },
-      { name: 'Энхтуяа М.', loc: 'БЗД' },
-      { name: 'Цолмон Б.', loc: 'СХД' },
-      { name: 'Алтанцэцэг Д.', loc: 'ХУД' },
-      { name: 'Золзаяа Н.', loc: 'БГД' },
-      { name: 'Мөнхзул О.', loc: 'ЧД' },
-      { name: 'Сарнай Б.', loc: 'Дархан' },
+      { phone: '9685xxxx', loc: 'БГД' },
+      { phone: '9911xxxx', loc: 'ХУД' },
+      { phone: '8811xxxx', loc: 'БГД' },
+      { phone: '8686xxxx', loc: 'СХД' },
+      { phone: '9909xxxx', loc: 'ХУД' },
+      { phone: '8911xxxx', loc: 'ЧД' },
+      { phone: '9505xxxx', loc: 'Дархан' },
+      { phone: '8808xxxx', loc: 'СБД' },
+      { phone: '9400xxxx', loc: 'СБД' },
+      { phone: '8505xxxx', loc: 'БЗД' },
+      { phone: '9900xxxx', loc: 'Налайх' },
+      { phone: '8800xxxx', loc: 'Багануур' },
+      { phone: '8019xxxx', loc: 'ЧД' },
+      { phone: '9915xxxx', loc: 'Эрдэнэт' },
+      { phone: '8625xxxx', loc: 'БЗД' },
+      { phone: '9511xxxx', loc: 'Төв аймаг' },
+      { phone: '8080xxxx', loc: 'Өвөрхангай' },
+      { phone: '7711xxxx', loc: 'Увс' },
+      { phone: '7555xxxx', loc: 'Ховд' },
+      { phone: '9570xxxx', loc: 'СХД' },
+      { phone: '9904xxxx', loc: 'ХУД' },
+      { phone: '8016xxxx', loc: 'БГД' },
+      { phone: '9090xxxx', loc: 'Дорнод' },
+      { phone: '8810xxxx', loc: 'Сэлэнгэ' },
+      { phone: '9999xxxx', loc: 'Хөвсгөл' },
+      { phone: '8900xxxx', loc: 'Архангай' },
+      { phone: '9666xxxx', loc: 'Дархан' },
+      { phone: '9111xxxx', loc: 'Эрдэнэт' },
+      { phone: '9688xxxx', loc: 'ЧД' },
+      { phone: '8833xxxx', loc: 'Дархан' },
     ];
     let lastBuyerIdx = -1;
     function showToast() {
@@ -2207,7 +2698,7 @@
       const b = buyers[idx];
       const ago = (1 + Math.floor(Math.random() * 28)) + ' мин';
       const tc = document.getElementById('toasts');
-      tc.innerHTML = `<div class="toast"><div class="av">👶</div><span><span class="name">${b.name}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
+      tc.innerHTML = `<div class="toast"><div class="av"><i class="hgi-stroke hgi-infant-01"></i></div><span><span class="name">${b.phone}</span> (${b.loc}) захиалга өглөө</span><span class="time">${ago} өмнө</span></div>`;
       setTimeout(() => { tc.innerHTML = ''; }, 4000);
     }
     setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
@@ -2267,7 +2758,8 @@
     document.getElementById('submitBtn').addEventListener('click', () => {
       const btn = document.getElementById('submitBtn');
       if (btn.disabled) return;
-      const name = document.getElementById('fname').value.trim();
+      const nameInput = document.getElementById('fname').value.trim();
+      const name = nameInput ? nameInput : 'Эрхэм харилцагч';
       const phone = document.getElementById('fphone').value.trim();
       const addr = document.getElementById('faddr').value.trim();
       const tier = window.orderQty + ' ширхэг — ₮' + (window.orderQty * 69000).toLocaleString();
@@ -2281,8 +2773,8 @@
         }
       }
 
-      if (!name || !phone || !addr) {
-        alert('Нэр, утас, хаягаа бүрэн бөглөнө үү!');
+      if (!phone || !addr) {
+        alert('Утас, хаягаа бүрэн бөглөнө үү!');
         return;
       }
       btn.disabled = true;
@@ -2303,42 +2795,123 @@
           parse_mode: 'HTML'
         })
       })
-      .then(res => res.json())
-      .then(data => {
-        if (data.ok) {
-          btn.textContent = '✅ Захиалга амжилттай илгээгдлээ!';
-          btn.style.background = '#16a34a';
-          // Dispatch tracking event
-          if (window.dispatchTrackingEvent) {
-            window.dispatchTrackingEvent('lead_submit', { payment_method: paymentMethod });
+        .then(res => res.json())
+        .then(data => {
+          if (data.ok) {
+            btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> Захиалга амжилттай илгээгдлээ!';
+            btn.style.background = '#16a34a';
+            // Dispatch tracking event
+            if (window.dispatchTrackingEvent) {
+              window.dispatchTrackingEvent('lead_submit', { payment_method: paymentMethod });
+            }
+            setTimeout(() => {
+              btn.disabled = false;
+              btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+              btn.style.opacity = '1';
+              btn.style.background = '';
+              // Clear form
+              document.getElementById('fname').value = '';
+              document.getElementById('fphone').value = '';
+              document.getElementById('faddr').value = '';
+            }, 4000);
+          } else {
+            throw new Error('Telegram API error');
           }
+        })
+        .catch(() => {
+          btn.innerHTML = '<i class="hgi-stroke hgi-cancel-01"></i> Алдаа гарлаа. Дахин оролдоно уу.';
+          btn.style.background = '#ef4444';
           setTimeout(() => {
             btn.disabled = false;
-            btn.textContent = '✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+            btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
             btn.style.opacity = '1';
             btn.style.background = '';
-            // Clear form
-            document.getElementById('fname').value = '';
-            document.getElementById('fphone').value = '';
-            document.getElementById('faddr').value = '';
-          }, 4000);
-        } else {
-          throw new Error('Telegram API error');
-        }
-      })
-      .catch(() => {
-        btn.textContent = '❌ Алдаа гарлаа. Дахин оролдоно уу.';
-        btn.style.background = '#ef4444';
-        setTimeout(() => {
-          btn.disabled = false;
-          btn.textContent = '✅ ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
-          btn.style.opacity = '1';
-          btn.style.background = '';
-        }, 3000);
-      });
+          }, 3000);
+        });
     });
   </script>
 
+
+  <!-- Contact Proof Footer -->
+  <footer
+    style="max-width:480px;margin:0 auto;padding:24px 16px 100px;text-align:center;font-size:11px;color:#A39E99;line-height:1.7;">
+    <div style="width:40px;height:1px;background:#EDEAE7;margin:0 auto 20px;"></div>
+    <div class="seller" style="margin-bottom: 24px; text-align: left; background: transparent; border: 1px solid rgba(0,0,0,0.05); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="seller-av" style="background:none; border-radius: 50%; overflow: hidden; padding: 0; width: 48px; height: 48px; flex-shrink: 0;">
+          <img src="/bambiroom/assets/store_logo-BjoR_NiG.webp" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="seller-body" style="flex: 1;">
+          <div class="seller-name" style="font-size: 16px; font-weight: 800; color: #111827; display: flex; align-items: center; gap: 6px;">Bambi Room <i class="hgi-stroke hgi-facebook fb-verify" style="color: #0866FF; font-size: 18px;"></i></div>
+          <div class="seller-meta" style="font-size: 12.5px; color: #6B7280; font-weight: 500;">Ухаалаг ээжүүдийн сонголт</div>
+        </div>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <button class="seller-btn" onclick="window.open('https://m.me/bambibabyroom', '_blank')" style="background: transparent; border: 1.5px solid #0084FF !important; color: #0084FF !important; border-radius: 10px; height: 42px; font-size: 13.5px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.17 5.5 3.09 7.42V22l2.72-1.49c1.3.36 2.7.57 4.19.57 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm1.14 12.83l-2.57-2.74-5.01 2.74 5.51-5.85 2.63 2.74 4.95-2.74-5.51 5.85z"/>
+          </svg>
+          Чатлах
+        </button>
+        <button class="seller-btn" onclick="window.open('https://www.facebook.com/bambibabyroom', '_blank')" style="background: transparent; border: 1.5px solid #0866FF !important; color: #0866FF !important; border-radius: 10px; height: 42px; font-size: 13.5px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
+          <i class="hgi-stroke hgi-facebook-02" style="font-size: 18px;"></i> Дагах
+        </button>
+      </div>
+    </div>
+    <div>Асуулт, санал хүсэлт байвал холбогдоорой</div>
+    <div style="margin-top:6px;">
+      <i class="hgi-stroke hgi-mail-01"></i> <a href="mailto:davaa.art.ai@gmail.com"
+        style="color:#00B4A6;text-decoration:none;">davaa.art.ai@gmail.com</a>
+    </div>
+    <div style="margin-top:4px;">
+      <i class="hgi-stroke hgi-smart-phone-01"></i> <a href="tel:+97696870870"
+        style="color:#00B4A6;text-decoration:none;">96870870</a>
+    </div>
+
+    <div style="margin-top:16px;font-size:10px;color:#C5C0BB;">© 2026 Bambi Room. Бүх эрх хуулиар хамгаалагдсан.</div>
+  </footer>
+
+  <script>
+    (function () {
+      // Dynamic daily sales logic
+      const BASE_SALES = 564;
+      const LAUNCH_DATE = new Date('2026-03-01T00:00:00Z').getTime();
+      const now = Date.now();
+
+      let daysPassed = Math.floor((now - LAUNCH_DATE) / (1000 * 60 * 60 * 24));
+      if (daysPassed < 0) daysPassed = 0;
+
+      let totalSales = BASE_SALES;
+      for (let i = 0; i < daysPassed; i++) {
+        // pseudo-random using 'i' as seed (so it doesn't change on refresh)
+        let pseudoRandom = Math.sin(i + 123) * 10000;
+        let dailySales = Math.floor((pseudoRandom - Math.floor(pseudoRandom)) * 4) + 1; // 1 to 4 sales
+        totalSales += dailySales;
+      }
+
+      ['salesCountText1', 'salesCountText2', 'salesCountText3'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = totalSales;
+      });
+
+      // Dynamic Review Dates
+      function getMongolianRelativeDate(daysAgo) {
+        if (daysAgo === 0) return 'Өнөөдөр';
+        if (daysAgo === 1) return 'Өчигдөр';
+        if (daysAgo < 7) return `${daysAgo} өдрийн өмнө`;
+        if (daysAgo < 14) return '1 долоо хоногийн өмнө';
+        const weeks = Math.floor(daysAgo / 7);
+        return `${weeks} долоо хоногийн өмнө`;
+      }
+
+      document.querySelectorAll('[data-review-date]').forEach(el => {
+        const days = parseInt(el.getAttribute('data-review-date'));
+        const locationPart = el.textContent.split(' • ')[0];
+        el.textContent = `${locationPart} • ${getMongolianRelativeDate(days)}`;
+      });
+    })();
+  </script>
 </body>
 
 </html>

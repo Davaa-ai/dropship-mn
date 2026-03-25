@@ -2037,13 +2037,22 @@
       <div class="divider"></div>
 
     <div class="inline-cta" style="margin-bottom: 24px; padding: 0 16px;">
-      <button class="cta-scroll-btn"
-        onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
-        style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 18px; font-size: 16px; font-weight: 800; color: #fff; border: none; cursor: pointer;">
-        <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 20px;"></i>
-        Захиалах
-        <span style="font-size: 12.5px; opacity: 0.9; font-weight: 600; margin-left: 2px;">— Хүргэлт үнэгүй</span>
-      </button>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="background: #ECFDF5; border: 1.5px solid #10B981; border-bottom: none; border-radius: 10px 10px 0 0; padding: 5px 16px 14px; margin-bottom: -10px; display: inline-flex; align-items: center; gap: 6px; position: relative; z-index: 0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: translateY(-0.5px);">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+          <span style="color: #047857; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Эрсдэлгүй захиалга</span>
+        </div>
+        <button class="cta-scroll-btn"
+          onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+          style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 18px; font-size: 16px; font-weight: 800; color: #fff; border: none; cursor: pointer; position: relative; z-index: 1;">
+          <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 20px;"></i>
+          Захиалах
+          <span style="font-size: 12.5px; opacity: 0.9; font-weight: 600; margin-left: 2px;">— Хүргэлт үнэгүй</span>
+        </button>
+      </div>
     </div>
 
     <div class="promo-card"
@@ -2285,232 +2294,100 @@
     </div>
   </section>
 
-  <style>
-    .review-card.partial-review .review-body {
-      opacity: 1 !important;
-      max-height: 48px !important;
-      position: relative;
-      overflow: hidden;
-      padding-top: 4px !important;
-      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      margin-bottom: 0;
-    }
-    .review-card.partial-review .review-body::after {
-      content: "";
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 24px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .review-card.partial-review.theme-blue .review-body::after {
-      background: linear-gradient(to bottom, rgba(255,255,255,0), #fafafa); /* matches generic bg */
-    }
-    .review-card.partial-review.is-expanded .review-body {
-      max-height: 500px !important;
-    }
-    .review-card.partial-review.is-expanded .review-body::after {
-      opacity: 0;
-    }
-    
-    .review-card.partial-review .review-top .review-expand-icon {
-      display: none; 
-    }
-
-    .smart-expand-btn {
-      font-size: 12.5px;
-      font-weight: 800;
-      color: var(--primary);
-      text-align: center;
-      margin-top: 8px;
-      padding: 8px 0;
-      border-radius: 8px;
-      background: var(--primary-soft);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-    .theme-blue .smart-expand-btn { color: var(--secondary); background: var(--secondary-soft); }
-    .theme-green .smart-expand-btn { color: var(--safe); background: var(--safe-soft); }
-    
-    .review-card.partial-review.is-expanded .smart-expand-btn {
-      display: none;
-    }
-  </style>
-  <section id="reviews-section" style="padding: 0 16px;">
-    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
+  <section id="reviews-section" style="padding: 0 16px 24px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
       <h2>Ээжүүдийн сэтгэгдэл</h2>
     </div>
 
-    <div id="reviews-container" style="position: relative; max-height: 480px; overflow: hidden; transition: max-height 0.5s ease-in-out;">
-      <div class="review-list" style="padding: 0 0 40px 0;">
-        <!-- Review 1 -->
-        <article class="review-card partial-review" onclick="this.classList.toggle('is-expanded')">
-          <div class="review-top">
-            <div class="review-av">
-              <img src="../../public/baby-chair/new-mom1.webp" alt="Profile">
-            </div>
-            <div class="review-meta">
-              <div class="review-author-row">
-                <span class="review-author">Энхтуяа Б.</span>
-                <div class="review-stars">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
-                </div>
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <!-- Review 1 -->
+      <div style="background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down" style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: var(--primary-soft); opacity: 0.6; z-index: 0;"></i>
+        
+        <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid var(--primary-soft); flex-shrink: 0;">
+            <img src="../../public/baby-chair/new-mom1.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Энхтуяа Б.</span>
+              <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
               </div>
-              <div class="review-badge">3 настай охинд авсан</div>
             </div>
-            <div class="review-expand-icon">
-              <i class="hgi-stroke hgi-arrow-down-01"></i>
-            </div>
+            <div style="display: inline-block; background: var(--primary-soft); color: var(--primary-dark); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">3 настай охинд авсан</div>
           </div>
-          <div class="review-body">
-            Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад илүү тайван болсон. Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна. Хамгийн гол нь хүүхэд өөрөө дуртай байгаа нь чухал юм.
-            <div class="review-submeta" data-review-date="2">Улаанбаатар • ...</div>
-          </div>
-          <div class="smart-expand-btn">Цааш унших <i class="hgi-stroke hgi-arrow-down-01"></i></div>
-        </article>
-
-        <!-- Review 2 -->
-        <article class="review-card theme-blue partial-review" onclick="this.classList.toggle('is-expanded')">
-          <div class="review-top">
-            <div class="review-av">
-              <img src="../../public/baby-chair/new-mom2.webp" alt="Profile">
-            </div>
-            <div class="review-meta">
-              <div class="review-author-row">
-                <span class="review-author">Саран М.</span>
-                <div class="review-stars">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
-                </div>
-              </div>
-              <div class="review-badge">Зай багатай байранд тохирсон</div>
-            </div>
-            <div class="review-expand-icon">
-              <i class="hgi-stroke hgi-arrow-down-01"></i>
-            </div>
-          </div>
-          <div class="review-body">
-            Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас зайлсхийж байсан. Энэ нэг сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан. Чанартай бас их авсаархан юм.
-            <div class="review-submeta" data-review-date="4">ХУД • ...</div>
-          </div>
-          <div class="smart-expand-btn">Цааш унших <i class="hgi-stroke hgi-arrow-down-01"></i></div>
-        </article>
-
-        <!-- Review 3 -->
-        <article class="review-card theme-green partial-review" onclick="this.classList.toggle('is-expanded')">
-          <div class="review-top">
-            <div class="review-av">
-              <img src="../../public/baby-chair/new-mom3.webp" alt="Profile">
-            </div>
-            <div class="review-meta">
-              <div class="review-author-row">
-                <span class="review-author">Oyun Oyun</span>
-                <div class="review-stars">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
-                </div>
-              </div>
-              <div class="review-badge">Өдөр тутам ашиглаж байна</div>
-            </div>
-            <div class="review-expand-icon">
-              <i class="hgi-stroke hgi-arrow-down-01"></i>
-            </div>
-          </div>
-          <div class="review-body">
-            Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч хэрэгтэй юм байна. Бас авсаархан амар эд байна. Материал нь их гоё зөөлөн хэрнээ бат бөх санагдлаа.
-            <div class="review-submeta" data-review-date="12">Дархан • ...</div>
-          </div>
-          <div class="smart-expand-btn">Цааш унших <i class="hgi-stroke hgi-arrow-down-01"></i></div>
-        </article>
-
-        <!-- Review 4 -->
-        <article class="review-card" onclick="this.classList.toggle('is-expanded')">
-          <div class="review-top">
-            <div class="review-av" style="background: var(--primary-soft); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--primary-dark); font-size: 14px;">Б.</div>
-            <div class="review-meta">
-              <div class="review-author-row">
-                <span class="review-author">Болормаа Т.</span>
-                <div class="review-stars">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
-                </div>
-              </div>
-              <div class="review-badge">Бэлгэнд авсан, маш их таалагдсан</div>
-            </div>
-            <div class="review-expand-icon">
-              <i class="hgi-stroke hgi-arrow-down-01"></i>
-            </div>
-          </div>
-          <div class="review-body">
-            Найзынхаа хүүхдийн даахинд бэлэглэсэн юм. Найз маань маш их баярласан, өдөр бүр хэрэглэж байгаа гэсэн. Өнгө нь ч гэсэн их гоё зөөлөн өнгөтэй юм билээ. Хүргэлт нь ч хурдан байсан.
-            <div class="review-submeta" data-review-date="18">Улаанбаатар • ...</div>
-          </div>
-        </article>
-
-        <!-- Review 5 -->
-        <article class="review-card theme-blue" onclick="this.classList.toggle('is-expanded')">
-          <div class="review-top">
-            <div class="review-av" style="background: var(--secondary-soft); display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--secondary-dark); font-size: 14px;">Г.</div>
-            <div class="review-meta">
-              <div class="review-author-row">
-                <span class="review-author">Гантуяа Л.</span>
-                <div class="review-stars">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
-                </div>
-              </div>
-              <div class="review-badge">Сэтгэл ханамж 100%</div>
-            </div>
-            <div class="review-expand-icon">
-              <i class="hgi-stroke hgi-arrow-down-01"></i>
-            </div>
-          </div>
-          <div class="review-body">
-            Захиалж авахаасаа өмнө жаахан эргэлзэж байсан ч ирээд хэрэглээд үзэхэд үнэхээр хэрэгтэй эд байна. Хүүхэд суулгаад усанд оруулахад нуруу өвдөхгүй амар болсон. Баярлалаа!
-            <div class="review-submeta" data-review-date="25">ХУД • ...</div>
-          </div>
-        </article>
+        </div>
+        
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад илүү тайван болсон. Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна. Хамгийн гол нь хүүхэд өөрөө дуртай байгаа нь чухал юм."
+        </div>
+        
+        <div data-review-date="2" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          Улаанбаатар • ...
+        </div>
       </div>
 
-      <!-- Fade Overlay -->
-      <div id="reviews-fade" style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, rgba(249, 250, 251, 0), rgba(249, 250, 251, 1)); pointer-events: none;"></div>
-    </div>
+      <!-- Review 2 -->
+      <div style="background: #fff; border: 1.5px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down" style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(59, 130, 246, 0.1); opacity: 0.8; z-index: 0;"></i>
+        
+        <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.2); flex-shrink: 0;">
+            <img src="../../public/baby-chair/new-mom2.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Саран М.</span>
+              <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div style="display: inline-block; background: rgba(59, 130, 246, 0.1); color: #2563EB; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">Зай багатай байранд тохирсон</div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас зайлсхийж байсан. Энэ нэг сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан. Чанартай бас их авсаархан юм."
+        </div>
+        
+        <div data-review-date="4" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          ХУД • ...
+        </div>
+      </div>
 
-    <!-- Toggle Button -->
-    <div style="text-align: center; margin-top: -12px; position: relative; z-index: 2;">
-      <button id="toggle-reviews" onclick="toggleReviews()" style="background: #fff; border: 1.5px solid var(--primary); color: var(--primary-dark); padding: 10px 24px; border-radius: 99px; font-size: 14px; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,212,197,0.12);">
-        <i class="hgi-stroke hgi-bubble-chat-user" style="font-size: 18px;"></i>
-        <span id="toggle-text">Сэтгэгдэл унших</span>
-        <i id="toggle-icon" class="hgi-stroke hgi-arrow-down-01" style="font-size: 16px;"></i>
-      </button>
-      <div style="margin-top: 12px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
-        + 91 бусад ээжийн сэтгэгдэл
+      <!-- Review 3 -->
+      <div style="background: #fff; border: 1.5px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down" style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(16, 185, 129, 0.1); opacity: 0.8; z-index: 0;"></i>
+        
+        <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.2); flex-shrink: 0;">
+            <img src="../../public/baby-chair/new-mom3.webp" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Oyun Oyun</span>
+              <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div style="display: inline-block; background: rgba(16, 185, 129, 0.1); color: #059669; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">Өдөр тутам ашиглаж байна</div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч хэрэгтэй юм байна. Бас авсаархан амар эд байна. Материал нь их гоё зөөлөн хэрнээ бат бөх санагдлаа."
+        </div>
+        
+        <div data-review-date="12" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+          Дархан • ...
+        </div>
       </div>
     </div>
   </section>
-
-  <script>
-    function toggleReviews() {
-      const container = document.getElementById('reviews-container');
-      const fade = document.getElementById('reviews-fade');
-      const text = document.getElementById('toggle-text');
-      const icon = document.getElementById('toggle-icon');
-      const isExpanded = container.style.maxHeight === 'none';
-
-      if (isExpanded) {
-        container.style.maxHeight = '480px';
-        fade.style.display = 'block';
-        text.textContent = 'Сэтгэгдэл унших';
-        icon.className = 'hgi-stroke hgi-arrow-down-01';
-        container.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        container.style.maxHeight = 'none';
-        fade.style.display = 'none';
-        text.textContent = 'Хураах';
-        icon.className = 'hgi-stroke hgi-arrow-up-01';
-      }
-    }
-  </script>
 
 
   <section class="inline-cta cta-reviews">
