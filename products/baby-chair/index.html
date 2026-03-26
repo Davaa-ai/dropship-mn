@@ -1102,7 +1102,7 @@
       align-items: center;
       background: var(--white);
       border: 1.5px solid var(--border);
-      border-radius: 99px;
+      border-radius: 12px;
       padding: 6px;
       box-shadow: var(--shadow-sm);
     }
@@ -1114,7 +1114,7 @@
     .qty-btn {
       width: 48px;
       height: 48px;
-      border-radius: 50%;
+      border-radius: 8px;
       background: var(--white);
       border: 1.5px solid var(--border);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
@@ -2027,31 +2027,41 @@
     <div style="position: relative; margin: 0 0 16px;">
       <div class="gallery" id="gallery"
         style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 16px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0 16px;">
-        
+
         <style>
-          .gallery::-webkit-scrollbar { display: none; }
+          .gallery::-webkit-scrollbar {
+            display: none;
+          }
         </style>
 
         <!-- Slide 1: Sequential Auto-playing Videos (Default) -->
-        <div style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <video id="sequence-video" autoplay muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <div
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <video id="sequence-video" autoplay muted playsinline
+            style="width: 100%; height: 100%; object-fit: cover; display: block;">
             <source src="vid1.mp4" type="video/mp4">
           </video>
         </div>
 
         <!-- Slide 2: Main Image -->
-        <div style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <img src="hero-image.png" alt="Олон үйлдэлт хүүхдийн сандал" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+        <div
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="hero-image.png" alt="Олон үйлдэлт хүүхдийн сандал"
+            style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
 
         <!-- Slide 3: Size 1 Image -->
-        <div style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <img src="size1.png" alt="Олон үйлдэлт хүүхдийн сандал хэмжээ" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+        <div
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="size1.png" alt="Олон үйлдэлт хүүхдийн сандал хэмжээ"
+            style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
 
         <!-- Slide 4: Size 2 Image -->
-        <div style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <img src="size2.png" alt="Олон үйлдэлт хүүхдийн сандал хэмжээ" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+        <div
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="size2.png" alt="Олон үйлдэлт хүүхдийн сандал хэмжээ"
+            style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
 
         <!-- Spacer for edge margin -->
@@ -2059,20 +2069,29 @@
       </div>
 
       <!-- Pagination Indicators -->
-      <div id="gallery-indicators" style="display: flex; justify-content: center; gap: 6px; margin-top: 14px; margin-bottom: 2px;">
-        <div class="indicator active" onclick="scrollToSlide(0)" style="width: 24px; height: 6px; border-radius: 3px; background: var(--primary-teal); transition: 0.3s; cursor: pointer;"></div>
-        <div class="indicator" onclick="scrollToSlide(1)" style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;"></div>
-        <div class="indicator" onclick="scrollToSlide(2)" style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;"></div>
-        <div class="indicator" onclick="scrollToSlide(3)" style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;"></div>
+      <div id="gallery-indicators"
+        style="display: flex; justify-content: center; gap: 6px; margin-top: 14px; margin-bottom: 2px;">
+        <div class="indicator active" onclick="scrollToSlide(0)"
+          style="width: 24px; height: 6px; border-radius: 3px; background: var(--primary-teal); transition: 0.3s; cursor: pointer;">
+        </div>
+        <div class="indicator" onclick="scrollToSlide(1)"
+          style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
+        </div>
+        <div class="indicator" onclick="scrollToSlide(2)"
+          style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
+        </div>
+        <div class="indicator" onclick="scrollToSlide(3)"
+          style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
+        </div>
       </div>
 
       <!-- Arrow Buttons -->
-      <button onclick="document.getElementById('gallery').scrollBy({left: -300, behavior: 'smooth'})" 
+      <button onclick="document.getElementById('gallery').scrollBy({left: -300, behavior: 'smooth'})"
         style="position: absolute; left: 8px; top: calc(50% - 15px); transform: translateY(-50%); width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.92); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; z-index: 10; cursor: pointer;">
         <i class="hgi-stroke hgi-arrow-left-01" style="font-size: 20px; color: #111;"></i>
       </button>
 
-      <button onclick="document.getElementById('gallery').scrollBy({left: 300, behavior: 'smooth'})" 
+      <button onclick="document.getElementById('gallery').scrollBy({left: 300, behavior: 'smooth'})"
         style="position: absolute; right: 8px; top: calc(50% - 15px); transform: translateY(-50%); width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.92); border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; z-index: 10; cursor: pointer;">
         <i class="hgi-stroke hgi-arrow-right-01" style="font-size: 20px; color: #111;"></i>
       </button>
@@ -2091,13 +2110,13 @@
       document.addEventListener('DOMContentLoaded', () => {
         const gallery = document.getElementById('gallery');
         const indicators = document.querySelectorAll('#gallery-indicators .indicator');
-        
-        if(gallery && indicators.length > 0) {
+
+        if (gallery && indicators.length > 0) {
           gallery.addEventListener('scroll', () => {
             const scrollPos = gallery.scrollLeft;
             const slideWidth = gallery.clientWidth * 0.9 + 12; // 90% width + 12px gap
             const activeIndex = Math.max(0, Math.min(3, Math.round(scrollPos / slideWidth)));
-            
+
             indicators.forEach((ind, i) => {
               if (i === activeIndex) {
                 ind.style.width = '24px';
@@ -2110,19 +2129,19 @@
           });
         }
       });
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         var video = document.getElementById('sequence-video');
         var sources = ['vid1.mp4', 'vid2.mp4', 'vid3.mp4'];
         var i = 0;
         if (video) {
           // Remove loop property if it exists so the 'ended' event can fire
           video.loop = false;
-          video.addEventListener('ended', function() {
+          video.addEventListener('ended', function () {
             i = (i + 1) % sources.length;
             video.src = sources[i];
             // Ensure muted attribute is set for autoplay policy
             video.muted = true;
-            video.play().catch(function(err){ console.log('Video autoplay error:', err); });
+            video.play().catch(function (err) { console.log('Video autoplay error:', err); });
           });
         }
       });
@@ -2137,7 +2156,7 @@
       </p>
 
       <div
-        style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border: 1.5px solid rgba(239, 123, 132, 0.3); padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: 0 4px 12px rgba(239, 123, 132, 0.15);">
+        style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 800; color: #ea580c; background: rgba(234, 88, 12, 0.08); border: 1.5px solid rgba(234, 88, 12, 0.25); padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);">
         <i class="hgi-stroke hgi-fire" style="font-size: 16px;"></i> Дэлхийд трэнд болж буй
       </div>
 
@@ -2146,7 +2165,7 @@
           style="font-size: 38px; font-weight: 900; line-height: 1; color: #111827; letter-spacing: -1.5px;">₮69,000</span>
         <div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 2px;">
           <span
-            style="font-size: 11px; font-weight: 800; color: #DC2626; background: transparent; padding: 3px 6px; border-radius: 4px; line-height: 1; display: inline-flex; align-items: center; width: max-content; border: 1.5px solid #DC2626;">
+            style="font-size: 11px; font-weight: 800; color: #ea580c; background: rgba(234, 88, 12, 0.08); padding: 3px 6px; border-radius: 4px; line-height: 1; display: inline-flex; align-items: center; width: max-content; border: 1.5px solid rgba(234, 88, 12, 0.25);">
             <i class="hgi-stroke hgi-sale-tag-02" style="font-size: 12px; margin-right: 3px;"></i>₮60,000 ХЭМНЭЛТ
           </span>
           <span class="price-was"
@@ -2168,51 +2187,62 @@
       <div class="divider" style="margin-bottom: 16px;"></div>
 
       <div style="margin: 0 -16px 4px; padding: 0 16px; text-align: center;">
-        <img src="modular-transparent.png" alt="3 үйлдэлт сандал" style="width: 100%; height: auto; object-fit: contain;" />
+        <img src="modular-transparent.png" alt="3 үйлдэлт сандал"
+          style="width: 100%; height: auto; object-fit: contain;" />
       </div>
 
       <!-- Trust Badges — icons with clever Mongolian text -->
-      <div style="display: flex; justify-content: space-around; align-items: flex-start; margin: 0 0 48px; padding: 4px 8px;">
-        
+      <div
+        style="display: flex; justify-content: space-around; align-items: flex-start; margin: 0 0 48px; padding: 4px 8px;">
+
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
           <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
               <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
             </svg>
           </div>
-          <span style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Байгальд<br>ээлтэй</span>
+          <span
+            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Байгальд<br>ээлтэй</span>
         </div>
 
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
           <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               <path d="M12 8v8"></path>
               <path d="M8 12h8"></path>
             </svg>
           </div>
-          <span style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Эрүүл<br>хэрэглээ</span>
+          <span
+            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Эрүүл<br>хэрэглээ</span>
         </div>
 
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
           <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               <path d="m9 12 2 2 4-4"></path>
             </svg>
           </div>
-          <span style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Сэтгэл<br>амар</span>
+          <span
+            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Сэтгэл<br>амар</span>
         </div>
 
         <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
           <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <span style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Ган шиг<br>бат</span>
+          <span
+            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Ган
+            шиг<br>бат</span>
         </div>
 
       </div>
@@ -2247,7 +2277,7 @@
           <div class="promo-left">
             <span class="promo-text"
               style="color: var(--text-secondary); font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 4px; letter-spacing: -0.1px;">
-              <i class="hgi-stroke hgi-delivery-truck-01" style="font-size: 16px; color: var(--accent);"></i> Хямдрал
+              <i class="hgi-stroke hgi-sale-tag-02" style="font-size: 16px; color: var(--accent);"></i> Хямдрал
               дуусах хугацаа:
             </span>
           </div>
@@ -2270,7 +2300,8 @@
               style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 6px; box-shadow: 0 0 0 rgba(239, 123, 132, 0.7);"></span>
             Одоо <b>&nbsp;45 хүн&nbsp;</b> үзэж байна
           </span>
-          <span class="stock-low" style="font-weight: 700; color: var(--accent) !important; font-size: 12px;">(Цөөн үлдлээ!)</span>
+          <span class="stock-low" style="font-weight: 700; color: var(--accent) !important; font-size: 12px;">(Цөөн
+            үлдлээ!)</span>
         </div>
       </div>
     </div>
@@ -2280,33 +2311,42 @@
 
     <section style="padding: 0 16px;">
       <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
-        <h2 style="font-size: 24px; font-weight: 900; color: #111827; letter-spacing: -0.5px;">Яагаад ээжүүд дуртай вэ?</h2>
+        <h2 style="font-size: 24px; font-weight: 900; color: #111827; letter-spacing: -0.5px;">Яагаад ээжүүд дуртай вэ?
+        </h2>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
 
         <!-- Card 1 -->
-        <div style="background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
+        <div
+          style="background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
           <i class="hgi-stroke hgi-smile" style="font-size: 32px; color: var(--primary-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Тайван хэвтэх<br>налуу түшлэг</h4>
+          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Тайван
+            хэвтэх<br>налуу түшлэг</h4>
         </div>
 
         <!-- Card 2 -->
-        <div style="background: transparent; border: 1.5px solid rgba(59, 130, 246, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
+        <div
+          style="background: transparent; border: 1.5px solid rgba(59, 130, 246, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
           <i class="hgi-stroke hgi-droplet" style="font-size: 32px; color: var(--secondary-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Ус нэвтэрдэггүй<br>дээд зэргийн чанар</h4>
+          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Ус
+            нэвтэрдэггүй<br>дээд зэргийн чанар</h4>
         </div>
 
         <!-- Card 3 -->
-        <div style="background: transparent; border: 1.5px solid rgba(16, 185, 129, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
+        <div
+          style="background: transparent; border: 1.5px solid rgba(16, 185, 129, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
           <i class="hgi-stroke hgi-layers-01" style="font-size: 32px; color: var(--safe-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Олон үйлдэлт<br>авсаархан хэмжээ</h4>
+          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Олон
+            үйлдэлт<br>авсаархан хэмжээ</h4>
         </div>
 
         <!-- Card 4 -->
-        <div style="background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
+        <div
+          style="background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
           <i class="hgi-stroke hgi-tick-01" style="font-size: 32px; color: var(--primary-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Хальтирдаггүй<br>тогтвортой бүтэц</h4>
+          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">
+            Хальтирдаггүй<br>тогтвортой бүтэц</h4>
         </div>
 
       </div>
@@ -2567,19 +2607,37 @@
     </section>
 
 
-    <section style="margin: 0 16px 32px; padding: 20px 16px; background: linear-gradient(160deg, var(--primary-soft) 0%, rgba(255,255,255, 0.6) 100%); text-align: center; border-radius: 12px; border: 1px dashed rgba(0, 212, 197, 0.4);">
-      <div style="color: var(--primary-dark); font-weight: 800; font-size: 14.5px; display: flex; align-items: center; justify-content: center; gap: 6px;">
-        <i class="hgi-stroke hgi-tick-01" style="font-size: 20px;"></i> Мянга мянган ээжүүдийн итгэлийг хүлээсэн
+    <section
+      style="position: relative; margin: 0 16px 32px; padding: 24px 16px; background: none; text-align: center; border: none; box-shadow: none;">
+      <img src="mommy.png" alt="Trust"
+        style="position: absolute; bottom: 10px; right: 10px; width: 64px; height: 64px; object-fit: contain; opacity: 1;">
+      <div
+        style="color: var(--primary-dark); font-weight: 800; font-size: 14.5px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+        Мянга мянган ээжүүдийн итгэлийг хүлээсэн
       </div>
       <div style="margin-top: 14px; display: flex; justify-content: center;">
         <style>
           @keyframes bounceDown {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(6px); }
-            60% { transform: translateY(3px); }
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+              transform: translateY(0);
+            }
+
+            40% {
+              transform: translateY(6px);
+            }
+
+            60% {
+              transform: translateY(3px);
+            }
           }
         </style>
-        <i class="hgi-stroke hgi-arrow-down-02" style="font-size: 32px; color: var(--primary-dark); animation: bounceDown 2s infinite ease-in-out;"></i>
+        <i class="hgi-stroke hgi-arrow-down-02"
+          style="font-size: 32px; color: var(--primary-dark); animation: bounceDown 2s infinite ease-in-out;"></i>
       </div>
     </section>
 
@@ -2698,7 +2756,8 @@
             <input type="radio" name="payment_method" value="Хүргүүлж авахдаа төлөх" onchange="togglePayment()">
             <div class="payment-radio" style="width: 18px; height: 18px; border-width: 1.5px;"></div>
             <div class="payment-info">
-              <div class="payment-title" style="font-size: 14px; font-weight: 600; color: #4B5563;">Хүргүүлж авахдаа төлөх (Бэлнээр)</div>
+              <div class="payment-title" style="font-size: 14px; font-weight: 600; color: #4B5563;">Хүргүүлж авахдаа
+                төлөх (Бэлнээр)</div>
               <div class="payment-desc" style="font-size: 12px; margin-top: 2px;">1-2 хоногийн дотор хүргэгдэнэ</div>
             </div>
           </label>
