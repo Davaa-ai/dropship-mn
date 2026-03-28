@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)</title>
+  <title>3 үйлдэлт хүүхдийн сандал</title>
   <meta name="description"
-    content="Хоолны болон үс, хөл угаах олон үйлдэлт хүүхдийн сандал. 3 үйлдэлт! ₮69,000. Үнэгүй хүргэлт.">
+    content="Хооллох, үс болон хөл угаахад зориулагдсан 3 үйлдэлт хүүхдийн сандал. ₮69,000. Үнэгүй хүргэлт.">
 
-  <meta property="og:title" content="Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)">
+  <meta property="og:title" content="3 үйлдэлт хүүхдийн сандал">
   <meta property="og:description"
-    content="Хооллох, үс болон хөл угаах зориулалттай олон үйлдэлт сандал. Одоо ₮60,000 хэмнэлттэй!">
-  <meta property="og:image" content="hero-image.png">
+    content="Хооллох, үс болон хөл угаахад ашиглах олон зориулалттай сандал. Одоо ₮60,000-ийн хэмнэлттэй!">
+  <meta property="og:image" content="hero-image.webp">
   <meta property="og:type" content="product">
 
   <link rel="icon"
@@ -30,7 +30,7 @@
       metaPixelId: '',
       gaMeasurementId: '',
       productId: 'baby-chair-3in1',
-      productName: 'Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)',
+      productName: '3 үйлдэлт хүүхдийн сандал',
       currency: 'MNT',
       unitPrice: 69000
     };
@@ -43,7 +43,7 @@
         gaEnabled: false,
         fired: {},
         productId: config.productId || 'baby-chair-3in1',
-        productName: config.productName || 'Олон үйлдэлт хүүхдийн сандал (3 үйлдэлт)',
+        productName: config.productName || '3 үйлдэлт хүүхдийн сандал',
         currency: config.currency || 'MNT',
         unitPrice: Number(config.unitPrice) || 69000
       };
@@ -254,7 +254,7 @@
     :root {
       --primary: #00D4C5;
       --primary-soft: #E8FAF9;
-      --primary-dark: #009E93;
+      --primary-dark: #00B4A6;
 
       --secondary: #3B82F6;
       --secondary-soft: #EFF6FF;
@@ -264,7 +264,7 @@
       --safe-soft: #ECFDF5;
       --safe-dark: #047857;
 
-      --text: #1F2937;
+      --text: #111827;
       --text-secondary: #4B5563;
       --text-muted: #9CA3AF;
       --bg: #F9FAFB;
@@ -337,7 +337,7 @@
 
     /* ===== TEAL CTA OVERRIDES ===== */
     .submit-btn {
-      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
       box-shadow: var(--shadow-teal) !important;
       border-radius: 8px !important;
       position: relative;
@@ -345,7 +345,7 @@
     }
 
     .cta-scroll-btn {
-      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
       box-shadow: var(--shadow-teal) !important;
       border-radius: 8px !important;
       position: relative;
@@ -358,16 +358,16 @@
     }
 
     .bank-header {
-      background: linear-gradient(135deg, #00D4C5, #009E93) !important;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
     }
 
     .step-badge {
-      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
       box-shadow: 0 2px 8px rgba(0, 212, 197, 0.3);
     }
 
     .btn-buy {
-      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
       box-shadow: 0 4px 16px rgba(0, 212, 197, 0.3) !important;
       transition: box-shadow 0.2s, transform 0.15s !important;
     }
@@ -396,7 +396,7 @@
     }
 
     .emotional-banner h2 {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 800;
       color: var(--warm);
       line-height: 1.6;
@@ -404,7 +404,7 @@
     }
 
     .emotional-banner p {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-secondary);
       line-height: 1.7;
     }
@@ -419,7 +419,7 @@
 
     .ub-card {
       border-radius: 12px;
-      padding: 14px 14px 16px;
+      padding: 16px 16px 16px;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -429,8 +429,8 @@
 
     .ub-card .ub-icon {
       position: absolute;
-      top: 14px;
-      right: 14px;
+      top: 16px;
+      right: 16px;
       font-size: 20px;
       display: flex;
       align-items: center;
@@ -443,7 +443,7 @@
     }
 
     .ub-card .ub-text h4 {
-      font-size: 13.5px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--text);
       margin-bottom: 6px;
@@ -476,9 +476,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 0;
+      padding: 16px 0;
       border-bottom: 1px solid rgba(237, 234, 231, 0.6);
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .savings-item:last-child {
@@ -489,7 +489,7 @@
       color: var(--text-secondary);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       font-weight: 500;
     }
 
@@ -506,11 +506,11 @@
 
     .savings-total {
       margin-top: 16px;
-      background: linear-gradient(135deg, #00D4C5, #00B4A6);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       border-radius: 10px;
       padding: 22px;
       text-align: center;
-      color: #fff;
+      color: var(--white);
       box-shadow: var(--shadow-teal);
       position: relative;
       overflow: hidden;
@@ -528,7 +528,7 @@
     }
 
     .savings-total .st-label {
-      font-size: 13px;
+      font-size: 12px;
       opacity: 0.9;
       margin-bottom: 6px;
       font-weight: 600;
@@ -541,7 +541,7 @@
     }
 
     .savings-total .st-vs {
-      font-size: 13px;
+      font-size: 12px;
       opacity: 0.85;
       margin-top: 6px;
       font-weight: 600;
@@ -557,13 +557,13 @@
     .safety-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 8px;
     }
 
     .safety-item {
       background: linear-gradient(160deg, var(--white) 50%, var(--primary-soft) 100%);
       border-radius: 10px;
-      padding: 22px 16px;
+      padding: 24px 16px;
       text-align: center;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
@@ -572,7 +572,7 @@
 
     .safety-item .si-icon {
       font-size: 28px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -584,14 +584,14 @@
     }
 
     .safety-item .si-title {
-      font-size: 13.5px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--warm);
       margin-bottom: 4px;
     }
 
     .safety-item .si-desc {
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--text-secondary);
       line-height: 1.55;
     }
@@ -614,15 +614,15 @@
     .cta-reviews .cta-social-text {
       color: var(--warm);
       font-weight: 700;
-      font-size: 13.5px;
-      margin-bottom: 10px;
+      font-size: 12px;
+      margin-bottom: 8px;
     }
 
     /* ===== PAYMENT OPTIONS ===== */
     .payment-options {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       margin-bottom: 16px;
     }
 
@@ -675,7 +675,7 @@
 
     .payment-title {
       font-weight: 700;
-      font-size: 14px;
+      font-size: 16px;
       color: var(--text);
     }
 
@@ -689,7 +689,7 @@
       background: var(--accent-soft);
       padding: 16px;
       border-radius: 8px;
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-secondary);
       margin-bottom: 24px;
       border-left: 4px solid var(--accent);
@@ -724,7 +724,7 @@
       scroll-snap-align: start;
       background:
         radial-gradient(circle at top left, rgba(0, 212, 197, 0.18), transparent 42%),
-        linear-gradient(160deg, #ffffff 0%, var(--primary-soft) 62%, #fff8f0 100%);
+        linear-gradient(160deg, var(--white) 0%, var(--primary-soft) 62%, #fff8f0 100%);
     }
 
     .gallery-placeholder-card {
@@ -750,7 +750,7 @@
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 0.8px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       padding: 0 12px;
     }
 
@@ -760,7 +760,7 @@
     }
 
     .gallery-placeholder-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 900;
       color: var(--warm);
       margin-bottom: 8px;
@@ -768,14 +768,14 @@
     }
 
     .gallery-placeholder-copy {
-      font-size: 13px;
+      font-size: 12px;
       line-height: 1.7;
       color: var(--text-secondary);
       margin-bottom: 12px;
     }
 
     .gallery-placeholder-meta {
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-muted);
       letter-spacing: 0.3px;
@@ -797,16 +797,16 @@
     .mode-placeholder-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 10px;
+      gap: 8px;
       padding: 0 16px 12px;
     }
 
     .mode-placeholder-card {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
-      padding: 18px 16px;
-      background: linear-gradient(160deg, #ffffff 30%, var(--primary-soft) 100%);
+      gap: 16px;
+      padding: 16px 16px;
+      background: linear-gradient(160deg, var(--white) 30%, var(--primary-soft) 100%);
       border: 1px solid rgba(0, 212, 197, 0.18);
       border-radius: 10px;
       box-shadow: var(--shadow-sm);
@@ -826,7 +826,7 @@
     }
 
     .mode-placeholder-title {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 800;
       color: var(--text);
       margin-bottom: 5px;
@@ -839,8 +839,8 @@
     }
 
     .mode-placeholder-note {
-      margin: 0 16px 18px;
-      padding: 14px 16px;
+      margin: 0 16px 16px;
+      padding: 16px 16px;
       background: rgba(239, 123, 132, 0.08);
       border: 1px dashed rgba(239, 123, 132, 0.28);
       border-radius: 10px;
@@ -860,7 +860,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .price-block .price-now {
@@ -881,7 +881,7 @@
     .price-block .price-badge {
       font-size: 12px;
       font-weight: 800;
-      color: #fff;
+      color: var(--white);
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       padding: 5px 12px;
       border-radius: 20px;
@@ -889,11 +889,11 @@
     }
 
     .price-block .product-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       line-height: 1.5;
       color: var(--text);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       margin-top: 0;
     }
 
@@ -901,7 +901,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-muted);
       margin-bottom: 0px;
       margin-top: 0;
@@ -910,7 +910,7 @@
     .price-block .divider {
       height: 1px;
       background: var(--border);
-      margin: 18px 0;
+      margin: 16px 0;
       opacity: 0.8;
     }
 
@@ -922,14 +922,14 @@
     .price-block .stats-row {
       display: flex;
       justify-content: space-between;
-      gap: 10px;
+      gap: 8px;
     }
 
     .price-block .stat-badge {
       text-align: center;
       flex: 1;
       background: linear-gradient(160deg, var(--bg), var(--white));
-      padding: 14px 8px;
+      padding: 16px 8px;
       border-radius: 8px;
       border: 1px solid var(--border);
     }
@@ -953,7 +953,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
     /* ===== BENEFIT LIST ===== */
@@ -963,13 +963,13 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     .benefit-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .benefit-icon {
@@ -987,7 +987,7 @@
     }
 
     .benefit-text {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-secondary);
       line-height: 1.45;
     }
@@ -1003,7 +1003,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .feature-chip {
@@ -1039,7 +1039,7 @@
 
     .guarantee-banner .gb-icon {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .guarantee-banner .gb-title {
@@ -1075,12 +1075,12 @@
     }
 
     .qty-label {
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--text-muted);
     }
 
     .qty-unit-price {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 800;
       color: var(--text);
     }
@@ -1090,7 +1090,7 @@
       font-weight: 700;
       color: var(--green);
       background: #f0fdf4;
-      padding: 7px 14px;
+      padding: 7px 16px;
       border-radius: 20px;
       border: 1px solid #bbf7d0;
     }
@@ -1134,7 +1134,7 @@
     .qty-stepper--sm .qty-btn {
       width: 36px;
       height: 36px;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .qty-btn:hover {
@@ -1175,7 +1175,7 @@
     }
 
     .qty-stepper--sm .qty-num {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .qty-unit {
@@ -1194,14 +1194,14 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 24px;
-      padding: 18px;
+      padding: 16px;
       background: linear-gradient(135deg, var(--primary-soft), #F0FDFA);
       border-radius: 10px;
       border: 1.5px dashed rgba(0, 212, 197, 0.3);
     }
 
     .qty-total-label {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--warm);
       font-weight: 700;
     }
@@ -1215,15 +1215,15 @@
     }
 
     .qty-bonus {
-      margin-top: 14px;
+      margin-top: 16px;
       text-align: center;
-      font-size: 13.5px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--warm);
       background: linear-gradient(135deg, var(--primary-soft), #FFF8F0);
       border: 1.5px dashed rgba(0, 212, 197, 0.3);
       border-radius: 8px;
-      padding: 14px;
+      padding: 16px;
       animation: bonusPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
@@ -1243,7 +1243,7 @@
     .section-head h2 {
       font-weight: 800;
       color: var(--text-secondary);
-      font-size: 13.5px !important;
+      font-size: 12px !important;
       text-transform: uppercase;
       letter-spacing: 0.8px;
     }
@@ -1257,7 +1257,7 @@
     .qa-q {
       font-weight: 700 !important;
       color: var(--warm) !important;
-      font-size: 13.5px !important;
+      font-size: 12px !important;
     }
 
     .qa-a {
@@ -1284,7 +1284,7 @@
 
     .btn-buy {
       border-radius: 8px !important;
-      background: linear-gradient(135deg, #00D4C5, #00B4A6) !important;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
       font-weight: 800 !important;
       box-shadow: var(--shadow-teal) !important;
     }
@@ -1298,13 +1298,13 @@
     .review-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       padding: 0 16px 16px;
     }
 
     .review-card {
       border: 1px solid var(--border) !important;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 16px;
       background: var(--white);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -1323,7 +1323,7 @@
 
     .review-card.is-expanded {
       border-left-color: var(--primary) !important;
-      background: linear-gradient(160deg, #ffffff 60%, var(--primary-soft) 100%);
+      background: linear-gradient(160deg, var(--white) 60%, var(--primary-soft) 100%);
     }
 
     .review-card .review-top {
@@ -1361,7 +1361,7 @@
     }
 
     .review-author {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 800;
       color: var(--text);
     }
@@ -1411,7 +1411,7 @@
       max-height: 0;
       overflow: hidden;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: 13.5px;
+      font-size: 12px;
       line-height: 1.6;
       color: var(--text-secondary);
       opacity: 0;
@@ -1442,7 +1442,7 @@
 
     .review-card.theme-blue.is-expanded {
       border-left-color: var(--secondary) !important;
-      background: linear-gradient(160deg, #ffffff 60%, var(--secondary-soft) 100%);
+      background: linear-gradient(160deg, var(--white) 60%, var(--secondary-soft) 100%);
     }
 
     .review-card.theme-green {
@@ -1451,7 +1451,7 @@
 
     .review-card.theme-green.is-expanded {
       border-left-color: var(--safe) !important;
-      background: linear-gradient(160deg, #ffffff 60%, var(--safe-soft) 100%);
+      background: linear-gradient(160deg, var(--white) 60%, var(--safe-soft) 100%);
     }
 
     .review-tags {
@@ -1467,7 +1467,7 @@
       background: rgba(255, 255, 255, 0.88);
       border: 1px solid var(--border);
       color: var(--warm);
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
       line-height: 1;
     }
@@ -1492,7 +1492,7 @@
     }
 
     .bank-header {
-      background: linear-gradient(135deg, #059669 0%, #10B981 100%) !important;
+      background: linear-gradient(135deg, #059669 0%, var(--safe) 100%) !important;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
@@ -1542,7 +1542,7 @@
       border: 1.5px solid #bdf2d0;
       border-radius: 16px;
       padding: 12px;
-      margin-top: 14px;
+      margin-top: 16px;
       box-shadow: 0 4px 15px rgba(22, 163, 74, 0.05);
     }
 
@@ -1553,7 +1553,7 @@
       font-size: 11px;
       font-weight: 800;
       color: #16a34a;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       margin-left: 10px;
       text-transform: uppercase;
       letter-spacing: 0.8px;
@@ -1561,7 +1561,7 @@
 
     /* ===== ORDER FORM — Premium ===== */
     .order-form h2 {
-      color: #111827 !important;
+      color: var(--text) !important;
       font-size: 28px !important;
       font-weight: 900 !important;
       letter-spacing: -1px !important;
@@ -1578,14 +1578,14 @@
     .mom-love-section {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 16px;
     }
 
     .mom-love-intro {
       position: relative;
       overflow: hidden;
-      padding: 18px;
-      border-radius: 18px;
+      padding: 16px;
+      border-radius: 16px;
       background:
         radial-gradient(circle at top right, rgba(59, 130, 246, 0.14), transparent 34%),
         linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(232, 250, 249, 0.96) 58%, rgba(239, 246, 255, 0.98) 100%);
@@ -1623,7 +1623,7 @@
     }
 
     .mom-love-kicker i {
-      font-size: 14px;
+      font-size: 16px;
       color: var(--primary);
     }
 
@@ -1636,7 +1636,7 @@
       font-weight: 900;
       line-height: 1.25;
       letter-spacing: -0.5px;
-      color: #111827;
+      color: var(--text);
     }
 
     .mom-love-intro p {
@@ -1644,7 +1644,7 @@
       z-index: 1;
       max-width: 330px;
       margin: 0;
-      font-size: 13.5px;
+      font-size: 12px;
       line-height: 1.65;
       color: var(--text-secondary);
     }
@@ -1655,7 +1655,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
     .mom-love-chip {
@@ -1667,13 +1667,13 @@
       background: rgba(255, 255, 255, 0.86);
       border: 1px solid rgba(17, 24, 39, 0.06);
       box-shadow: 0 3px 10px rgba(17, 24, 39, 0.04);
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text);
     }
 
     .mom-love-chip i {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--primary);
     }
 
@@ -1690,8 +1690,8 @@
       position: relative;
       overflow: hidden;
       padding: 16px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #ffffff 0%, var(--card-soft) 160%);
+      border-radius: 16px;
+      background: linear-gradient(180deg, var(--white) 0%, var(--card-soft) 160%);
       border: 1px solid var(--card-border);
       box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
     }
@@ -1726,13 +1726,13 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .mom-love-icon {
       width: 48px;
       height: 48px;
-      border-radius: 14px;
+      border-radius: 16px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1765,12 +1765,12 @@
       font-weight: 900;
       line-height: 1.28;
       letter-spacing: -0.3px;
-      color: #111827;
+      color: var(--text);
     }
 
     .mom-love-card p {
       margin: 0;
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-secondary);
       line-height: 1.6;
     }
@@ -1779,8 +1779,8 @@
       display: flex;
       flex-direction: column;
       gap: 9px;
-      margin-top: 14px;
-      padding-top: 14px;
+      margin-top: 16px;
+      padding-top: 16px;
       border-top: 1px dashed rgba(17, 24, 39, 0.08);
     }
 
@@ -1839,7 +1839,7 @@
 
     .faq-answer-inner {
       padding: 0 16px 16px;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 1.6;
       color: var(--text-secondary);
     }
@@ -1864,7 +1864,7 @@
     /* ===== PROMO & URGENCY CARD ===== */
     .promo-card {
       margin: 0 16px 20px;
-      background: #ffffff;
+      background: var(--white);
       border: 1px solid rgba(0, 0, 0, 0.04);
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -1876,13 +1876,13 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 18px 16px;
-      background: #ffffff;
+      padding: 16px 16px;
+      background: var(--white);
     }
 
     .promo-text {
       color: #71717A;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       display: flex;
       align-items: center;
@@ -1901,7 +1901,7 @@
 
     .timer b {
       background: #2D2926;
-      color: #ffffff;
+      color: var(--white);
       font-size: 15px;
       font-weight: 700;
       padding: 5px 6px;
@@ -1924,13 +1924,13 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      padding: 14px 16px;
+      padding: 16px 16px;
       background: rgba(0, 212, 197, 0.08);
       border-top: 1px dashed rgba(0, 212, 197, 0.2);
     }
 
     .urgency span {
-      font-size: 13.5px;
+      font-size: 12px;
       color: #52525B;
       font-weight: 500;
       display: flex;
@@ -1948,13 +1948,342 @@
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #00D4C5;
+      background: var(--primary);
       margin-right: 8px;
     }
 
     .stock-low {
       font-weight: 600 !important;
-      color: #00D4C5 !important;
+      color: var(--primary) !important;
+    }
+
+    /* ===== EXTRACTED COMPONENTS ===== */
+    .trust-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .trust-badge-icon {
+      color: var(--safe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .trust-badge-text {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--safe);
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: 1.5px solid rgba(0, 0, 0, 0.07);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card-head {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-card-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .feature-card-body {
+      padding: 16px;
+    }
+
+    .feature-card-desc {
+      margin: 0;
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ===== COMPACT MOBILE — prevent text wrapping on narrow screens ===== */
+    @media (max-width: 420px) {
+
+      /* — Hero title — */
+      .product-hero-section .product-title {
+        font-size: 20px !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 8px !important;
+        line-height: 1.25 !important;
+      }
+
+      /* — Description paragraph below title — */
+      .hero-desc {
+        font-size: 13px !important;
+        line-height: 1.45 !important;
+        margin-bottom: 12px !important;
+      }
+
+      /* — Rating row — */
+      .rating-row {
+        gap: 8px !important;
+        font-size: 11px !important;
+      }
+
+      .rating-row .stars span {
+        font-size: 13px !important;
+      }
+
+      /* — Main price — */
+      .hero-price {
+        font-size: 26px !important;
+        letter-spacing: -1px !important;
+      }
+
+      /* — Section headings (uppercase small ones) — */
+      .section-head h2 {
+        font-size: 11px !important;
+        letter-spacing: 0.6px !important;
+      }
+
+      /* — Compact section headings (big readable ones) — */
+      .compact-heading {
+        font-size: 16px !important;
+        letter-spacing: -0.3px !important;
+        text-transform: none !important;
+      }
+
+      /* — Feature card titles — */
+      .feature-card-title {
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+      }
+
+      .feature-card-head {
+        padding: 10px 12px !important;
+        gap: 6px !important;
+      }
+
+      .feature-card-head i {
+        font-size: 14px !important;
+      }
+
+      .feature-card-body {
+        padding: 10px 12px !important;
+      }
+
+      .feature-card-desc {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+      }
+
+      /* — Trust badge text (Байгальд ээлтэй, etc.) — */
+      .trust-badge-text {
+        font-size: 10px !important;
+        letter-spacing: 0 !important;
+      }
+
+      .trust-badge-icon svg {
+        width: 22px !important;
+        height: 22px !important;
+      }
+
+      .trust-badge {
+        gap: 4px !important;
+      }
+
+      /* — CTA buttons — */
+      .cta-scroll-btn {
+        font-size: 14px !important;
+        padding: 14px 12px !important;
+      }
+
+      .cta-scroll-btn i {
+        font-size: 16px !important;
+      }
+
+      .cta-scroll-btn span {
+        font-size: 11px !important;
+      }
+
+      /* — Promo card (discount timer) — */
+      .promo-card .promo-strip {
+        padding: 8px 10px !important;
+        gap: 4px !important;
+      }
+
+      .promo-card .promo-text {
+        font-size: 11px !important;
+      }
+
+      .promo-card .urgency {
+        padding: 6px 10px !important;
+        gap: 4px !important;
+      }
+
+      .promo-card .urgency span {
+        font-size: 11px !important;
+      }
+
+      /* — Emotional banner — */
+      .emotional-banner {
+        padding: 20px 16px !important;
+      }
+
+      .emotional-banner h2 {
+        font-size: 14px !important;
+      }
+
+      .emotional-banner p {
+        font-size: 11px !important;
+      }
+
+      /* — Guarantee banner — */
+      .guarantee-banner .gb-title {
+        font-size: 13px !important;
+      }
+
+      .guarantee-banner .gb-desc {
+        font-size: 11px !important;
+      }
+
+      /* — Savings section — */
+      .savings-item {
+        font-size: 13px !important;
+        padding: 12px 0 !important;
+      }
+
+      .savings-total .st-amount {
+        font-size: 26px !important;
+      }
+
+      /* — Mom love section — */
+      .mom-love-intro h3 {
+        font-size: 17px !important;
+      }
+
+      .mom-love-card h4 {
+        font-size: 15px !important;
+      }
+
+      .mom-love-point {
+        font-size: 11.5px !important;
+      }
+
+      /* — Order form — */
+      .order-form h2 {
+        font-size: 22px !important;
+      }
+
+      /* — Review cards — */
+      .review-author {
+        font-size: 13px !important;
+      }
+
+      /* — Bottom bar — */
+      .btn-buy {
+        font-size: 14px !important;
+      }
+
+      /* — Sections — tighter vertical spacing — */
+      section {
+        margin: 20px 0 16px !important;
+      }
+
+      /* — Qty — */
+      .qty-total-label {
+        font-size: 14px !important;
+      }
+
+      .qty-total-price {
+        font-size: 22px !important;
+      }
+
+      /* — Price block spacing — */
+      .price-block {
+        padding: 10px 14px 14px !important;
+      }
+
+      /* — Inline CTA safe badge above button — */
+      .inline-cta span[style*="font-size: 11px"] {
+        font-size: 10px !important;
+      }
+
+      /* — Payment options — */
+      .payment-title {
+        font-size: 14px !important;
+      }
+
+      /* — "Trusted by moms" text center section — */
+      section > div[style*="font-size: 16px"][style*="font-weight: 800"] {
+        font-size: 13px !important;
+      }
+    }
+
+    /* Extra narrow — iPhone SE, Galaxy Fold etc. */
+    @media (max-width: 340px) {
+
+      .product-hero-section .product-title {
+        font-size: 18px !important;
+      }
+
+      .hero-desc {
+        font-size: 12px !important;
+      }
+
+      .hero-price {
+        font-size: 22px !important;
+      }
+
+      .compact-heading {
+        font-size: 14px !important;
+      }
+
+      .feature-card-title {
+        font-size: 12px !important;
+      }
+
+      .feature-card-desc {
+        font-size: 10px !important;
+      }
+
+      .trust-badge-text {
+        font-size: 9px !important;
+      }
+
+      .cta-scroll-btn {
+        font-size: 13px !important;
+        padding: 12px 10px !important;
+      }
+
+      .mom-love-intro h3 {
+        font-size: 15px !important;
+      }
+
+      .mom-love-card h4 {
+        font-size: 13px !important;
+      }
+
+      .savings-total .st-amount {
+        font-size: 22px !important;
+      }
+
+      .order-form h2 {
+        font-size: 20px !important;
+      }
     }
   </style>
 </head>
@@ -1963,7 +2292,7 @@
 
 
   <div class="product-hero-section"
-    style="background: #ffffff; padding-bottom: 24px; border-bottom: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: 8px;">
+    style="background: var(--white); padding-bottom: 24px; border-bottom: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: 8px;">
     <header class="header" style="position: relative; justify-content: center; border-bottom: none;">
 
       <div style="display: flex; align-items: center; gap: 8px;">
@@ -1983,10 +2312,10 @@
 
     <div style="padding: 16px 16px 16px;">
       <h1 class="product-title"
-        style="font-size: 26px; font-weight: 900; margin-bottom: 12px; margin-top: 0; line-height: 1.2; color: #111827; letter-spacing: -0.8px;">
+        style="font-size: 26px; font-weight: 900; margin-bottom: 12px; margin-top: 0; line-height: 1.2; color: var(--text); letter-spacing: -0.8px;">
         Хүүхдийн 3 үйлдэлт сандал</h1>
 
-      <div class="rating-row" style="display: flex; align-items: center; gap: 12px; font-size: 13px;">
+      <div class="rating-row" style="display: flex; align-items: center; gap: 12px; font-size: 12px;">
         <div style="display: flex; align-items: center; gap: 6px;">
           <span class="stars" style="display: flex; gap: 3px; align-items: center;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B">
@@ -2011,15 +2340,15 @@
               <path fill="url(#starGradient48)"
                 d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
-            <span style="font-weight: 800; font-size: 14px; line-height: 1; margin-left: 2px;">4.8/5</span>
+            <span style="font-weight: 800; font-size: 16px; line-height: 1; margin-left: 2px;">4.8/5</span>
           </span>
         </div>
 
-        <div style="height: 14px; width: 1px; background: #E5E7EB;"></div>
+        <div style="height: 16px; width: 1px; background: #E5E7EB;"></div>
 
         <span style="color: var(--primary-dark); font-weight: 700; display: flex; align-items: center; gap: 4px;">
-          <i class="hgi-stroke hgi-user-group" style="font-size: 14px; color: var(--primary-dark);"></i>
-          <span>Мянга мянган ээжүүдийн сонголт</span>
+          <i class="hgi-stroke hgi-user-group" style="font-size: 16px; color: var(--primary-dark);"></i>
+          <span>Мянга мянган ээжүүдийн ухаалаг сонголт</span>
         </span>
       </div>
     </div>
@@ -2031,6 +2360,68 @@
         <style>
           .gallery::-webkit-scrollbar {
             display: none;
+          }
+
+          /* ===== EXTRACTED COMPONENTS ===== */
+          .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            text-align: center;
+          }
+
+          .trust-badge-icon {
+            color: var(--safe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .trust-badge-text {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--safe);
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            line-height: 1.2;
+          }
+
+          .feature-card {
+            background: var(--white);
+            border: 1.5px solid rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+          }
+
+          .feature-card-head {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+
+          .feature-card-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.3;
+          }
+
+          .feature-card-body {
+            padding: 16px;
+          }
+
+          .feature-card-desc {
+            margin: 0;
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
           }
         </style>
 
@@ -2045,22 +2436,29 @@
 
         <!-- Slide 2: Main Image -->
         <div
-          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <img src="hero-image.png" alt="Олон үйлдэлт хүүхдийн сандал"
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="hero-image.webp" alt="3 үйлдэлт хүүхдийн сандал"
             style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
 
-        <!-- Slide 3: Size 1 Image -->
+        <!-- Slide 3: Colors Image -->
         <div
-          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <img src="size1.png" alt="Олон үйлдэлт хүүхдийн сандал хэмжээ"
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="prod-colors.webp" alt="Өнгөний сонголт"
             style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
 
-        <!-- Slide 4: Size 2 Image -->
+        <!-- Slide 4: Size 1 Image -->
         <div
-          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-          <img src="size2.png" alt="Олон үйлдэлт хүүхдийн сандал хэмжээ"
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="size1.webp" alt="3 үйлдэлт хүүхдийн сандлын хэмжээ"
+            style="width: 100%; height: 100%; object-fit: contain; display: block;">
+        </div>
+
+        <!-- Slide 5: Size 2 Image -->
+        <div
+          style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+          <img src="size2.webp" alt="3 үйлдэлт хүүхдийн сандлын хэмжээ"
             style="width: 100%; height: 100%; object-fit: contain; display: block;">
         </div>
 
@@ -2070,7 +2468,7 @@
 
       <!-- Pagination Indicators -->
       <div id="gallery-indicators"
-        style="display: flex; justify-content: center; gap: 6px; margin-top: 14px; margin-bottom: 2px;">
+        style="display: flex; justify-content: center; gap: 6px; margin-top: 16px; margin-bottom: 2px;">
         <div class="indicator active" onclick="scrollToSlide(0)"
           style="width: 24px; height: 6px; border-radius: 3px; background: var(--primary-teal); transition: 0.3s; cursor: pointer;">
         </div>
@@ -2081,6 +2479,9 @@
           style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
         </div>
         <div class="indicator" onclick="scrollToSlide(3)"
+          style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
+        </div>
+        <div class="indicator" onclick="scrollToSlide(4)"
           style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
         </div>
       </div>
@@ -2115,7 +2516,7 @@
           gallery.addEventListener('scroll', () => {
             const scrollPos = gallery.scrollLeft;
             const slideWidth = gallery.clientWidth * 0.9 + 12; // 90% width + 12px gap
-            const activeIndex = Math.max(0, Math.min(3, Math.round(scrollPos / slideWidth)));
+            const activeIndex = Math.max(0, Math.min(4, Math.round(scrollPos / slideWidth)));
 
             indicators.forEach((ind, i) => {
               if (i === activeIndex) {
@@ -2151,64 +2552,68 @@
 
     <div class="price-block" style="margin: 0; padding: 12px 16px 16px;">
 
-      <p style="font-size: 14.5px; color: var(--text-secondary); margin-bottom: 16px; margin-top: 0; line-height: 1.5;">
+      <p class="hero-desc" style="font-size: 16px; color: var(--text-secondary); margin-bottom: 16px; margin-top: 0; line-height: 1.5;">
         <strong>Хооллох, үс угаах болон хөл угаахад</strong> зориулагдсан ээжүүдийн ухаалаг туслах.
       </p>
 
-      <div
-        style="display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 800; color: #ea580c; background: rgba(234, 88, 12, 0.08); border: 1.5px solid rgba(234, 88, 12, 0.25); padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.3px; box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);">
-        <i class="hgi-stroke hgi-fire" style="font-size: 16px;"></i> Дэлхийд трэнд болж буй
-      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+        <!-- Badges Row -->
+        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+          <!-- Trending label -->
+          <div
+            style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 800; color: #ea580c; background: rgba(234, 88, 12, 0.08); border: 1.5px solid rgba(234, 88, 12, 0.25); padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.3px;">
+            <i class="hgi-stroke hgi-fire" style="font-size: 16px;"></i> Дэлхийд трэнд болж буй
 
-      <div class="price-row" style="display: flex; align-items: flex-end; gap: 12px; margin-bottom: 8px;">
-        <span class="price-now"
-          style="font-size: 38px; font-weight: 900; line-height: 1; color: #111827; letter-spacing: -1.5px;">₮69,000</span>
-        <div style="display: flex; flex-direction: column; gap: 4px; padding-bottom: 2px;">
+          </div>
+
+          <!-- Product feature badge -->
           <span
-            style="font-size: 11px; font-weight: 800; color: #ea580c; background: rgba(234, 88, 12, 0.08); padding: 3px 6px; border-radius: 4px; line-height: 1; display: inline-flex; align-items: center; width: max-content; border: 1.5px solid rgba(234, 88, 12, 0.25);">
-            <i class="hgi-stroke hgi-sale-tag-02" style="font-size: 12px; margin-right: 3px;"></i>₮60,000 ХЭМНЭЛТ
+            style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); border: none; padding: 4px 10px; border-radius: 6px; font-weight: 800; font-size: 11px; box-shadow: 0 4px 10px rgba(0,212,197,0.15); display: inline-flex; align-items: center;">
+            <i class="hgi-stroke hgi-sparkles" style="font-size: 12px; margin-right: 4px;"></i> 3 үйлдэлт
           </span>
-          <span class="price-was"
-            style="font-size: 16px; color: #9CA3AF; text-decoration: line-through; font-weight: 500; line-height: 1;">₮129,000</span>
         </div>
-      </div>
 
+        <!-- Prices Row -->
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <span
+            class="hero-price" style="font-size: clamp(28px, 8vw, 38px); font-weight: 900; line-height: 1; color: var(--text); letter-spacing: -1.5px;">₮69,000</span>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span
+              style="font-size: clamp(14px, 4vw, 16px); color: var(--text-muted); text-decoration: line-through; font-weight: 500;">₮129,000</span>
 
-
-      <div class="feature-chips"
-        style="gap: 8px; margin-bottom: 20px; display: flex; flex-wrap: wrap; align-items: center;">
-        <!-- 3 үйлдэлт — Teal Highlight -->
-        <span class="feature-chip"
-          style="background: linear-gradient(135deg, #00D4C5, #00B4A6); color: #fff; border: none; padding: 4px 12px; border-radius: 8px; font-weight: 800; font-size: 11px; box-shadow: 0 4px 12px rgba(0,212,197,0.15); display: inline-flex; align-items: center;">
-          <i class="hgi-stroke hgi-sparkles" style="color: #fff; font-size: 13px; margin-right: 4px;"></i>3 үйлдэлт
-        </span>
+            <!-- Discount badge -->
+            <span
+              style="font-size: 11px; font-weight: 800; color: #ea580c; background: rgba(234, 88, 12, 0.08); border: 1.5px dashed rgba(234, 88, 12, 0.25); padding: 4px 8px; border-radius: 6px; display: inline-flex; align-items: center;">
+              <i class="hgi-stroke hgi-sale-tag-02" style="font-size: 12px; margin-right: 4px;"></i> ₮60к ХЭМНЭЛТ
+            </span>
+          </div>
+        </div>
       </div>
 
       <div class="divider" style="margin-bottom: 16px;"></div>
 
       <div style="margin: 0 -16px 4px; padding: 0 16px; text-align: center;">
-        <img src="modular-transparent.png" alt="3 үйлдэлт сандал"
+        <img src="modular-transparent.webp" alt="3 үйлдэлт сандал"
           style="width: 100%; height: auto; object-fit: contain;" />
       </div>
 
       <!-- Trust Badges — icons with clever Mongolian text -->
       <div
-        style="display: flex; justify-content: space-around; align-items: flex-start; margin: 0 0 48px; padding: 4px 8px;">
+        style="display: flex; justify-content: space-around; align-items: flex-start; margin: 0 0 32px; padding: 4px 8px;">
 
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
-          <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
               <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
             </svg>
           </div>
-          <span
-            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Байгальд<br>ээлтэй</span>
+          <span class="trust-badge-text">Байгальд ээлтэй</span>
         </div>
 
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
-          <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -2216,33 +2621,29 @@
               <path d="M8 12h8"></path>
             </svg>
           </div>
-          <span
-            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Эрүүл<br>хэрэглээ</span>
+          <span class="trust-badge-text">Эрүүл хэрэглээ</span>
         </div>
 
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
-          <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               <path d="m9 12 2 2 4-4"></path>
             </svg>
           </div>
-          <span
-            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Сэтгэл<br>амар</span>
+          <span class="trust-badge-text">Найдвартай</span>
         </div>
 
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; text-align: center;">
-          <div style="color: #10B981; display: flex; justify-content: center; align-items: center;">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <span
-            style="font-size: 10px; font-weight: 800; color: #10B981; text-transform: uppercase; letter-spacing: 0.2px; line-height: 1.2;">Ган
-            шиг<br>бат</span>
+          <span class="trust-badge-text">Бат бөх чанар</span>
         </div>
 
       </div>
@@ -2250,19 +2651,19 @@
       <div class="inline-cta" style="margin-bottom: 24px; padding: 0 16px;">
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div
-            style="background: #ECFDF5; border: 1.5px solid #10B981; border-bottom: none; border-radius: 10px 10px 0 0; padding: 5px 16px 14px; margin-bottom: -10px; display: inline-flex; align-items: center; gap: 6px; position: relative; z-index: 0;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2.5"
+            style="background: #ECFDF5; border: 1.5px solid var(--safe); border-bottom: none; border-radius: 10px 10px 0 0; padding: 5px 16px 16px; margin-bottom: -10px; display: inline-flex; align-items: center; gap: 6px; position: relative; z-index: 0;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--safe-dark)" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round" style="transform: translateY(-0.5px);">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               <path d="m9 12 2 2 4-4"></path>
             </svg>
             <span
-              style="color: #047857; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Эрсдэлгүй
-              захиалга</span>
+              style="color: var(--safe-dark); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Эрсдэлгүй,
+              баталгаат захиалга</span>
           </div>
           <button class="cta-scroll-btn"
             onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
-            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 18px; font-size: 16px; font-weight: 800; color: #fff; border: none; cursor: pointer; position: relative; z-index: 1;">
+            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-size: 16px; font-weight: 800; color: var(--white); border: none; cursor: pointer; position: relative; z-index: 1;">
             <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 20px;"></i>
             Захиалах
             <span style="font-size: 12.5px; opacity: 0.9; font-weight: 600; margin-left: 2px;">— Хүргэлт үнэгүй</span>
@@ -2283,13 +2684,13 @@
           </div>
           <div class="timer" style="display: flex; align-items: center; gap: 3px;">
             <b id="h"
-              style="background: var(--text); color: #ffffff; font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">12</b><span
+              style="background: var(--text); color: var(--white); font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">12</b><span
               class="colon" style="color: var(--text); font-weight: 800; font-size: 11px;">:</span>
             <b id="m"
-              style="background: var(--text); color: #ffffff; font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">39</b><span
+              style="background: var(--text); color: var(--white); font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">39</b><span
               class="colon" style="color: var(--text); font-weight: 800; font-size: 11px;">:</span>
             <b id="s"
-              style="background: var(--text); color: #ffffff; font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">28</b>
+              style="background: var(--text); color: var(--white); font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">28</b>
           </div>
         </div>
         <div class="urgency"
@@ -2298,7 +2699,7 @@
             style="font-size: 12px; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center;">
             <span class="live-dot"
               style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 6px; box-shadow: 0 0 0 rgba(239, 123, 132, 0.7);"></span>
-            Одоо <b>&nbsp;45 хүн&nbsp;</b> үзэж байна
+            Яг одоо <b>&nbsp;45 хүн&nbsp;</b> сонирхож байна
           </span>
           <span class="stock-low" style="font-weight: 700; color: var(--accent) !important; font-size: 12px;">(Цөөн
             үлдлээ!)</span>
@@ -2310,43 +2711,59 @@
 
 
     <section style="padding: 0 16px;">
-      <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
-        <h2 style="font-size: 24px; font-weight: 900; color: #111827; letter-spacing: -0.5px;">Яагаад ээжүүд дуртай вэ?
-        </h2>
+      <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
+        <h2 class="compact-heading" style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Ээжүүд яагаад үүнд
+          дуртай байдаг вэ?</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
 
-        <!-- Card 1 -->
-        <div
-          style="background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
-          <i class="hgi-stroke hgi-smile" style="font-size: 32px; color: var(--primary-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Тайван
-            хэвтэх<br>налуу түшлэг</h4>
+        <!-- Card 1: Reclining -->
+        <div class="feature-card">
+          <div class="feature-card-head"
+            style="background: linear-gradient(135deg, rgba(0,212,197,0.1) 0%, rgba(0,212,197,0.03) 100%); border-bottom: 1px solid rgba(0,212,197,0.1);">
+            <i class="hgi-stroke hgi-smile" style="font-size: 16px; color: var(--primary-dark);"></i>
+            <h4 class="feature-card-title">Налах боломжтой түшлэг</h4>
+          </div>
+          <div class="feature-card-body">
+            <p class="feature-card-desc">Үс угаахад хүүхдэд хамгийн тухтай байрлал</p>
+          </div>
         </div>
 
-        <!-- Card 2 -->
-        <div
-          style="background: transparent; border: 1.5px solid rgba(59, 130, 246, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
-          <i class="hgi-stroke hgi-droplet" style="font-size: 32px; color: var(--secondary-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Ус
-            нэвтэрдэггүй<br>дээд зэргийн чанар</h4>
+        <!-- Card 2: Waterproof -->
+        <div class="feature-card">
+          <div class="feature-card-head"
+            style="background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(59,130,246,0.03) 100%); border-bottom: 1px solid rgba(59,130,246,0.1);">
+            <i class="hgi-stroke hgi-droplet" style="font-size: 16px; color: var(--secondary-dark);"></i>
+            <h4 class="feature-card-title">Усанд тэсвэртэй</h4>
+          </div>
+          <div class="feature-card-body">
+            <p class="feature-card-desc">Цэвэрлэхэд маш амар, сайн чанарын PP материалтай</p>
+          </div>
         </div>
 
-        <!-- Card 3 -->
-        <div
-          style="background: transparent; border: 1.5px solid rgba(16, 185, 129, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
-          <i class="hgi-stroke hgi-layers-01" style="font-size: 32px; color: var(--safe-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">Олон
-            үйлдэлт<br>авсаархан хэмжээ</h4>
+        <!-- Card 3: Multi-function -->
+        <div class="feature-card">
+          <div class="feature-card-head"
+            style="background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(16,185,129,0.03) 100%); border-bottom: 1px solid rgba(16,185,129,0.1);">
+            <i class="hgi-stroke hgi-layers-01" style="font-size: 16px; color: var(--safe-dark);"></i>
+            <h4 class="feature-card-title">3 төрлийн хэрэглээ</h4>
+          </div>
+          <div class="feature-card-body">
+            <p class="feature-card-desc">Хооллох, үс угаах, хөл угаах — ганцхан сандал бүгдийг шийднэ</p>
+          </div>
         </div>
 
-        <!-- Card 4 -->
-        <div
-          style="background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.15); border-radius: 16px; padding: 24px 12px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px;">
-          <i class="hgi-stroke hgi-tick-01" style="font-size: 32px; color: var(--primary-dark);"></i>
-          <h4 style="margin: 0; font-size: 13.5px; font-weight: 800; color: #111827; line-height: 1.35;">
-            Хальтирдаггүй<br>тогтвортой бүтэц</h4>
+        <!-- Card 4: Non-slip -->
+        <div class="feature-card">
+          <div class="feature-card-head"
+            style="background: linear-gradient(135deg, rgba(0,212,197,0.1) 0%, rgba(0,212,197,0.03) 100%); border-bottom: 1px solid rgba(0,212,197,0.1);">
+            <i class="hgi-stroke hgi-tick-01" style="font-size: 16px; color: var(--primary-dark);"></i>
+            <h4 class="feature-card-title">Хальтардаггүй хөл</h4>
+          </div>
+          <div class="feature-card-body">
+            <p class="feature-card-desc">Аюулгүй, тогтвортой бүтэцтэй тул ээжүүд сэтгэл амар байна</p>
+          </div>
         </div>
 
       </div>
@@ -2356,53 +2773,102 @@
 
 
 
-    <section>
-      <div class="section-head">
-        <h2>Хэдэн төгрөг хэмнэх вэ?</h2>
+    <section style="padding: 0 16px;">
+      <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
+        <h2 class="compact-heading" style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Та нийт хэдийг хэмнэх
+          вэ?</h2>
       </div>
-      <div class="savings-section">
-        <div style="background: transparent; border: 1px dotted #16A34A; padding: 20px;">
-          <!-- Compact & Simple Breakdown -->
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <!-- Item 1 -->
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 14px; color: #4B5563;">Хоолны сандал</span>
-              <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮80k — 120k</span>
-            </div>
-            <div style="border-top: 1px dotted #16A34A;"></div>
 
-            <!-- Item 2 -->
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 14px; color: #4B5563;">Үс угаах сандал</span>
-              <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮40k — 60k</span>
-            </div>
-            <div style="border-top: 1px dotted #16A34A;"></div>
+      <div
+        style="background: var(--white); border: 1.5px solid rgba(22,163,74,0.2); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(22,163,74,0.06);">
 
-            <!-- Item 3 -->
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 14px; color: #4B5563;">Хөл угаах тавиур</span>
-              <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮30k — 50k</span>
-            </div>
+        <!-- Header label -->
+        <div
+          style="background: linear-gradient(135deg, rgba(22,163,74,0.07) 0%, rgba(16,185,129,0.05) 100%); padding: 12px 16px; border-bottom: 1px solid rgba(22,163,74,0.1); display: flex; align-items: center; gap: 8px;">
+          <i class="hgi-stroke hgi-calculator" style="font-size: 16px; color: #16A34A;"></i>
+          <span
+            style="font-size: 12px; font-weight: 800; color: #16A34A; text-transform: uppercase; letter-spacing: 0.4px;">Хэрэв
+            тус тусад нь авбал...</span>
+        </div>
 
-            <div style="border-top: 2px dotted #16A34A; margin-top: 4px;"></div>
+        <!-- Breakdown rows -->
+        <div style="padding: 16px 16px 0;">
 
-            <!-- Summary -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
-              <span style="font-size: 15px; font-weight: 800; color: #111827;">Нийт зардал</span>
-              <span style="font-size: 14px; color: #9CA3AF; text-decoration: line-through;">₮150k — 230k</span>
-            </div>
-
-            <div style="margin-top: 20px; text-align: center;">
-              <div style="color: #16A34A; font-weight: 900; font-size: 16px; margin-bottom: 20px;">
-                ₮81,000 — ₮161,000 хэмнэх боломж!
+          <!-- Row 1 -->
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div
+                style="width: 32px; height: 32px; border-radius: 8px; background: rgba(0,212,197,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="hgi-stroke hgi-chair-01" style="font-size: 16px; color: var(--primary-dark);"></i>
               </div>
-              <button class="cta-scroll-btn"
-                onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})">
-                <i class="hgi-stroke hgi-fire"></i> Хямдралтай үнээр авах
-              </button>
+              <span style="font-size: 12px; font-weight: 700; color: #374151;">Хоолны сандал</span>
             </div>
+            <span
+              style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮80,000–120,000</span>
+          </div>
+
+          <!-- Row 2 -->
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div
+                style="width: 32px; height: 32px; border-radius: 8px; background: rgba(59,130,246,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="hgi-stroke hgi-shampoo" style="font-size: 16px; color: var(--secondary-dark);"></i>
+              </div>
+              <span style="font-size: 12px; font-weight: 700; color: #374151;">Үс угаах сандал</span>
+            </div>
+            <span
+              style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮40,000–60,000</span>
+          </div>
+
+          <!-- Row 3 -->
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div
+                style="width: 32px; height: 32px; border-radius: 8px; background: rgba(16,185,129,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <i class="hgi-stroke hgi-bathtub-01" style="font-size: 16px; color: var(--safe-dark);"></i>
+              </div>
+              <span style="font-size: 12px; font-weight: 700; color: #374151;">Хөл угаах тавиур</span>
+            </div>
+            <span
+              style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮30,000–50,000</span>
           </div>
         </div>
+
+        <!-- Divider -->
+        <div style="margin: 0 16px; border-top: 2px dashed rgba(22,163,74,0.2);"></div>
+
+        <!-- Total row -->
+        <div
+          style="padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; background: rgba(22,163,74,0.03);">
+          <span style="font-size: 12px; font-weight: 700; color: #374151;">Нийт зардал</span>
+          <span
+            style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮150,000–230,000</span>
+        </div>
+
+        <!-- Savings highlight -->
+        <div
+          style="margin: 0 12px 12px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px dashed rgba(22,163,74,0.35); border-radius: 12px; padding: 16px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <i class="hgi-stroke hgi-save-money-pound" style="font-size: 16px; color: #16A34A;"></i>
+            <div
+              style="font-size: 11px; font-weight: 700; color: #16A34A; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px;">
+              Таны хэмнэлт</div>
+          </div>
+          <div style="font-size: 22px; font-weight: 900; color: #15803D; letter-spacing: -0.5px;">₮81,000–₮161,000</div>
+        </div>
+
+        <!-- CTA -->
+        <div style="padding: 0 12px 16px;">
+          <button class="cta-scroll-btn"
+            onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 800;">
+            <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 16px;"></i>
+            Хэмнэлттэй үнээр авах
+          </button>
+        </div>
+
       </div>
     </section>
 
@@ -2411,86 +2877,105 @@
 
     <section style="padding: 0 16px;">
       <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 16px;">
-        <h2>Бүтээгдэхүүний дэлгэрэнгүй</h2>
+        <h2 class="compact-heading" style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Бүтээгдэхүүний
+          дэлгэрэнгүй</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <!-- Spec 1: Material -->
+      <div
+        style="background: var(--white); border: 1.5px solid rgba(0,0,0,0.07); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
+
+        <!-- Header -->
         <div
-          style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
-          <i class="hgi-stroke hgi-test-tube-01" style="font-size: 18px; color: var(--primary-dark); opacity: 0.8;"></i>
-          <div style="display: flex; flex-direction: column;">
-            <span
-              style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Материал</span>
-            <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">PP
-              (BPA-free)</span>
-          </div>
+          style="background: linear-gradient(135deg, rgba(0,212,197,0.07) 0%, rgba(59,130,246,0.04) 100%); padding: 12px 16px; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 8px;">
+          <i class="hgi-stroke hgi-information-circle" style="font-size: 16px; color: var(--primary-dark);"></i>
+          <span
+            style="font-size: 12px; font-weight: 800; color: var(--primary-dark); text-transform: uppercase; letter-spacing: 0.4px;">Техникийн
+            үзүүлэлт</span>
         </div>
 
-        <!-- Spec 2: Age -->
-        <div
-          style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
-          <i class="hgi-stroke hgi-infant-01" style="font-size: 18px; color: var(--secondary-dark); opacity: 0.8;"></i>
-          <div style="display: flex; flex-direction: column;">
-            <span
-              style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Нас</span>
-            <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">0-7 нас</span>
-          </div>
-        </div>
+        <!-- Spec rows -->
+        <div>
 
-        <!-- Spec 3: Capacity -->
-        <div
-          style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
-          <i class="hgi-stroke hgi-justice-scale-01"
-            style="font-size: 18px; color: var(--safe-dark); opacity: 0.8;"></i>
-          <div style="display: flex; flex-direction: column;">
-            <span
-              style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Даац</span>
-            <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">75 кг хүртэл</span>
+          <!-- Row: Material -->
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border);">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="hgi-stroke hgi-test-tube-01" style="font-size: 20px; color: var(--primary-dark);"></i>
+              <span style="font-size: 12px; font-weight: 600; color: #6B7280;">Материал</span>
+            </div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--text);">PP (BPA-free)</span>
           </div>
-        </div>
 
-        <!-- Spec 4: Modes -->
-        <div
-          style="background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
-          <i class="hgi-stroke hgi-sparkles" style="font-size: 18px; color: var(--primary-dark); opacity: 0.8;"></i>
-          <div style="display: flex; flex-direction: column;">
-            <span
-              style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Горим</span>
-            <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">3 үйлдэлт</span>
+          <!-- Row: Age -->
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border); background: #FAFAFA;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="hgi-stroke hgi-calendar-01" style="font-size: 20px; color: var(--secondary-dark);"></i>
+              <span style="font-size: 12px; font-weight: 600; color: #6B7280;">Нас</span>
+            </div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--text);">0–7 нас</span>
           </div>
-        </div>
 
-        <!-- Spec 5: Colors -->
-        <div
-          style="grid-column: span 2; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; align-items: center; gap: 10px;">
-          <i class="hgi-stroke hgi-paint-board"
-            style="font-size: 18px; color: var(--secondary-dark); opacity: 0.8;"></i>
-          <div style="display: flex; flex-direction: column;">
-            <span
-              style="font-size: 10px; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px;">Боломжит
-              өнгө</span>
-            <span style="font-size: 12.5px; color: var(--text); font-weight: 700; line-height: 1.2;">Ягаан-цайвар,
-              Шар-цэнхэр</span>
+          <!-- Row: Capacity -->
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border);">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="hgi-stroke hgi-justice-scale-01" style="font-size: 20px; color: var(--safe-dark);"></i>
+              <span style="font-size: 12px; font-weight: 600; color: #6B7280;">Даац</span>
+            </div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--text);">75 кг хүртэл</span>
           </div>
+
+          <!-- Row: Modes -->
+          <div
+            style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border); background: #FAFAFA;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="hgi-stroke hgi-sparkles" style="font-size: 20px; color: var(--primary-dark);"></i>
+              <span style="font-size: 12px; font-weight: 600; color: #6B7280;">Зориулалт</span>
+            </div>
+            <span style="font-size: 12px; font-weight: 800; color: var(--text);">3 үйлдэлт</span>
+          </div>
+
+          <!-- Row: Colors -->
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="hgi-stroke hgi-paint-board" style="font-size: 20px; color: var(--secondary-dark);"></i>
+              <span style="font-size: 12px; font-weight: 600; color: #6B7280;">Өнгө</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div
+                style="display: flex; align-items: center; gap: 4px; background: rgba(236,72,153,0.08); border: 1px solid rgba(236,72,153,0.2); border-radius: 20px; padding: 4px 8px;">
+                <span
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #F9A8D4; display:inline-block; border: 1px solid rgba(236,72,153,0.3);"></span>
+                <span style="font-size: 11px; font-weight: 700; color: #9D174D;">Ягаан</span>
+              </div>
+              <div
+                style="display: flex; align-items: center; gap: 4px; background: rgba(59,130,246,0.07); border: 1px solid rgba(59,130,246,0.2); border-radius: 20px; padding: 4px 8px;">
+                <span
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #93C5FD; display:inline-block; border: 1px solid rgba(59,130,246,0.3);"></span>
+                <span style="font-size: 11px; font-weight: 700; color: var(--secondary-dark);">Цэнхэр</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <section id="reviews-section" style="padding: 0 16px 24px;">
       <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
-        <h2>Ээжүүдийн сэтгэгдэл</h2>
+        <h2 class="compact-heading" style="font-size: 18px; font-weight: 900; color: var(--text); letter-spacing: -0.3px;">Ээжүүдийн сэтгэгдэл</h2>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 16px;">
         <!-- Review 1 -->
         <div
-          style="background: #fff; border: 1.5px solid rgba(0, 212, 197, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0, 212, 197, 0.04); position: relative;">
+          style="background: var(--white); border: 1.5px solid rgba(0, 212, 197, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0, 212, 197, 0.04); position: relative;">
           <!-- decorative quote -->
           <i class="hgi-stroke hgi-quote-down"
             style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(0, 212, 197, 0.1); opacity: 0.8; z-index: 0;"></i>
 
-          <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
             <div
               style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(0, 212, 197, 0.2); flex-shrink: 0;">
               <img src="../../public/baby-chair/new-mom1.webp" alt="Profile"
@@ -2499,7 +2984,7 @@
             <div style="flex: 1;">
               <div style="display: flex; align-items: center; justify-content: space-between;">
                 <span style="font-weight: 800; font-size: 15px; color: var(--text);">Энхтуяа Б.</span>
-                <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
                   <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
                     class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
                     class="hgi-stroke hgi-star-01"></i>
@@ -2512,26 +2997,26 @@
           </div>
 
           <div
-            style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+            style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
             "Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад илүү тайван болсон.
             Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна. Хамгийн гол нь хүүхэд өөрөө
             дуртай байгаа нь чухал юм."
           </div>
 
           <div data-review-date="2"
-            style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+            style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
             Улаанбаатар • ...
           </div>
         </div>
 
         <!-- Review 2 -->
         <div
-          style="background: #fff; border: 1.5px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04); position: relative;">
+          style="background: var(--white); border: 1.5px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04); position: relative;">
           <!-- decorative quote -->
           <i class="hgi-stroke hgi-quote-down"
             style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(59, 130, 246, 0.1); opacity: 0.8; z-index: 0;"></i>
 
-          <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
             <div
               style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.2); flex-shrink: 0;">
               <img src="../../public/baby-chair/new-mom2.webp" alt="Profile"
@@ -2540,7 +3025,7 @@
             <div style="flex: 1;">
               <div style="display: flex; align-items: center; justify-content: space-between;">
                 <span style="font-weight: 800; font-size: 15px; color: var(--text);">Саран М.</span>
-                <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
                   <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
                     class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
                     class="hgi-stroke hgi-star-01"></i>
@@ -2553,25 +3038,25 @@
           </div>
 
           <div
-            style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+            style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
             "Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас зайлсхийж байсан. Энэ нэг
             сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан. Чанартай бас их авсаархан юм."
           </div>
 
           <div data-review-date="4"
-            style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+            style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
             ХУД • ...
           </div>
         </div>
 
         <!-- Review 3 -->
         <div
-          style="background: #fff; border: 1.5px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.04); position: relative;">
+          style="background: var(--white); border: 1.5px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.04); position: relative;">
           <!-- decorative quote -->
           <i class="hgi-stroke hgi-quote-down"
             style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(16, 185, 129, 0.1); opacity: 0.8; z-index: 0;"></i>
 
-          <div style="display: flex; gap: 14px; position: relative; z-index: 1;">
+          <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
             <div
               style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.2); flex-shrink: 0;">
               <img src="../../public/baby-chair/new-mom3.webp" alt="Profile"
@@ -2580,7 +3065,7 @@
             <div style="flex: 1;">
               <div style="display: flex; align-items: center; justify-content: space-between;">
                 <span style="font-weight: 800; font-size: 15px; color: var(--text);">Oyun Oyun</span>
-                <div style="color: #F59E0B; font-size: 14px; display: flex; gap: 2px;">
+                <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
                   <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
                     class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
                     class="hgi-stroke hgi-star-01"></i>
@@ -2593,13 +3078,13 @@
           </div>
 
           <div
-            style="margin-top: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+            style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
             "Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч хэрэгтэй юм байна. Бас
             авсаархан амар эд байна. Материал нь их гоё зөөлөн хэрнээ бат бөх санагдлаа."
           </div>
 
           <div data-review-date="12"
-            style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted); font-weight: 600;">
+            style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
             Дархан • ...
           </div>
         </div>
@@ -2609,13 +3094,13 @@
 
     <section
       style="position: relative; margin: 0 16px 32px; padding: 24px 16px; background: none; text-align: center; border: none; box-shadow: none;">
-      <img src="mommy.png" alt="Trust"
+      <img src="mommy.webp" alt="Trust"
         style="position: absolute; bottom: 10px; right: 10px; width: 64px; height: 64px; object-fit: contain; opacity: 1;">
       <div
-        style="color: var(--primary-dark); font-weight: 800; font-size: 14.5px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+        style="color: var(--primary-dark); font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 6px;">
         Мянга мянган ээжүүдийн итгэлийг хүлээсэн
       </div>
-      <div style="margin-top: 14px; display: flex; justify-content: center;">
+      <div style="margin-top: 16px; display: flex; justify-content: center;">
         <style>
           @keyframes bounceDown {
 
@@ -2634,6 +3119,68 @@
             60% {
               transform: translateY(3px);
             }
+          }
+
+          /* ===== EXTRACTED COMPONENTS ===== */
+          .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            text-align: center;
+          }
+
+          .trust-badge-icon {
+            color: var(--safe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .trust-badge-text {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--safe);
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            line-height: 1.2;
+          }
+
+          .feature-card {
+            background: var(--white);
+            border: 1.5px solid rgba(0, 0, 0, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+          }
+
+          .feature-card-head {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+
+          .feature-card-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.3;
+          }
+
+          .feature-card-body {
+            padding: 16px;
+          }
+
+          .feature-card-desc {
+            margin: 0;
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
           }
         </style>
         <i class="hgi-stroke hgi-arrow-down-02"
@@ -2656,14 +3203,14 @@
             style="font-size: 16px; vertical-align: middle;"></i></div>
 
         <div style="
-        margin: 8px 0 18px;
+        margin: 8px 0 16px;
         background: transparent;
         border: 2px solid rgba(0,212,197,0.45);
         border-radius: 10px;
-        padding: 18px 18px 18px 16px;
+        padding: 16px 16px 16px 16px;
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 16px;
         position: relative;
         overflow: hidden;
       ">
@@ -2679,41 +3226,98 @@
           background: transparent;
           border: 2px solid var(--primary);
           display: flex; align-items: center; justify-content: center;
-          font-size: 18px; font-weight: 900; color: var(--primary-dark);
+          font-size: 16px; font-weight: 900; color: var(--primary-dark);
           flex-shrink: 0;
         ">1</div>
           <div style="flex:1;">
             <div style="font-size: 15px; font-weight: 900; color: var(--primary-dark); line-height: 1.3;">
-              Авах тоогоо оруулна уу
+              Тоо, өнгө сонгоно уу
             </div>
           </div>
           <div style="font-size: 22px; color: var(--primary); flex-shrink: 0;">↓</div>
         </div>
+
         <div class="form-group">
-          <div style="display: flex; align-items: center; justify-content: center; gap: 32px; padding: 4px 0;">
-            <div class="qty-stepper qty-stepper--sm" style="margin: 0; flex-shrink: 0;">
-              <button class="qty-btn" onclick="changeQty(-1)">−</button>
-              <div class="qty-display">
-                <span class="qty-num" id="qtyNumForm">1</span>
-                <span class="qty-unit">ширхэг</span>
+          <!-- Compact Color Quantity Picker -->
+          <div style="display: flex; gap: 6px; padding: 2px 0;">
+
+            <!-- Pink Pill -->
+            <div id="rowPink" style="
+              flex: 1;
+              display: flex;
+              align-items: center;
+              gap: 0;
+              background: var(--white);
+              border: 1.5px solid #EC4899;
+              border-radius: 24px;
+              padding: 4px 4px 4px 10px;
+              box-shadow: 0 2px 8px rgba(236, 72, 153, 0.08);
+              transition: all 0.25s cubic-bezier(.4,0,.2,1);
+            ">
+              <span
+                style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #F9A8D4, #EC4899); flex-shrink: 0; box-shadow: 0 0 0 1.5px var(--white), 0 1px 3px rgba(236,72,153,0.3);"></span>
+              <span
+                style="font-weight: 700; color: #1F2937; font-size: 11px; margin-left: 6px; white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;">Ягаан</span>
+              <div
+                style="display: flex; align-items: center; gap: 0; background: #FDF2F8; border-radius: 20px; padding: 2px; margin-left: 4px;">
+                <button class="qty-btn" type="button" onclick="changeColorQty('pink', -1)"
+                  style="width: 24px; height: 24px; font-size: 13px; border-radius: 50%; border: none; background: transparent; color: #9CA3AF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1;">−</button>
+                <span id="qtyPink"
+                  style="font-size: 14px; font-weight: 800; color: #111827; min-width: 18px; text-align: center; line-height: 1;">1</span>
+                <button class="qty-btn" type="button" onclick="changeColorQty('pink', 1)"
+                  style="width: 24px; height: 24px; font-size: 13px; border-radius: 50%; border: none; background: #EC4899; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1; box-shadow: 0 1px 3px rgba(236,72,153,0.3);">+</button>
               </div>
-              <button class="qty-btn" onclick="changeQty(1)">+</button>
             </div>
-            <div
-              style="font-size: 16px; color: var(--primary-dark); font-weight: 800; margin-top: 0; width: 140px; text-align: left;"
-              id="formQtyTotal">Нийт: ₮69,000</div>
+
+            <!-- Blue Pill -->
+            <div id="rowBlue" style="
+              flex: 1;
+              display: flex;
+              align-items: center;
+              gap: 0;
+              background: var(--white);
+              border: 1.5px solid #E5E7EB;
+              border-radius: 24px;
+              padding: 4px 4px 4px 10px;
+              transition: all 0.25s cubic-bezier(.4,0,.2,1);
+            ">
+              <span
+                style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #93C5FD, #3B82F6); flex-shrink: 0; box-shadow: 0 1px 3px rgba(59,130,246,0.2);"></span>
+              <span
+                style="font-weight: 700; color: #1F2937; font-size: 11px; margin-left: 6px; white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;">Цэнхэр</span>
+              <div
+                style="display: flex; align-items: center; gap: 0; background: #EFF6FF; border-radius: 20px; padding: 2px; margin-left: 4px;">
+                <button class="qty-btn" type="button" onclick="changeColorQty('blue', -1)"
+                  style="width: 24px; height: 24px; font-size: 13px; border-radius: 50%; border: none; background: transparent; color: #9CA3AF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1;">−</button>
+                <span id="qtyBlue"
+                  style="font-size: 14px; font-weight: 800; color: #111827; min-width: 18px; text-align: center; line-height: 1;">0</span>
+                <button class="qty-btn" type="button" onclick="changeColorQty('blue', 1)"
+                  style="width: 24px; height: 24px; font-size: 13px; border-radius: 50%; border: none; background: #3B82F6; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1; box-shadow: 0 1px 3px rgba(59,130,246,0.3);">+</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Total display - compact -->
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px; margin-bottom: 6px; padding: 5px 12px; background: linear-gradient(135deg, #F0FDFA, #F9FAFB); border-radius: 20px; border: 1px solid rgba(0,212,197,0.15);">
+            <div style="font-size: 11px; color: #6B7280; font-weight: 600;"><span id="formQtyTotal"
+                style="color: #111; font-weight: 800;">1</span> ширхэг</div>
+            <div style="font-size: 15px; color: var(--primary-dark); font-weight: 900; letter-spacing: -0.3px;"
+              id="formPriceTotal">₮69,000</div>
           </div>
         </div>
 
+        <!-- Step 2: Payment Method -->
         <div style="
-        margin: 8px 0 18px;
+        margin: 8px 0 16px;
         background: transparent;
         border: 2px solid rgba(0,212,197,0.45);
         border-radius: 10px;
-        padding: 18px 18px 18px 16px;
+        padding: 16px 16px 16px 16px;
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 16px;
         position: relative;
         overflow: hidden;
       ">
@@ -2729,7 +3333,7 @@
           background: transparent;
           border: 2px solid var(--primary);
           display: flex; align-items: center; justify-content: center;
-          font-size: 18px; font-weight: 900; color: var(--primary-dark);
+          font-size: 16px; font-weight: 900; color: var(--primary-dark);
           flex-shrink: 0;
         ">2</div>
           <div style="flex:1;">
@@ -2747,16 +3351,17 @@
             <div class="payment-info">
               <div class="payment-title">Дансаар шилжүүлэх</div>
               <div class="payment-desc">Өдөртөө хүргэгдэнэ <i class="hgi-stroke hgi-delivery-truck-01"
-                  style="font-size: 14px; vertical-align: middle;"></i></div>
+                  style="font-size: 16px; vertical-align: middle;"></i></div>
             </div>
           </label>
 
           <label class="payment-option-label" id="lbl-cod"
-            style="padding: 14px 16px; margin-top: 8px; border: 1px dashed rgba(0,0,0,0.15); background: transparent; opacity: 0.85;">
+            style="padding: 16px 16px; margin-top: 8px; border: 1px dashed rgba(0,0,0,0.15); background: transparent; opacity: 0.85;">
             <input type="radio" name="payment_method" value="Хүргүүлж авахдаа төлөх" onchange="togglePayment()">
-            <div class="payment-radio" style="width: 18px; height: 18px; border-width: 1.5px;"></div>
+            <div class="payment-radio" style="width: 16px; height: 16px; border-width: 1.5px;"></div>
             <div class="payment-info">
-              <div class="payment-title" style="font-size: 14px; font-weight: 600; color: #4B5563;">Хүргүүлж авахдаа
+              <div class="payment-title" style="font-size: 16px; font-weight: 600; color: var(--text-secondary);">
+                Хүргүүлж авахдаа
                 төлөх (Бэлнээр)</div>
               <div class="payment-desc" style="font-size: 12px; margin-top: 2px;">1-2 хоногийн дотор хүргэгдэнэ</div>
             </div>
@@ -2764,10 +3369,8 @@
         </div>
 
         <div class="cod-message" id="codDetails">
-          <i class="hgi-stroke hgi-package-box"></i> Та бараагаа хүлээж авах үедээ бэлнээр эсвэл түрүүлж утсаар
-          холбогдох
-          үед төлбөрөө хийх боломжтой.
-          Хүргэлт 1-2 хоногт таны хаягаар очих болно.
+          <i class="hgi-stroke hgi-package-box"></i> Та бараагаа хүлээн авах үедээ бэлнээр эсвэл шилжүүлгээр төлөх
+          боломжтой. Хүргэлт 1-2 хоногт таны хаягаар очно.
         </div>
 
         <div id="transferSection">
@@ -2778,9 +3381,9 @@
             <div class="bank-details-card" style="margin-bottom: 0;">
               <div class="bank-header"
                 style="position: relative; justify-content: center; display: flex; align-items: center; padding: 16px;">
-                <span class="bank-name" style="font-size: 16px; font-weight: 800; color: #ffffff;">ХААН Банк</span>
+                <span class="bank-name" style="font-size: 16px; font-weight: 800; color: var(--white);">ХААН Банк</span>
                 <div
-                  style="position: absolute; right: 16px; background: #ffffff; border-radius: 6px; padding: 4px; display: flex; align-items: center; justify-content: center;">
+                  style="position: absolute; right: 16px; background: var(--white); border-radius: 6px; padding: 4px; display: flex; align-items: center; justify-content: center;">
                   <img src="../../public/baby-chair/Symbol.webp" alt="Khaan Bank"
                     style="height: 24px; width: auto; object-fit: contain;">
                 </div>
@@ -2790,25 +3393,25 @@
                 <div class="bank-value-row">
                   <span class="bank-value" id="bankAccount" style="font-size: 20px;">5041 0338 49</span>
                   <button class="copy-btn" onclick="trackCopyBank(); copyBank()" id="copyBtn"
-                    style="background: #ecfdf5; border: 1.5px solid #10b981; border-radius: 8px; padding: 8px 16px; font-size: 13px; font-weight: 700; color: #047857; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2); transition: all 0.2s;"><i
-                      class="hgi-stroke hgi-clipboard" style="font-size: 15px; color: #10b981;"></i> Хуулах</button>
+                    style="background: #ecfdf5; border: 1.5px solid var(--safe); border-radius: 8px; padding: 8px 16px; font-size: 12px; font-weight: 700; color: var(--safe-dark); display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.2); transition: all 0.2s;"><i
+                      class="hgi-stroke hgi-clipboard" style="font-size: 15px; color: var(--safe);"></i> Хуулах</button>
                 </div>
               </div>
               <div class="bank-row">
                 <span class="bank-label">Данс эзэмшигч</span>
-                <span class="bank-value" style="font-size: 18px;">ГАНЦЭЦЭГ.Ч</span>
+                <span class="bank-value" style="font-size: 16px;">ГАНЦЭЦЭГ.Ч</span>
               </div>
               <div class="bank-row" style="padding-bottom: 20px;">
                 <span class="bank-label">Гүйлгээний утга</span>
                 <div style="margin-top: 4px;">
                   <span class="bank-value"
-                    style="display: inline-block; background: #ecfdf5; color: #059669; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 8px;">Нэр
+                    style="display: inline-block; background: #ecfdf5; color: #059669; font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 8px;">Нэр
                     + утасны дугаар</span>
                 </div>
               </div>
               <div class="bank-row"
                 style="background: #fffbeb; border-top: 1px solid rgba(0,0,0,0.04); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; padding: 16px;">
-                <div style="font-size: 13px; color: #92400e; line-height: 1.5;">
+                <div style="font-size: 12px; color: #92400e; line-height: 1.5;">
                   ⚠️ <b>АНХААР:</b> Гүйлгээний утга дээрээ өөрийн <u
                     style="text-decoration: underline; text-decoration-color: #fca5a5; text-underline-offset: 2px;">утасны
                     дугаар, нэрээ</u> заавал зөв бичээрэй!
@@ -2819,14 +3422,14 @@
         </div>
 
         <div style="
-        margin: 8px 0 18px;
+        margin: 8px 0 16px;
         background: transparent;
         border: 2px solid rgba(0,212,197,0.45);
         border-radius: 10px;
-        padding: 18px 18px 18px 16px;
+        padding: 16px 16px 16px 16px;
         display: flex;
         align-items: center;
-        gap: 14px;
+        gap: 16px;
         position: relative;
         overflow: hidden;
       ">
@@ -2844,7 +3447,7 @@
           background: transparent;
           border: 2px solid var(--primary);
           display: flex; align-items: center; justify-content: center;
-          font-size: 18px; font-weight: 900; color: var(--primary-dark);
+          font-size: 16px; font-weight: 900; color: var(--primary-dark);
           flex-shrink: 0;
         ">3</div>
 
@@ -2875,7 +3478,7 @@
 
 
         <div
-          style="text-align:center; margin-top:14px; padding:12px 16px; background:linear-gradient(135deg, #F0FDFA, #ECFDF5); border-radius:12px; border:1.5px solid #bbf7d0; font-size:14px; font-weight:800; color:#16a34a; letter-spacing:0.5px;">
+          style="text-align:center; margin-top:16px; padding:12px 16px; background:linear-gradient(135deg, #F0FDFA, #ECFDF5); border-radius:12px; border:1.5px solid #bbf7d0; font-size:16px; font-weight:800; color:#16a34a; letter-spacing:0.5px;">
           <i class="hgi-stroke hgi-delivery-truck-01"></i> ӨНӨӨДӨР ЗАХИАЛБАЛ ХҮРГЭЛТ ҮНЭГҮЙ
         </div>
 
@@ -2894,7 +3497,7 @@
       <div
         style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding-left: 2px;">
         <span
-          style="font-size: 20px; font-weight: 900; color: #111827; letter-spacing: -0.5px; line-height: 1;">₮69,000</span>
+          style="font-size: 20px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1;">₮69,000</span>
         <div style="display: flex;">
           <span
             style="font-size: 10.5px; font-weight: 700; color: var(--green); background: #f0fdf4; padding: 3px 6px; border-radius: 4px; border: 1px solid #bbf7d0; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;"><i
@@ -2966,37 +3569,71 @@
       }
       setTimeout(() => { showToast(); setInterval(showToast, 6000 + Math.random() * 6000); }, 5000);
 
-      // ===== QUANTITY STEPPER =====
+      // ===== QUANTITY & COLOR STEPPER =====
+      window.qtyPink = 1;
+      window.qtyBlue = 0;
       window.orderQty = 1;
       const UNIT_PRICE = 69000;
 
-      function changeQty(delta) {
-        const newQty = window.orderQty + delta;
-        if (newQty < 1) return; // floor at 1
+      function changeColorQty(color, delta) {
+        if (color === 'pink') {
+          window.qtyPink = Math.max(0, window.qtyPink + delta);
+        } else {
+          window.qtyBlue = Math.max(0, window.qtyBlue + delta);
+        }
 
-        window.orderQty = newQty;
+        // Prevent 0 total
+        if (window.qtyPink === 0 && window.qtyBlue === 0) {
+          if (color === 'pink') window.qtyPink = 1;
+          else window.qtyBlue = 1;
+        }
 
-        // Update all qty number displays
-        document.querySelectorAll('.qty-num').forEach(el => el.textContent = newQty);
+        document.getElementById('qtyPink').textContent = window.qtyPink;
+        document.getElementById('qtyBlue').textContent = window.qtyBlue;
 
-        // Update minus button state
-        document.querySelectorAll('.qty-stepper .qty-btn').forEach((btn) => {
-          if (btn.textContent.trim() === '−') btn.disabled = (newQty <= 1);
+        const rowPink = document.getElementById('rowPink');
+        if (window.qtyPink > 0) {
+          rowPink.style.border = '1.5px solid #EC4899';
+          rowPink.style.boxShadow = '0 2px 8px rgba(236, 72, 153, 0.08)';
+          rowPink.style.background = '#FFFBFD';
+        } else {
+          rowPink.style.border = '1.5px solid #E5E7EB';
+          rowPink.style.boxShadow = 'none';
+          rowPink.style.background = 'var(--white)';
+        }
+
+        const rowBlue = document.getElementById('rowBlue');
+        if (window.qtyBlue > 0) {
+          rowBlue.style.border = '1.5px solid #3B82F6';
+          rowBlue.style.boxShadow = '0 2px 8px rgba(59, 130, 246, 0.08)';
+          rowBlue.style.background = '#F8FAFF';
+        } else {
+          rowBlue.style.border = '1.5px solid #E5E7EB';
+          rowBlue.style.boxShadow = 'none';
+          rowBlue.style.background = 'var(--white)';
+        }
+
+        window.orderQty = window.qtyPink + window.qtyBlue;
+
+        document.getElementById('formQtyTotal').textContent = window.orderQty;
+        document.getElementById('formPriceTotal').textContent = '₮' + (window.orderQty * UNIT_PRICE).toLocaleString('mn-MN');
+
+        // Disable minus button visually if 0
+        document.querySelectorAll('#rowPink .qty-btn').forEach(btn => {
+          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyPink === 0);
         });
-
-        // Format price nicely
-        const total = newQty * UNIT_PRICE;
-        const formatted = '₮' + total.toLocaleString('mn-MN');
-
-        // Update form total
-        const formTotal = document.getElementById('formQtyTotal');
-        if (formTotal) formTotal.textContent = 'Нийт: ' + formatted;
+        document.querySelectorAll('#rowBlue .qty-btn').forEach(btn => {
+          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyBlue === 0);
+        });
       }
 
-      // Init: disable minus at start
+      // Init: disable minus start
       document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.qty-stepper .qty-btn').forEach(btn => {
-          if (btn.textContent.trim() === '−') btn.disabled = true;
+        document.querySelectorAll('#rowPink .qty-btn').forEach(btn => {
+          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyPink === 0);
+        });
+        document.querySelectorAll('#rowBlue .qty-btn').forEach(btn => {
+          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyBlue === 0);
         });
       });
 
@@ -3025,7 +3662,13 @@
         const name = nameInput ? nameInput : 'Эрхэм харилцагч';
         const phone = document.getElementById('fphone').value.trim();
         const addr = document.getElementById('faddr').value.trim();
-        const tier = window.orderQty + ' ширхэг — ₮' + (window.orderQty * 69000).toLocaleString();
+
+        let colorParts = [];
+        if (window.qtyPink > 0) colorParts.push(window.qtyPink + 'ш Ягаан');
+        if (window.qtyBlue > 0) colorParts.push(window.qtyBlue + 'ш Цэнхэр');
+        let colorChoice = colorParts.join(', ');
+
+        const tier = window.orderQty + ' ширхэг (' + colorChoice + ') — ₮' + (window.orderQty * 69000).toLocaleString('mn-MN');
 
         const payMethodEls = document.getElementsByName('payment_method');
         let paymentMethod = 'Дансаар шилжүүлэх';
@@ -3113,17 +3756,17 @@
           </div>
           <div class="seller-body" style="flex: 1;">
             <div class="seller-name"
-              style="font-size: 16px; font-weight: 800; color: #111827; display: flex; align-items: center; gap: 6px;">
-              Bambi Room <i class="hgi-stroke hgi-facebook fb-verify" style="color: #0866FF; font-size: 18px;"></i>
+              style="font-size: 16px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 6px;">
+              Bambi Room <i class="hgi-stroke hgi-facebook fb-verify" style="color: #0866FF; font-size: 16px;"></i>
             </div>
             <div class="seller-meta" style="font-size: 12.5px; color: #6B7280; font-weight: 500;">Ухаалаг ээжүүдийн
               сонголт</div>
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
           <button class="seller-btn" onclick="window.open('https://m.me/bambibabyroom', '_blank')"
-            style="background: transparent; border: 1.5px solid #0084FF !important; color: #0084FF !important; border-radius: 10px; height: 42px; font-size: 13.5px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
+            style="background: transparent; border: 1.5px solid #0084FF !important; color: #0084FF !important; border-radius: 10px; height: 42px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.17 5.5 3.09 7.42V22l2.72-1.49c1.3.36 2.7.57 4.19.57 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm1.14 12.83l-2.57-2.74-5.01 2.74 5.51-5.85 2.63 2.74 4.95-2.74-5.51 5.85z" />
@@ -3131,19 +3774,19 @@
             Чатлах
           </button>
           <button class="seller-btn" onclick="window.open('https://www.facebook.com/bambibabyroom', '_blank')"
-            style="background: transparent; border: 1.5px solid #0866FF !important; color: #0866FF !important; border-radius: 10px; height: 42px; font-size: 13.5px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
-            <i class="hgi-stroke hgi-facebook-02" style="font-size: 18px;"></i> Дагах
+            style="background: transparent; border: 1.5px solid #0866FF !important; color: #0866FF !important; border-radius: 10px; height: 42px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
+            <i class="hgi-stroke hgi-facebook-02" style="font-size: 16px;"></i> Дагах
           </button>
         </div>
       </div>
       <div>Асуулт, санал хүсэлт байвал холбогдоорой</div>
       <div style="margin-top:6px;">
         <i class="hgi-stroke hgi-mail-01"></i> <a href="mailto:davaa.art.ai@gmail.com"
-          style="color:#00B4A6;text-decoration:none;">davaa.art.ai@gmail.com</a>
+          style="color:var(--primary-dark);text-decoration:none;">davaa.art.ai@gmail.com</a>
       </div>
       <div style="margin-top:4px;">
         <i class="hgi-stroke hgi-smart-phone-01"></i> <a href="tel:+97696870870"
-          style="color:#00B4A6;text-decoration:none;">96870870</a>
+          style="color:var(--primary-dark);text-decoration:none;">96870870</a>
       </div>
 
       <div style="margin-top:16px;font-size:10px;color:#C5C0BB;">© 2026 Bambi Room. Бүх эрх хуулиар хамгаалагдсан.</div>
