@@ -1905,6 +1905,7 @@
       border-radius: 50%;
       background: transparent;
       color: var(--primary-dark);
+      border: 2px solid rgba(0, 212, 197, 0.4);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -1912,20 +1913,6 @@
       font-weight: 900;
       flex-shrink: 0;
       z-index: 1;
-    }
-
-    .order-step-no::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      padding: 2px;
-      background: linear-gradient(180deg, rgba(0, 212, 197, 0.82) 0%, rgba(0, 212, 197, 0.18) 100%);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      z-index: -1;
     }
 
     .order-step-title {
@@ -2414,6 +2401,145 @@
         font-size: 20px !important;
       }
     }
+
+    /* ===== PROGRESSIVE DISCLOSURE ===== */
+    .order-step-block.step-active {
+      animation: stepReveal 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes stepReveal {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== GUARANTEE STRIP ===== */
+    .guarantee-strip {
+      margin: 0 16px 24px;
+      padding: 20px;
+      background: linear-gradient(160deg, #f0fdf4 0%, #ecfdf5 100%);
+      border: 1.5px solid #bbf7d0;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .guarantee-strip-icon {
+      width: 48px;
+      height: 48px;
+      background: #dcfce7;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .guarantee-strip-text h4 {
+      margin: 0 0 4px;
+      font-size: 14px;
+      font-weight: 800;
+      color: #166534;
+    }
+
+    .guarantee-strip-text p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #15803d;
+      font-weight: 600;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 0 16px;
+    }
+
+    .faq-item-new {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-q-btn {
+      width: 100%;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      background: none;
+      border: none;
+      font-family: inherit;
+      text-align: left;
+    }
+
+    .faq-q-btn i {
+      transition: transform 0.3s;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .faq-item-new.is-open .faq-q-btn i {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+
+    .faq-a-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item-new.is-open .faq-a-body {
+      max-height: 200px;
+    }
+
+    .faq-a-inner {
+      padding: 0 16px 16px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    /* ===== MESSENGER ALT ===== */
+    .messenger-alt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 14px;
+      background: #EFF6FF;
+      border: 1.5px solid #93C5FD;
+      border-radius: 12px;
+      color: #1D4ED8;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .messenger-alt:hover {
+      background: #DBEAFE;
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 
@@ -2442,7 +2568,7 @@
     <div style="padding: 16px 16px 16px;">
       <h1 class="product-title"
         style="font-size: 26px; font-weight: 900; margin-bottom: 12px; margin-top: 0; line-height: 1.2; color: var(--text); letter-spacing: -0.8px;">
-        Хүүхдийн 3 үйлдэлт сандал</h1>
+        Нэг сандлаар хооллох, үс угаах, хөл угаах — бүгдийг шийд</h1>
 
       <div class="rating-row"
         style="display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; padding-right: 4px;">
@@ -2487,82 +2613,12 @@
       <div class="gallery" id="gallery"
         style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 16px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0 16px;">
 
-        <style>
-          .gallery::-webkit-scrollbar {
-            display: none;
-          }
-
-          /* ===== EXTRACTED COMPONENTS ===== */
-          .trust-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            flex: 1;
-            text-align: center;
-          }
-
-          .trust-badge-icon {
-            color: var(--safe);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .trust-badge-text {
-            font-size: 12px;
-            font-weight: 800;
-            color: var(--safe);
-            text-transform: uppercase;
-            letter-spacing: 0.2px;
-            line-height: 1.2;
-          }
-
-          .feature-card {
-            background: var(--white);
-            border: 1.5px solid rgba(0, 0, 0, 0.07);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            display: flex;
-            flex-direction: column;
-          }
-
-          .feature-card-head {
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-          }
-
-          .feature-card-title {
-            margin: 0;
-            font-size: 16px;
-            font-weight: 800;
-            color: var(--text);
-            line-height: 1.3;
-          }
-
-          .feature-card-body {
-            padding: 16px;
-          }
-
-          .feature-card-desc {
-            margin: 0;
-            font-size: 12px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-          }
-        </style>
-
         <!-- Slide 1: Sequential Auto-playing Videos (Default) -->
         <div
           style="flex: 0 0 90%; aspect-ratio: 4/5; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
           <video id="sequence-video" autoplay muted playsinline preload="metadata"
             style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            <source src="videos/vid1.mp4" type="video/mp4" data-sequence-source>
-            <source src="videos/vid2.mp4" type="video/mp4" data-sequence-source>
-            <source src="videos/vid3.mp4" type="video/mp4" data-sequence-source>
+            <source src="videos/vid1.mp4" type="video/mp4">
           </video>
         </div>
 
@@ -2602,7 +2658,7 @@
       <div id="gallery-indicators"
         style="display: flex; justify-content: center; gap: 6px; margin-top: 16px; margin-bottom: 2px;">
         <div class="indicator active" onclick="scrollToSlide(0)"
-          style="width: 24px; height: 6px; border-radius: 3px; background: var(--primary-teal); transition: 0.3s; cursor: pointer;">
+          style="width: 24px; height: 6px; border-radius: 3px; background: var(--primary); transition: 0.3s; cursor: pointer;">
         </div>
         <div class="indicator" onclick="scrollToSlide(1)"
           style="width: 10px; height: 6px; border-radius: 3px; background: #e5e7eb; transition: 0.3s; cursor: pointer;">
@@ -2653,7 +2709,7 @@
             indicators.forEach((ind, i) => {
               if (i === activeIndex) {
                 ind.style.width = '24px';
-                ind.style.background = 'var(--primary-teal)';
+                ind.style.background = 'var(--primary)';
               } else {
                 ind.style.width = '10px';
                 ind.style.background = '#e5e7eb';
@@ -2664,27 +2720,17 @@
       });
       document.addEventListener('DOMContentLoaded', function () {
         var video = document.getElementById('sequence-video');
-        if (video) {
-          var sources = Array.from(video.querySelectorAll('source[data-sequence-source]'))
-            .map(function (source) { return source.src; })
-            .filter(Boolean);
-          var i = 0;
-
-          if (sources.length > 0) {
-            video.src = sources[0];
-            video.load();
-          }
-
-          video.loop = false;
-          video.addEventListener('ended', function () {
-            if (sources.length === 0) return;
-            i = (i + 1) % sources.length;
-            video.src = sources[i];
-            video.load();
-            video.muted = true;
-            video.play().catch(function (err) { console.log('Video autoplay error:', err); });
-          });
-        }
+        if (!video) return;
+        var sources = ['videos/vid1.mp4', 'videos/vid2.mp4', 'videos/vid3.mp4'];
+        var i = 0;
+        video.loop = false;
+        video.addEventListener('ended', function () {
+          i = (i + 1) % sources.length;
+          video.src = sources[i];
+          video.load();
+          video.muted = true;
+          video.play().catch(function (err) { console.log('Video autoplay error:', err); });
+        });
       });
     </script>
 
@@ -2739,65 +2785,8 @@
           style="width: 100%; height: auto; object-fit: contain;" />
       </div>
 
-      <div class="section-head" style="margin: 0 16px 12px;">
-        <h2 class="compact-heading"
-          style="font-size: 18px; font-weight: 900; color: var(--text); letter-spacing: -0.3px;">Дэлгэрэнгүй</h2>
-      </div>
-
-      <div class="spec-card-grid" style="padding: 0 16px; margin: 0 0 18px;">
-        <div class="spec-card spec-card--teal">
-          <div class="spec-card-copy">
-            <div class="spec-card-label">Нас</div>
-            <div class="spec-card-value">0–7 нас</div>
-          </div>
-          <div class="spec-card-icon">
-            <i class="hgi-stroke hgi-calendar-01"></i>
-          </div>
-        </div>
-
-        <div class="spec-card spec-card--blue">
-          <div class="spec-card-copy">
-            <div class="spec-card-label">Даац</div>
-            <div class="spec-card-value">75 кг хүртэл</div>
-          </div>
-          <div class="spec-card-icon">
-            <i class="hgi-stroke hgi-justice-scale-01"></i>
-          </div>
-        </div>
-
-        <div class="spec-card spec-card--green">
-          <div class="spec-card-copy">
-            <div class="spec-card-label">Материал</div>
-            <div class="spec-card-value">PP (BPA-free)</div>
-          </div>
-          <div class="spec-card-icon">
-            <i class="hgi-stroke hgi-test-tube-01"></i>
-          </div>
-        </div>
-
-        <div class="spec-card spec-card--teal">
-          <div class="spec-card-copy">
-            <div class="spec-card-label">Хэрэглээ</div>
-            <div class="spec-card-value">Авсаархан, арчиж цэвэрлэхэд амар</div>
-          </div>
-          <div class="spec-card-icon">
-            <i class="hgi-stroke hgi-layers-01"></i>
-          </div>
-        </div>
-
-        <div class="spec-card spec-card--wide spec-card--mint">
-          <div class="spec-card-copy">
-            <div class="spec-card-label">Хүргэлт ба төлбөр</div>
-            <div class="spec-card-value">Үнэгүй хүргэлт</div>
-            <div class="spec-card-meta">Дансаар төлөөд өдөртөө хүргүүлээд авах боломжтой</div>
-          </div>
-          <div class="spec-card-icon">
-            <i class="hgi-stroke hgi-delivery-truck-01"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="inline-cta" style="margin-bottom: 24px; padding: 0 16px;">
+      <!-- Above-fold CTA -->
+      <div class="inline-cta" style="margin-bottom: 16px; padding: 0 16px;">
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div
             style="background: #ECFDF5; border: 1.5px solid var(--safe); border-bottom: none; border-radius: 10px 10px 0 0; padding: 4px 16px 14px; margin-bottom: -10px; display: inline-flex; align-items: center; gap: 4px; position: relative; z-index: 0;">
@@ -2807,11 +2796,11 @@
               <path d="m9 12 2 2 4-4"></path>
             </svg>
             <span
-              style="color: var(--safe-dark); font-size: 10px; font-weight: 700; letter-spacing: 0.2px;">Эрсдэлгүй,
-              баталгаат захиалга</span>
+              style="color: var(--safe-dark); font-size: 10px; font-weight: 700; letter-spacing: 0.2px;">Таалагдахгүй
+              бол буцаана • Эрсдэлгүй</span>
           </div>
           <button class="cta-scroll-btn"
-            onclick="trackOrderIntent('price_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+            onclick="trackOrderIntent('hero_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
             style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-size: 16px; font-weight: 800; color: var(--white); border: none; cursor: pointer; position: relative; z-index: 1;">
             <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 20px;"></i>
             Захиалах
@@ -2820,444 +2809,457 @@
         </div>
       </div>
 
-      <div class="promo-card"
-        style="margin: 0 16px 20px; border: 1px solid rgba(239, 123, 132, 0.4); background: var(--accent-soft); border-radius: 8px; overflow: hidden;">
-        <div class="promo-strip"
-          style="background: transparent; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 12px;">
-          <div class="promo-left">
-            <span class="promo-text"
-              style="color: var(--text-secondary); font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 4px; letter-spacing: -0.1px;">
-              <i class="hgi-stroke hgi-sale-tag-02" style="font-size: 16px; color: var(--accent);"></i> Хямдрал
-              дуусах хугацаа:
-            </span>
+    </div>
+  </div>
+
+
+
+  <section style="padding: 0 16px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
+      <h2 class="compact-heading"
+        style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Ээжүүд яагаад үүнд
+        дуртай байдаг вэ?</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+
+      <!-- Card 1: Reclining -->
+      <div class="feature-card feature-card--teal">
+        <div class="feature-card-head">
+          <i class="hgi-stroke hgi-smile" style="font-size: 16px; color: var(--primary-dark);"></i>
+          <h4 class="feature-card-title">Налдаг түшлэг</h4>
+        </div>
+        <div class="feature-card-body">
+          <p class="feature-card-desc">Үс угаахад хүүхдэд хамгийн тухтай байрлал</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Waterproof -->
+      <div class="feature-card feature-card--blue">
+        <div class="feature-card-head">
+          <i class="hgi-stroke hgi-droplet" style="font-size: 16px; color: var(--secondary-dark);"></i>
+          <h4 class="feature-card-title">Усанд тэсвэртэй</h4>
+        </div>
+        <div class="feature-card-body">
+          <p class="feature-card-desc">Цэвэрлэхэд маш амар, сайн чанарын PP материалтай</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Multi-function -->
+      <div class="feature-card feature-card--green">
+        <div class="feature-card-head">
+          <i class="hgi-stroke hgi-layers-01" style="font-size: 16px; color: var(--safe-dark);"></i>
+          <h4 class="feature-card-title">3 төрлийн хэрэглээ</h4>
+        </div>
+        <div class="feature-card-body">
+          <p class="feature-card-desc">Хооллох, үс угаах, хөл угаах — ганцхан сандал бүгдийг шийднэ</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Non-slip -->
+      <div class="feature-card feature-card--teal">
+        <div class="feature-card-head">
+          <i class="hgi-stroke hgi-tick-01" style="font-size: 16px; color: var(--primary-dark);"></i>
+          <h4 class="feature-card-title">Хальтардаггүй хөл</h4>
+        </div>
+        <div class="feature-card-body">
+          <p class="feature-card-desc">Аюулгүй, тогтвортой бүтэцтэй тул ээжүүд сэтгэл амар байна</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section style="padding: 0 16px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
+      <h2 class="compact-heading"
+        style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Та нийт хэдэн төгрөг
+        хэмнэх
+        вэ?</h2>
+    </div>
+
+    <div style="padding: 0;">
+
+      <!-- Breakdown rows -->
+      <div style="padding: 0;">
+
+        <!-- Row 1 -->
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="hgi-stroke hgi-chair-01"
+              style="font-size: 16px; color: var(--primary-dark); width: 16px; text-align: center; flex-shrink: 0;"></i>
+            <span style="font-size: 12px; font-weight: 700; color: #374151;">Хоолны сандал</span>
           </div>
-          <div class="timer" style="display: flex; align-items: center; gap: 3px;">
-            <b id="h"
-              style="background: var(--text); color: var(--white); font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">12</b><span
-              class="colon" style="color: var(--text); font-weight: 800; font-size: 11px;">:</span>
-            <b id="m"
-              style="background: var(--text); color: var(--white); font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">39</b><span
-              class="colon" style="color: var(--text); font-weight: 800; font-size: 11px;">:</span>
-            <b id="s"
-              style="background: var(--text); color: var(--white); font-size: 11px; font-weight: 800; padding: 2px 4px; border-radius: 4px; min-width: 22px; text-align: center; display: inline-block; line-height: 1.1;">28</b>
+          <span
+            style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮80,000–120,000</span>
+        </div>
+
+        <!-- Row 2 -->
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="hgi-stroke hgi-shampoo"
+              style="font-size: 16px; color: var(--secondary-dark); width: 16px; text-align: center; flex-shrink: 0;"></i>
+            <span style="font-size: 12px; font-weight: 700; color: #374151;">Үс угаах сандал</span>
+          </div>
+          <span
+            style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮40,000–60,000</span>
+        </div>
+
+        <!-- Row 3 -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <i class="hgi-stroke hgi-bathtub-01"
+              style="font-size: 16px; color: var(--safe-dark); width: 16px; text-align: center; flex-shrink: 0;"></i>
+            <span style="font-size: 12px; font-weight: 700; color: #374151;">Хөл угаах тавиур</span>
+          </div>
+          <span
+            style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮30,000–50,000</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div style="margin: 8px 0 0; border-top: 1px dashed rgba(22,163,74,0.25);"></div>
+
+      <!-- Total row -->
+      <div
+        style="padding: 12px 0 0; display: flex; justify-content: space-between; align-items: center; background: transparent;">
+        <span style="font-size: 12px; font-weight: 700; color: #374151;">Нийт зардал</span>
+        <span
+          style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮150,000–230,000</span>
+      </div>
+
+      <!-- Savings highlight -->
+      <div
+        style="margin: 14px 0 12px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px dashed rgba(22,163,74,0.35); border-radius: 12px; padding: 16px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <i class="hgi-stroke hgi-save-money-pound" style="font-size: 16px; color: #16A34A;"></i>
+          <div
+            style="font-size: 11px; font-weight: 700; color: #16A34A; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px;">
+            Таны хэмнэлт</div>
+        </div>
+        <div style="font-size: 22px; font-weight: 900; color: #15803D; letter-spacing: -0.5px;">₮81,000–₮161,000</div>
+      </div>
+
+      <!-- CTA -->
+      <div style="padding: 0 0 16px;">
+        <button class="cta-scroll-btn"
+          onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+          style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 800;">
+          <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 16px;"></i>
+          Хэмнэлттэй үнээр авах
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section id="reviews-section" style="padding: 0 16px 24px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
+      <h2 class="compact-heading"
+        style="font-size: 18px; font-weight: 900; color: var(--text); letter-spacing: -0.3px;">Ээжүүдийн сэтгэгдэл
+      </h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <!-- Review 1 -->
+      <div
+        style="background: var(--white); border: 1.5px solid rgba(0, 212, 197, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0, 212, 197, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down"
+          style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(0, 212, 197, 0.1); opacity: 0.8; z-index: 0;"></i>
+
+        <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
+          <div
+            style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(0, 212, 197, 0.2); flex-shrink: 0;">
+            <img src="../../public/baby-chair/new-mom1.webp" alt="Profile"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Энхтуяа Б.</span>
+              <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
+                  class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
+                  class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div
+              style="display: inline-block; background: var(--primary-soft); color: var(--primary-dark); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">
+              3 настай охинд авсан</div>
           </div>
         </div>
-        <div class="urgency"
-          style="background: rgba(239, 123, 132, 0.04); border-top: 1px dashed rgba(239, 123, 132, 0.25); padding: 8px 12px; display: flex; align-items: center; justify-content: center; gap: 6px;">
-          <span
-            style="font-size: 12px; color: var(--text-secondary); font-weight: 500; display: flex; align-items: center;">
-            <span class="live-dot"
-              style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 6px; box-shadow: 0 0 0 rgba(239, 123, 132, 0.7);"></span>
-            Яг одоо <b>&nbsp;45 хүн&nbsp;</b> сонирхож байна
-          </span>
-          <span class="stock-low" style="font-weight: 700; color: var(--accent) !important; font-size: 12px;">(Цөөн
-            үлдлээ!)</span>
+
+        <div
+          style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад илүү тайван болсон.
+          Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна. Хамгийн гол нь хүүхэд өөрөө
+          дуртай байгаа нь чухал юм."
+        </div>
+
+        <div data-review-date="2" style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
+          Улаанбаатар • ...
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div
+        style="background: var(--white); border: 1.5px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down"
+          style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(59, 130, 246, 0.1); opacity: 0.8; z-index: 0;"></i>
+
+        <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
+          <div
+            style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.2); flex-shrink: 0;">
+            <img src="../../public/baby-chair/new-mom2.webp" alt="Profile"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Саран М.</span>
+              <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
+                  class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
+                  class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div
+              style="display: inline-block; background: rgba(59, 130, 246, 0.1); color: #2563EB; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">
+              Зай багатай байранд тохирсон</div>
+          </div>
+        </div>
+
+        <div
+          style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас зайлсхийж байсан. Энэ нэг
+          сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан. Чанартай бас их авсаархан юм."
+        </div>
+
+        <div data-review-date="4" style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
+          ХУД • ...
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div
+        style="background: var(--white); border: 1.5px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.04); position: relative;">
+        <!-- decorative quote -->
+        <i class="hgi-stroke hgi-quote-down"
+          style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(16, 185, 129, 0.1); opacity: 0.8; z-index: 0;"></i>
+
+        <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
+          <div
+            style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.2); flex-shrink: 0;">
+            <img src="../../public/baby-chair/new-mom3.webp" alt="Profile"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-weight: 800; font-size: 15px; color: var(--text);">Oyun Oyun</span>
+              <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
+                <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
+                  class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
+                  class="hgi-stroke hgi-star-01"></i>
+              </div>
+            </div>
+            <div
+              style="display: inline-block; background: rgba(16, 185, 129, 0.1); color: #059669; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">
+              Өдөр тутам ашиглаж байна</div>
+          </div>
+        </div>
+
+        <div
+          style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
+          "Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч хэрэгтэй юм байна. Бас
+          авсаархан амар эд байна. Материал нь их гоё зөөлөн хэрнээ бат бөх санагдлаа."
+        </div>
+
+        <div data-review-date="12"
+          style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
+          Дархан • ...
         </div>
       </div>
     </div>
+  </section>
 
 
-
-
-    <section style="padding: 0 16px;">
-      <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
-        <h2 class="compact-heading"
-          style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Ээжүүд яагаад үүнд
-          дуртай байдаг вэ?</h2>
+  <!-- ===== SPECS (relocated — logical confirmation) ===== -->
+  <section style="padding: 0 16px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 16px;">
+      <h2 class="compact-heading"
+        style="font-size: 18px; font-weight: 900; color: var(--text); letter-spacing: -0.3px;">Дэлгэрэнгүй</h2>
+    </div>
+    <div class="spec-card-grid" style="padding: 0; margin: 0 0 8px;">
+      <div class="spec-card spec-card--teal">
+        <div class="spec-card-copy">
+          <div class="spec-card-label">Нас</div>
+          <div class="spec-card-value">0–7 нас</div>
+        </div>
+        <div class="spec-card-icon"><i class="hgi-stroke hgi-calendar-01"></i></div>
       </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-
-        <!-- Card 1: Reclining -->
-        <div class="feature-card feature-card--teal">
-          <div class="feature-card-head">
-            <i class="hgi-stroke hgi-smile" style="font-size: 16px; color: var(--primary-dark);"></i>
-            <h4 class="feature-card-title">Налдаг түшлэг</h4>
-          </div>
-          <div class="feature-card-body">
-            <p class="feature-card-desc">Үс угаахад хүүхдэд хамгийн тухтай байрлал</p>
-          </div>
+      <div class="spec-card spec-card--blue">
+        <div class="spec-card-copy">
+          <div class="spec-card-label">Даац</div>
+          <div class="spec-card-value">75 кг хүртэл</div>
         </div>
-
-        <!-- Card 2: Waterproof -->
-        <div class="feature-card feature-card--blue">
-          <div class="feature-card-head">
-            <i class="hgi-stroke hgi-droplet" style="font-size: 16px; color: var(--secondary-dark);"></i>
-            <h4 class="feature-card-title">Усанд тэсвэртэй</h4>
-          </div>
-          <div class="feature-card-body">
-            <p class="feature-card-desc">Цэвэрлэхэд маш амар, сайн чанарын PP материалтай</p>
-          </div>
-        </div>
-
-        <!-- Card 3: Multi-function -->
-        <div class="feature-card feature-card--green">
-          <div class="feature-card-head">
-            <i class="hgi-stroke hgi-layers-01" style="font-size: 16px; color: var(--safe-dark);"></i>
-            <h4 class="feature-card-title">3 төрлийн хэрэглээ</h4>
-          </div>
-          <div class="feature-card-body">
-            <p class="feature-card-desc">Хооллох, үс угаах, хөл угаах — ганцхан сандал бүгдийг шийднэ</p>
-          </div>
-        </div>
-
-        <!-- Card 4: Non-slip -->
-        <div class="feature-card feature-card--teal">
-          <div class="feature-card-head">
-            <i class="hgi-stroke hgi-tick-01" style="font-size: 16px; color: var(--primary-dark);"></i>
-            <h4 class="feature-card-title">Хальтардаггүй хөл</h4>
-          </div>
-          <div class="feature-card-body">
-            <p class="feature-card-desc">Аюулгүй, тогтвортой бүтэцтэй тул ээжүүд сэтгэл амар байна</p>
-          </div>
-        </div>
-
+        <div class="spec-card-icon"><i class="hgi-stroke hgi-justice-scale-01"></i></div>
       </div>
-    </section>
-
-
-
-
-
-    <section style="padding: 0 16px;">
-      <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 20px;">
-        <h2 class="compact-heading"
-          style="font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.5px;">Та нийт хэдийг хэмнэх
-          вэ?</h2>
+      <div class="spec-card spec-card--green">
+        <div class="spec-card-copy">
+          <div class="spec-card-label">Материал</div>
+          <div class="spec-card-value">PP (BPA-free)</div>
+        </div>
+        <div class="spec-card-icon"><i class="hgi-stroke hgi-test-tube-01"></i></div>
       </div>
-
-      <div style="padding: 0;">
-
-        <!-- Breakdown rows -->
-        <div style="padding: 0;">
-
-          <!-- Row 1 -->
-          <div
-            style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <i class="hgi-stroke hgi-chair-01"
-                style="font-size: 16px; color: var(--primary-dark); width: 16px; text-align: center; flex-shrink: 0;"></i>
-              <span style="font-size: 12px; font-weight: 700; color: #374151;">Хоолны сандал</span>
-            </div>
-            <span
-              style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮80,000–120,000</span>
-          </div>
-
-          <!-- Row 2 -->
-          <div
-            style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border);">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <i class="hgi-stroke hgi-shampoo"
-                style="font-size: 16px; color: var(--secondary-dark); width: 16px; text-align: center; flex-shrink: 0;"></i>
-              <span style="font-size: 12px; font-weight: 700; color: #374151;">Үс угаах сандал</span>
-            </div>
-            <span
-              style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮40,000–60,000</span>
-          </div>
-
-          <!-- Row 3 -->
-          <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <i class="hgi-stroke hgi-bathtub-01"
-                style="font-size: 16px; color: var(--safe-dark); width: 16px; text-align: center; flex-shrink: 0;"></i>
-              <span style="font-size: 12px; font-weight: 700; color: #374151;">Хөл угаах тавиур</span>
-            </div>
-            <span
-              style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮30,000–50,000</span>
-          </div>
+      <div class="spec-card spec-card--teal">
+        <div class="spec-card-copy">
+          <div class="spec-card-label">Хэрэглээ</div>
+          <div class="spec-card-value">Авсаархан, арчиж цэвэрлэхэд амар</div>
         </div>
-
-        <!-- Divider -->
-        <div style="margin: 8px 0 0; border-top: 1px dashed rgba(22,163,74,0.25);"></div>
-
-        <!-- Total row -->
-        <div
-          style="padding: 12px 0 0; display: flex; justify-content: space-between; align-items: center; background: transparent;">
-          <span style="font-size: 12px; font-weight: 700; color: #374151;">Нийт зардал</span>
-          <span
-            style="font-size: 12px; color: var(--text-muted); text-decoration: line-through; font-weight: 600;">₮150,000–230,000</span>
-        </div>
-
-        <!-- Savings highlight -->
-        <div
-          style="margin: 14px 0 12px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px dashed rgba(22,163,74,0.35); border-radius: 12px; padding: 16px 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
-          <div style="display: flex; align-items: center; gap: 6px;">
-            <i class="hgi-stroke hgi-save-money-pound" style="font-size: 16px; color: #16A34A;"></i>
-            <div
-              style="font-size: 11px; font-weight: 700; color: #16A34A; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 1px;">
-              Таны хэмнэлт</div>
-          </div>
-          <div style="font-size: 22px; font-weight: 900; color: #15803D; letter-spacing: -0.5px;">₮81,000–₮161,000</div>
-        </div>
-
-        <!-- CTA -->
-        <div style="padding: 0 0 16px;">
-          <button class="cta-scroll-btn"
-            onclick="trackOrderIntent('savings_cta'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
-            style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 800;">
-            <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 16px;"></i>
-            Хэмнэлттэй үнээр авах
-          </button>
-        </div>
-
+        <div class="spec-card-icon"><i class="hgi-stroke hgi-layers-01"></i></div>
       </div>
-    </section>
-
-
-
-
-    <section id="reviews-section" style="padding: 0 16px 24px;">
-      <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 24px;">
-        <h2 class="compact-heading"
-          style="font-size: 18px; font-weight: 900; color: var(--text); letter-spacing: -0.3px;">Ээжүүдийн сэтгэгдэл
-        </h2>
+      <div class="spec-card spec-card--wide spec-card--mint">
+        <div class="spec-card-copy">
+          <div class="spec-card-label">Хүргэлт ба төлбөр</div>
+          <div class="spec-card-value">Үнэгүй хүргэлт</div>
+          <div class="spec-card-meta">Дансаар төлөөд өдөртөө хүргүүлээд авах боломжтой</div>
+        </div>
+        <div class="spec-card-icon"><i class="hgi-stroke hgi-delivery-truck-01"></i></div>
       </div>
+    </div>
+  </section>
 
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <!-- Review 1 -->
-        <div
-          style="background: var(--white); border: 1.5px solid rgba(0, 212, 197, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(0, 212, 197, 0.04); position: relative;">
-          <!-- decorative quote -->
-          <i class="hgi-stroke hgi-quote-down"
-            style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(0, 212, 197, 0.1); opacity: 0.8; z-index: 0;"></i>
 
-          <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
-            <div
-              style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(0, 212, 197, 0.2); flex-shrink: 0;">
-              <img src="../../public/baby-chair/new-mom1.webp" alt="Profile"
-                style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-weight: 800; font-size: 15px; color: var(--text);">Энхтуяа Б.</span>
-                <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
-                    class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
-                    class="hgi-stroke hgi-star-01"></i>
-                </div>
-              </div>
+  <!-- ===== URGENCY + LOGISTICS (authentic) ===== -->
+  <div class="promo-card"
+    style="margin: 0 16px 20px; border: 1px solid rgba(0, 212, 197, 0.4); background: rgba(0, 212, 197, 0.05); border-radius: 8px; overflow: hidden;">
+    <div class="promo-strip"
+      style="background: transparent; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+      <div
+        style="font-size: 12px; color: var(--text-secondary); font-weight: 600; display: flex; align-items: center; gap: 6px;">
+        <i class="hgi-stroke hgi-box-01" style="font-size: 16px; color: var(--primary-dark);"></i>
+        <span><b>Агуулахын үлдэгдэл:</b> Маш цөөхөн үлдлээ</span>
+      </div>
+      <div
+        style="font-size: 12px; color: var(--text-secondary); font-weight: 600; display: flex; align-items: center; gap: 6px;">
+        <i class="hgi-stroke hgi-fast-delivery" style="font-size: 16px; color: var(--green);"></i>
+        <span><b>Хүргэлт:</b> 16:00-с өмнө захиалбал өнөөдөртөө гарна</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ===== ORDER FORM — PROGRESSIVE DISCLOSURE ===== -->
+  <section id="order-section">
+    <div class="order-form">
+      <h2>Захиалга өгөх</h2>
+
+      <!-- STEP 1: Color & Quantity (always visible) -->
+      <div class="order-step-block" data-step="1">
+        <div class="order-step-head">
+          <div class="order-step-no">1</div>
+          <div class="order-step-title">Тоо, өнгөө сонгоно уу</div>
+        </div>
+        <div class="form-group">
+          <div style="display: flex; gap: 6px; padding: 2px 0;">
+            <!-- Pink Pill -->
+            <div id="rowPink" onclick="changeColorQty('pink', 1)"
+              style="cursor: pointer; flex: 1; display: flex; align-items: center; gap: 0; background: var(--white); border: 1.5px solid #EC4899; border-radius: 24px; padding: 4px 4px 4px 10px; box-shadow: 0 2px 8px rgba(236, 72, 153, 0.08); transition: all 0.25s cubic-bezier(.4,0,.2,1);">
+              <span
+                style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #F9A8D4, #EC4899); flex-shrink: 0; box-shadow: 0 0 0 1.5px var(--white), 0 1px 3px rgba(236,72,153,0.3);"></span>
+              <span
+                style="font-weight: 700; color: #1F2937; font-size: 11px; margin-left: 6px; white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;">Ягаан</span>
               <div
-                style="display: inline-block; background: var(--primary-soft); color: var(--primary-dark); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">
-                3 настай охинд авсан</div>
-            </div>
-          </div>
-
-          <div
-            style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
-            "Охин маань үсээ угаалгах дургүй байдаг байсан ч толгойгоо арагш налуулаад суухад илүү тайван болсон.
-            Хооллохдоо ч давхар ашиглаж байгаа болохоор нэг зүйлээр хоёр ажлаа шийдэж байна. Хамгийн гол нь хүүхэд өөрөө
-            дуртай байгаа нь чухал юм."
-          </div>
-
-          <div data-review-date="2"
-            style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
-            Улаанбаатар • ...
-          </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div
-          style="background: var(--white); border: 1.5px solid rgba(59, 130, 246, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.04); position: relative;">
-          <!-- decorative quote -->
-          <i class="hgi-stroke hgi-quote-down"
-            style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(59, 130, 246, 0.1); opacity: 0.8; z-index: 0;"></i>
-
-          <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
-            <div
-              style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(59, 130, 246, 0.2); flex-shrink: 0;">
-              <img src="../../public/baby-chair/new-mom2.webp" alt="Profile"
-                style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-weight: 800; font-size: 15px; color: var(--text);">Саран М.</span>
-                <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
-                    class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
-                    class="hgi-stroke hgi-star-01"></i>
-                </div>
+                style="display: flex; align-items: center; gap: 0; background: #FDF2F8; border-radius: 20px; padding: 2px; margin-left: 4px;">
+                <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('pink', -1)"
+                  style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: transparent; color: #9CA3AF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1;">−</button>
+                <span id="qtyPink"
+                  style="font-size: 14px; font-weight: 800; color: #111827; min-width: 18px; text-align: center; line-height: 1;">1</span>
+                <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('pink', 1)"
+                  style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: #EC4899; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1; box-shadow: 0 1px 3px rgba(236,72,153,0.3);">+</button>
               </div>
+            </div>
+            <!-- Blue Pill -->
+            <div id="rowBlue" onclick="changeColorQty('blue', 1)"
+              style="cursor: pointer; flex: 1; display: flex; align-items: center; gap: 0; background: var(--white); border: 1.5px solid #E5E7EB; border-radius: 24px; padding: 4px 4px 4px 10px; transition: all 0.25s cubic-bezier(.4,0,.2,1);">
+              <span
+                style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #93C5FD, #3B82F6); flex-shrink: 0; box-shadow: 0 1px 3px rgba(59,130,246,0.2);"></span>
+              <span
+                style="font-weight: 700; color: #1F2937; font-size: 11px; margin-left: 6px; white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;">Цэнхэр</span>
               <div
-                style="display: inline-block; background: rgba(59, 130, 246, 0.1); color: #2563EB; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">
-                Зай багатай байранд тохирсон</div>
-            </div>
-          </div>
-
-          <div
-            style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
-            "Манайх жижиг талбайтай болохоор тусдаа хоолны сандал, угаалгын суудал авахаас зайлсхийж байсан. Энэ нэг
-            сандлыг өдөр тутам ээлжлээд ашиглаж байгаа нь хамгийн их таалагдсан. Чанартай бас их авсаархан юм."
-          </div>
-
-          <div data-review-date="4"
-            style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
-            ХУД • ...
-          </div>
-        </div>
-
-        <!-- Review 3 -->
-        <div
-          style="background: var(--white); border: 1.5px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.04); position: relative;">
-          <!-- decorative quote -->
-          <i class="hgi-stroke hgi-quote-down"
-            style="position: absolute; top: 16px; right: 16px; font-size: 40px; color: rgba(16, 185, 129, 0.1); opacity: 0.8; z-index: 0;"></i>
-
-          <div style="display: flex; gap: 16px; position: relative; z-index: 1;">
-            <div
-              style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid rgba(16, 185, 129, 0.2); flex-shrink: 0;">
-              <img src="../../public/baby-chair/new-mom3.webp" alt="Profile"
-                style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div style="flex: 1;">
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-weight: 800; font-size: 15px; color: var(--text);">Oyun Oyun</span>
-                <div style="color: #F59E0B; font-size: 16px; display: flex; gap: 2px;">
-                  <i class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
-                    class="hgi-stroke hgi-star-01"></i><i class="hgi-stroke hgi-star-01"></i><i
-                    class="hgi-stroke hgi-star-01"></i>
-                </div>
+                style="display: flex; align-items: center; gap: 0; background: #EFF6FF; border-radius: 20px; padding: 2px; margin-left: 4px;">
+                <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('blue', -1)"
+                  style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: transparent; color: #9CA3AF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1;">−</button>
+                <span id="qtyBlue"
+                  style="font-size: 14px; font-weight: 800; color: #111827; min-width: 18px; text-align: center; line-height: 1;">0</span>
+                <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('blue', 1)"
+                  style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: #3B82F6; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1; box-shadow: 0 1px 3px rgba(59,130,246,0.3);">+</button>
               </div>
-              <div
-                style="display: inline-block; background: rgba(16, 185, 129, 0.1); color: #059669; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; margin-top: 4px; letter-spacing: 0.2px;">
-                Өдөр тутам ашиглаж байна</div>
             </div>
           </div>
-
           <div
-            style="margin-top: 16px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); position: relative; z-index: 1;">
-            "Эхэндээ үс угаахад л зориулна гэж бодож байлаа. Харин хөл угаах, түр суулгах үед ч хэрэгтэй юм байна. Бас
-            авсаархан амар эд байна. Материал нь их гоё зөөлөн хэрнээ бат бөх санагдлаа."
-          </div>
-
-          <div data-review-date="12"
-            style="margin-top: 8px; font-size: 12px; color: var(--text-muted); font-weight: 600;">
-            Дархан • ...
+            style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px; margin-bottom: 6px; padding: 6px 14px; background: linear-gradient(90deg, rgba(0, 212, 197, 0.15) 0%, rgba(0, 212, 197, 0.03) 100%); border-radius: 20px; border: none;">
+            <div style="font-size: 11px; color: #6B7280; font-weight: 600;"><span id="formQtyTotal"
+                style="color: #111; font-weight: 800;">1</span> ширхэг</div>
+            <div style="font-size: 15px; color: var(--primary-dark); font-weight: 900; letter-spacing: -0.3px;"
+              id="formPriceTotal">₮69,000</div>
           </div>
         </div>
+        <button type="button" class="cta-scroll-btn" id="continueToPaymentBtn"
+          onclick="document.getElementById('paymentFlowWrapper').style.display = 'block'; this.style.display = 'none'; document.getElementById('fphone').focus();"
+          style="margin-top: 16px; font-size: 14px; font-weight: 800; padding: 16px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          ҮРГЭЛЖЛҮҮЛЭХ <i class="hgi-stroke hgi-arrow-down-01" style="font-size: 18px;"></i>
+        </button>
       </div>
-    </section>
 
+      <div id="paymentFlowWrapper" style="display: none;">
 
-    <section style="margin: 0 16px 32px; padding: 20px 0 0; background: none; border: none; box-shadow: none;">
-      <div style="display: flex; align-items: center; justify-content: center;">
-        <div style="display: inline-flex; align-items: center; gap: 12px;">
-          <!-- Text -->
-          <div
-            style="color: var(--primary-dark); font-weight: 900; font-size: 17px; line-height: 1.35; letter-spacing: -0.3px; text-align: center;">
-            Мянга мянган ээжүүдийн<br>
-            <span style="font-weight: 700; font-size: 15px; color: var(--primary);">итгэлийг хүлээсэн</span>
-          </div>
-          <!-- Image -->
-          <img src="images/web/mom-baby.webp" alt="Ээжүүдийн сонголт"
-            style="width: 110px; height: 110px; object-fit: contain; flex-shrink: 0;">
-        </div>
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-    <section id="order-section">
-      <div class="order-form">
-        <h2>Захиалга өгөх</h2>
-
-        <div class="order-step-block">
-          <div class="order-step-head">
-            <div class="order-step-no">1</div>
-            <div class="order-step-title">Тоо, өнгөө сонгоно уу</div>
-          </div>
-
-          <div class="form-group">
-            <!-- Compact Color Quantity Picker -->
-            <div style="display: flex; gap: 6px; padding: 2px 0;">
-
-              <!-- Pink Pill -->
-              <div id="rowPink" onclick="changeColorQty('pink', 1)" style="
-              cursor: pointer;
-              flex: 1;
-              display: flex;
-              align-items: center;
-              gap: 0;
-              background: var(--white);
-              border: 1.5px solid #EC4899;
-              border-radius: 24px;
-              padding: 4px 4px 4px 10px;
-              box-shadow: 0 2px 8px rgba(236, 72, 153, 0.08);
-              transition: all 0.25s cubic-bezier(.4,0,.2,1);
-            ">
-                <span
-                  style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #F9A8D4, #EC4899); flex-shrink: 0; box-shadow: 0 0 0 1.5px var(--white), 0 1px 3px rgba(236,72,153,0.3);"></span>
-                <span
-                  style="font-weight: 700; color: #1F2937; font-size: 11px; margin-left: 6px; white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;">Ягаан</span>
-                <div
-                  style="display: flex; align-items: center; gap: 0; background: #FDF2F8; border-radius: 20px; padding: 2px; margin-left: 4px;">
-                  <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('pink', -1)"
-                    style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: transparent; color: #9CA3AF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1;">−</button>
-                  <span id="qtyPink"
-                    style="font-size: 14px; font-weight: 800; color: #111827; min-width: 18px; text-align: center; line-height: 1;">1</span>
-                  <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('pink', 1)"
-                    style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: #EC4899; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1; box-shadow: 0 1px 3px rgba(236,72,153,0.3);">+</button>
-                </div>
-              </div>
-
-              <!-- Blue Pill -->
-              <div id="rowBlue" onclick="changeColorQty('blue', 1)" style="
-              cursor: pointer;
-              flex: 1;
-              display: flex;
-              align-items: center;
-              gap: 0;
-              background: var(--white);
-              border: 1.5px solid #E5E7EB;
-              border-radius: 24px;
-              padding: 4px 4px 4px 10px;
-              transition: all 0.25s cubic-bezier(.4,0,.2,1);
-            ">
-                <span
-                  style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #93C5FD, #3B82F6); flex-shrink: 0; box-shadow: 0 1px 3px rgba(59,130,246,0.2);"></span>
-                <span
-                  style="font-weight: 700; color: #1F2937; font-size: 11px; margin-left: 6px; white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis;">Цэнхэр</span>
-                <div
-                  style="display: flex; align-items: center; gap: 0; background: #EFF6FF; border-radius: 20px; padding: 2px; margin-left: 4px;">
-                  <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('blue', -1)"
-                    style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: transparent; color: #9CA3AF; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1;">−</button>
-                  <span id="qtyBlue"
-                    style="font-size: 14px; font-weight: 800; color: #111827; min-width: 18px; text-align: center; line-height: 1;">0</span>
-                  <button class="qty-btn" type="button" onclick="event.stopPropagation(); changeColorQty('blue', 1)"
-                    style="width: 32px; height: 28px; font-size: 16px; border-radius: 14px; border: none; background: #3B82F6; color: white; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; padding: 0; line-height: 1; box-shadow: 0 1px 3px rgba(59,130,246,0.3);">+</button>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Total display - compact -->
-            <div
-              style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px; margin-bottom: 6px; padding: 6px 14px; background: linear-gradient(90deg, rgba(0, 212, 197, 0.15) 0%, rgba(0, 212, 197, 0.03) 100%); border-radius: 20px; border: none;">
-              <div style="font-size: 11px; color: #6B7280; font-weight: 600;"><span id="formQtyTotal"
-                  style="color: #111; font-weight: 800;">1</span> ширхэг</div>
-              <div style="font-size: 15px; color: var(--primary-dark); font-weight: 900; letter-spacing: -0.3px;"
-                id="formPriceTotal">₮69,000</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="order-step-block">
+        <!-- STEP 2: Contact info -->
+        <div class="order-step-block step-active" data-step="2" style="margin-top: 8px;">
           <div class="order-step-head">
             <div class="order-step-no">2</div>
-            <div class="order-step-title">Төлбөрөө шилжүүлнэ үү</div>
+            <div class="order-step-title">Утасны дугаараа оруулна уу</div>
           </div>
+          <div class="form-group">
+            <label style="color: #111;">Утасны дугаар <span style="color:#ef4444">*</span></label>
+            <input type="tel" placeholder="9911 2233..." id="fphone" maxlength="8" inputmode="numeric" pattern="[0-9]*"
+              style="border-color: rgba(236,72,153,0.3);">
+          </div>
+          <div class="form-group" style="margin-top: 4px;">
+            <label>Нэр <span style="font-weight:400; color:#9ca3af; font-size:11px;">(Заавал биш)</span></label>
+            <input type="text" placeholder="Таны нэр..." id="fname">
+          </div>
+          <div class="form-group" style="margin-top: 4px;">
+            <label>Хаяг <span style="font-weight:400; color:#9ca3af; font-size:11px;">(Заавал биш)</span></label>
+            <input type="text" placeholder="Баянгол, 4-р хороо..." id="faddr">
+          </div>
+          <div style="text-align: center; margin: 12px 0 -4px; color: #D1D5DB;">
+            <i class="hgi-stroke hgi-arrow-down-double" style="font-size: 24px;"></i>
+          </div>
+        </div>
 
+        <!-- STEP 3: Payment -->
+        <div class="order-step-block step-active" data-step="3" style="margin-top: 8px;">
+          <div class="order-step-head">
+            <div class="order-step-no">3</div>
+            <div class="order-step-title">Төлбөрөө шилжүүлж баталгаажуулна уу</div>
+          </div>
           <input type="hidden" name="payment_method" value="Дансаар шилжүүлэх" id="lbl-transfer">
-
           <div id="transferSection">
             <div class="secure-payment-wrapper">
               <div class="secure-badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: translateY(-0.5px);">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" style="transform: translateY(-0.5px);">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   <path d="m9 12 2 2 4-4"></path>
                 </svg>
@@ -3276,7 +3278,8 @@
                 </div>
                 <div class="bank-row">
                   <span class="bank-label">Дансны дугаар</span>
-                  <div class="bank-value-row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px;">
+                  <div class="bank-value-row"
+                    style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px;">
                     <div style="display: flex; flex-direction: column; gap: 2px;">
                       <span class="bank-value" id="bankAccount" style="font-size: 20px;">5041 0338 49</span>
                       <span
@@ -3312,312 +3315,405 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="order-step-block">
-          <div class="order-step-head">
-            <div class="order-step-no">3</div>
-            <div class="order-step-title">Мэдээллээ бөглөж баталгаажуулна уу</div>
-          </div>
-
-          <div class="form-group">
-            <label>Нэр</label>
-            <input type="text" placeholder="Таны нэр..." id="fname">
-          </div>
-          <div class="form-group">
-            <label>Утасны дугаар</label>
-            <input type="tel" placeholder="9911 2233..." id="fphone" maxlength="8" inputmode="numeric" pattern="[0-9]*">
-          </div>
-          <div class="form-group">
-            <label>Хаяг (дүүрэг, хороо)</label>
-            <input type="text" placeholder="Баянгол, 4-р хороо..." id="faddr">
-          </div>
 
           <button class="submit-btn" id="submitBtn"><i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА
             БАТАЛГААЖУУЛАХ</button>
 
+          <!-- ===== SOCIAL PROOF (specific number) ===== -->
+          <div style="margin: 24px 0 12px; display: flex; align-items: center; justify-content: center;">
+            <div style="display: inline-flex; align-items: center; gap: 12px;">
+              <div
+                style="color: var(--primary-dark); font-weight: 900; font-size: 15px; line-height: 1.35; letter-spacing: -0.3px; text-align: center;">
+                <span id="totalSalesCount">2,847</span>+ ээжийн<br>
+                <span style="font-weight: 700; font-size: 14px; color: var(--primary);">итгэлийг хүлээсэн</span>
+              </div>
+              <img src="images/web/mom-baby.webp" alt="Ээжүүдийн сонголт"
+                style="width: 80px; height: 80px; object-fit: contain; flex-shrink: 0;">
+            </div>
+          </div>
 
           <div
             style="display: flex; align-items: center; justify-content: center; margin-top:16px; padding:12px 8px; background: transparent; border: 1.5px solid rgba(0, 212, 197, 0.35); border-radius:12px; font-size:11.5px; font-weight:800; color:var(--primary-dark); letter-spacing:0.3px; white-space:nowrap;">
-            <i class="hgi-stroke hgi-gift" style="font-size: 16px; margin-right: 6px; display: flex; align-items: center; justify-content: center;"></i> ӨНӨӨДӨР ЗАХИАЛБАЛ ХҮРГЭЛТ ҮНЭГҮЙ
+            <i class="hgi-stroke hgi-gift"
+              style="font-size: 16px; margin-right: 6px; display: flex; align-items: center; justify-content: center;"></i>
+            ӨНӨӨДӨР ЗАХИАЛБАЛ ХҮРГЭЛТ ҮНЭГҮЙ
           </div>
 
           <div class="payment-note">
             <b><i class="hgi-stroke hgi-idea-01"></i> Хэрхэн ажиллах вэ?</b>
             <p>Шилжүүлэг хийсний дараа захиалгаа баталгаажуулснаар бид тантай 24 цагийн дотор холбогдож, хүргэлтийн
-              мэдээлэл
-              өгнө.</p>
+              мэдээлэл өгнө.</p>
           </div>
+
+          <!-- Messenger alternative -->
+          <a class="messenger-alt" href="https://m.me/bambibabyroom" target="_blank"
+            onclick="if(window.dispatchTrackingEvent) dispatchTrackingEvent('contact', {channel:'messenger'})">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.17 5.5 3.09 7.42V22l2.72-1.49c1.3.36 2.7.57 4.19.57 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm1.14 12.83l-2.57-2.74-5.01 2.74 5.51-5.85 2.63 2.74 4.95-2.74-5.51 5.85z" />
+            </svg>
+            Messenger-ээр захиалах
+          </a>
         </div>
-      </div>
-    </section>
+
+      </div><!-- End paymentFlowWrapper -->
+
+    </div>
+  </section>
 
 
-    <div class="bottom-bar">
-      <!-- Price + label -->
-      <div
-        style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding-left: 2px;">
+
+
+
+
+
+
+  <div class="bottom-bar">
+    <!-- Price + label -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding-left: 2px;">
+      <span id="bottomBarPrice"
+        style="font-size: 20px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1;">₮69,000</span>
+      <div style="display: flex;">
         <span
-          style="font-size: 20px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; line-height: 1;">₮69,000</span>
-        <div style="display: flex;">
-          <span
-            style="font-size: 10.5px; font-weight: 700; color: var(--green); background: #f0fdf4; padding: 3px 6px; border-radius: 4px; border: 1px solid #bbf7d0; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;"><i
-              class="hgi-stroke hgi-delivery-truck-01" style="font-size: 12px;"></i> Үнэгүй хүргэлт</span>
-        </div>
+          style="font-size: 10.5px; font-weight: 700; color: var(--green); background: #f0fdf4; padding: 3px 6px; border-radius: 4px; border: 1px solid #bbf7d0; white-space: nowrap; display: inline-flex; align-items: center; gap: 4px;"><i
+            class="hgi-stroke hgi-delivery-truck-01" style="font-size: 12px;"></i> Үнэгүй хүргэлт</span>
       </div>
-
-      <button class="btn-buy"
-        onclick="trackOrderIntent('bottom_buy'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
-        style="flex: 1; min-width: 160px; padding: 8px 16px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;">
-        <div style="font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 5px;">
-          <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 17px;"></i> Захиалах
-        </div>
-        <div
-          style="font-size: 10px; font-weight: 600; opacity: 0.85; display: flex; align-items: center; gap: 3px; letter-spacing: 0.3px;">
-          <i class="hgi-stroke hgi-time-04" style="font-size: 11px;"></i> Хямдрал
-          Дуусах: <span class="timer-h">00</span>:<span class="timer-m">00</span>:<span class="timer-s">00</span>
-        </div>
-      </button>
     </div>
 
-    <script>
-      // ===== QUANTITY & COLOR STEPPER =====
-      window.qtyPink = 1;
-      window.qtyBlue = 0;
-      window.orderQty = 1;
-      const UNIT_PRICE = 69000;
+    <button class="btn-buy"
+      onclick="trackOrderIntent('bottom_buy'); document.getElementById('order-section').scrollIntoView({behavior:'smooth'})"
+      style="flex: 1; min-width: 160px; padding: 8px 16px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;">
+      <div style="font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 5px;">
+        <i class="hgi-stroke hgi-shopping-cart-check-in-01" style="font-size: 17px;"></i> Захиалах
+      </div>
+      <div
+        style="font-size: 10px; font-weight: 600; opacity: 0.85; display: flex; align-items: center; gap: 4px; letter-spacing: 0.3px;">
+        <i class="hgi-stroke hgi-fast-delivery" style="font-size: 11px;"></i> Өнөөдөртөө шууд гарна
+      </div>
+    </button>
+  </div>
 
-      function changeColorQty(color, delta) {
-        if (color === 'pink') {
-          window.qtyPink = Math.max(0, window.qtyPink + delta);
-        } else {
-          window.qtyBlue = Math.max(0, window.qtyBlue + delta);
-        }
+  <script>
+    // ===== QUANTITY & COLOR STEPPER =====
+    window.qtyPink = 1;
+    window.qtyBlue = 0;
+    window.orderQty = 1;
+    const UNIT_PRICE = 69000;
 
-        // Prevent 0 total
-        if (window.qtyPink === 0 && window.qtyBlue === 0) {
-          if (color === 'pink') window.qtyPink = 1;
-          else window.qtyBlue = 1;
-        }
-
-        document.getElementById('qtyPink').textContent = window.qtyPink;
-        document.getElementById('qtyBlue').textContent = window.qtyBlue;
-
-        const rowPink = document.getElementById('rowPink');
-        if (window.qtyPink > 0) {
-          rowPink.style.border = '1.5px solid #EC4899';
-          rowPink.style.boxShadow = '0 2px 8px rgba(236, 72, 153, 0.08)';
-          rowPink.style.background = '#FFFBFD';
-        } else {
-          rowPink.style.border = '1.5px solid #E5E7EB';
-          rowPink.style.boxShadow = 'none';
-          rowPink.style.background = 'var(--white)';
-        }
-
-        const rowBlue = document.getElementById('rowBlue');
-        if (window.qtyBlue > 0) {
-          rowBlue.style.border = '1.5px solid #3B82F6';
-          rowBlue.style.boxShadow = '0 2px 8px rgba(59, 130, 246, 0.08)';
-          rowBlue.style.background = '#F8FAFF';
-        } else {
-          rowBlue.style.border = '1.5px solid #E5E7EB';
-          rowBlue.style.boxShadow = 'none';
-          rowBlue.style.background = 'var(--white)';
-        }
-
-        window.orderQty = window.qtyPink + window.qtyBlue;
-
-        document.getElementById('formQtyTotal').textContent = window.orderQty;
-        document.getElementById('formPriceTotal').textContent = '₮' + (window.orderQty * UNIT_PRICE).toLocaleString('mn-MN');
-
-        // Disable minus button visually if 0
-        document.querySelectorAll('#rowPink .qty-btn').forEach(btn => {
-          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyPink === 0);
-        });
-        document.querySelectorAll('#rowBlue .qty-btn').forEach(btn => {
-          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyBlue === 0);
-        });
+    function changeColorQty(color, delta) {
+      if (color === 'pink') {
+        window.qtyPink = Math.max(0, window.qtyPink + delta);
+      } else {
+        window.qtyBlue = Math.max(0, window.qtyBlue + delta);
       }
 
-      // Init: disable minus start
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('#rowPink .qty-btn').forEach(btn => {
-          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyPink === 0);
-        });
-        document.querySelectorAll('#rowBlue .qty-btn').forEach(btn => {
-          if (btn.textContent.trim() === '−') btn.disabled = (window.qtyBlue === 0);
-        });
+      // Prevent 0 total
+      if (window.qtyPink === 0 && window.qtyBlue === 0) {
+        if (color === 'pink') window.qtyPink = 1;
+        else window.qtyBlue = 1;
+      }
+
+      document.getElementById('qtyPink').textContent = window.qtyPink;
+      document.getElementById('qtyBlue').textContent = window.qtyBlue;
+
+      const rowPink = document.getElementById('rowPink');
+      if (window.qtyPink > 0) {
+        rowPink.style.border = '1.5px solid #EC4899';
+        rowPink.style.boxShadow = '0 2px 8px rgba(236, 72, 153, 0.08)';
+        rowPink.style.background = '#FFFBFD';
+      } else {
+        rowPink.style.border = '1.5px solid #E5E7EB';
+        rowPink.style.boxShadow = 'none';
+        rowPink.style.background = 'var(--white)';
+      }
+
+      const rowBlue = document.getElementById('rowBlue');
+      if (window.qtyBlue > 0) {
+        rowBlue.style.border = '1.5px solid #3B82F6';
+        rowBlue.style.boxShadow = '0 2px 8px rgba(59, 130, 246, 0.08)';
+        rowBlue.style.background = '#F8FAFF';
+      } else {
+        rowBlue.style.border = '1.5px solid #E5E7EB';
+        rowBlue.style.boxShadow = 'none';
+        rowBlue.style.background = 'var(--white)';
+      }
+
+      window.orderQty = window.qtyPink + window.qtyBlue;
+
+      document.getElementById('formQtyTotal').textContent = window.orderQty;
+      const formattedPrice = '₮' + (window.orderQty * UNIT_PRICE).toLocaleString('mn-MN');
+      document.getElementById('formPriceTotal').textContent = formattedPrice;
+      const bottomPrice = document.getElementById('bottomBarPrice');
+      if (bottomPrice) bottomPrice.textContent = formattedPrice;
+
+      // Disable minus button visually if 0
+      document.querySelectorAll('#rowPink .qty-btn').forEach(btn => {
+        if (btn.textContent.trim() === '−') btn.disabled = (window.qtyPink === 0);
       });
+      document.querySelectorAll('#rowBlue .qty-btn').forEach(btn => {
+        if (btn.textContent.trim() === '−') btn.disabled = (window.qtyBlue === 0);
+      });
+    }
+
+    // Init: disable minus start
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('#rowPink .qty-btn').forEach(btn => {
+        if (btn.textContent.trim() === '−') btn.disabled = (window.qtyPink === 0);
+      });
+      document.querySelectorAll('#rowBlue .qty-btn').forEach(btn => {
+        if (btn.textContent.trim() === '−') btn.disabled = (window.qtyBlue === 0);
+      });
+    });
 
 
-      // Form submit → Telegram Bot
-      document.getElementById('submitBtn').addEventListener('click', () => {
-        const btn = document.getElementById('submitBtn');
-        if (btn.disabled) return;
-        const nameInput = document.getElementById('fname').value.trim();
-        const name = nameInput ? nameInput : 'Эрхэм харилцагч';
-        const phone = document.getElementById('fphone').value.trim();
-        const addr = document.getElementById('faddr').value.trim();
+    // Sanitize text input
+    function sanitizeInput(str) {
+      var div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML.substring(0, 200);
+    }
 
-        let colorParts = [];
-        if (window.qtyPink > 0) colorParts.push(window.qtyPink + 'ш Ягаан');
-        if (window.qtyBlue > 0) colorParts.push(window.qtyBlue + 'ш Цэнхэр');
-        let colorChoice = colorParts.join(', ');
+    // Form submit → Telegram Bot
+    var lastSubmitTime = 0;
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const btn = document.getElementById('submitBtn');
+      if (btn.disabled) return;
+      // Rate limit: 10s cooldown
+      var now = Date.now();
+      if (now - lastSubmitTime < 10000) return;
+      lastSubmitTime = now;
 
-        const tier = window.orderQty + ' ширхэг (' + colorChoice + ') — ₮' + (window.orderQty * 69000).toLocaleString('mn-MN');
+      const nameInput = sanitizeInput(document.getElementById('fname').value.trim());
+      const name = nameInput ? nameInput : 'Харилцагч';
+      const phone = document.getElementById('fphone').value.trim();
+      const addrInput = sanitizeInput(document.getElementById('faddr').value.trim());
+      const addr = addrInput ? addrInput : 'Оруулаагүй';
 
-        const paymentMethod = document.querySelector('input[name=\"payment_method\"]').value;
+      let colorParts = [];
+      if (window.qtyPink > 0) colorParts.push(window.qtyPink + 'ш Ягаан');
+      if (window.qtyBlue > 0) colorParts.push(window.qtyBlue + 'ш Цэнхэр');
+      let colorChoice = colorParts.join(', ');
 
-        if (!phone || !addr) {
-          alert('Утас, хаягаа бүрэн бөглөнө үү!');
-          return;
-        }
-        // Validate Mongolian phone format: 8 digits starting with 7, 8, or 9
-        const phoneClean = phone.replace(/[\s\-]/g, '');
-        if (!/^[789]\d{7}$/.test(phoneClean)) {
-          alert('Зөв утасны дугаар оруулна уу (8 оронтой, 7/8/9-ээр эхэлсэн)');
-          return;
-        }
-        btn.disabled = true;
-        btn.textContent = '⏳ Илгээж байна...';
-        btn.style.opacity = '0.6';
+      const tier = window.orderQty + ' ширхэг (' + colorChoice + ') — ₮' + (window.orderQty * 69000).toLocaleString('mn-MN');
 
-        fetch('https://gyoecadvlabojcowgiuz.supabase.co/functions/v1/telegram-order', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: name,
-            phone: phone,
-            addr: addr,
-            tier: tier,
-            paymentMethod: paymentMethod
-          })
+      const paymentMethod = document.querySelector('input[name=\"payment_method\"]').value;
+
+      if (!phone) {
+        alert('Заавал утасны дугаараа оруулна уу!');
+        return;
+      }
+      // Validate Mongolian phone format: 8 digits starting with 7, 8, or 9
+      const phoneClean = phone.replace(/[\s\-]/g, '');
+      if (!/^[789]\d{7}$/.test(phoneClean)) {
+        alert('Зөв утасны дугаар оруулна уу (8 оронтой, 7/8/9-ээр эхэлсэн)');
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = '⏳ Илгээж байна...';
+      btn.style.opacity = '0.6';
+
+      fetch('https://gyoecadvlabojcowgiuz.supabase.co/functions/v1/telegram-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          phone: phone,
+          addr: addr,
+          tier: tier,
+          paymentMethod: paymentMethod
         })
-          .then(res => res.json())
-          .then(data => {
-            if (data.ok) {
-              btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> Захиалга амжилттай илгээгдлээ!';
-              btn.style.background = '#16a34a';
-              // Dispatch tracking event
-              if (window.dispatchTrackingEvent) {
-                window.dispatchTrackingEvent('lead_submit', { payment_method: paymentMethod });
-              }
-              setTimeout(() => {
-                btn.disabled = false;
-                btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
-                btn.style.opacity = '1';
-                btn.style.background = '';
-                // Clear form
-                document.getElementById('fname').value = '';
-                document.getElementById('fphone').value = '';
-                document.getElementById('faddr').value = '';
-              }, 4000);
-            } else {
-              throw new Error('Telegram API error');
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.ok) {
+            btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> Захиалга амжилттай илгээгдлээ!';
+            btn.style.background = '#16a34a';
+            // Dispatch tracking event
+            if (window.dispatchTrackingEvent) {
+              window.dispatchTrackingEvent('lead_submit', { payment_method: paymentMethod });
             }
-          })
-          .catch(() => {
-            btn.innerHTML = '<i class="hgi-stroke hgi-cancel-01"></i> Алдаа гарлаа. Дахин оролдоно уу.';
-            btn.style.background = '#ef4444';
             setTimeout(() => {
               btn.disabled = false;
               btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
               btn.style.opacity = '1';
               btn.style.background = '';
-            }, 3000);
-          });
-      });
-    </script>
-
-    <script type="module" src="../../src/js/main.js"></script>
-
-    <!-- Contact Proof Footer -->
-    <footer
-      style="max-width:480px;margin:0 auto;padding:24px 16px 100px;text-align:center;font-size:11px;color:#A39E99;line-height:1.7;">
-      <div style="width:40px;height:1px;background:#EDEAE7;margin:0 auto 20px;"></div>
-      <div class="seller"
-        style="margin-bottom: 24px; text-align: left; background: transparent; border: 1px solid rgba(0,0,0,0.05); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 16px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <div class="seller-av"
-            style="background:none; border-radius: 50%; overflow: hidden; padding: 0; width: 48px; height: 48px; flex-shrink: 0;">
-            <img src="../../baby-chair/store_logo.webp" alt="Avatar"
-              style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-          <div class="seller-body" style="flex: 1;">
-            <div class="seller-name"
-              style="font-size: 16px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 6px;">
-              Bambi Room <i class="hgi-stroke hgi-facebook fb-verify" style="color: #0866FF; font-size: 16px;"></i>
-            </div>
-            <div class="seller-meta" style="font-size: 12.5px; color: #6B7280; font-weight: 500;">Ухаалаг ээжүүдийн
-              сонголт</div>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-          <button class="seller-btn" onclick="window.open('https://m.me/bambibabyroom', '_blank')"
-            style="background: transparent; border: 1.5px solid #0084FF !important; color: #0084FF !important; border-radius: 10px; height: 42px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.17 5.5 3.09 7.42V22l2.72-1.49c1.3.36 2.7.57 4.19.57 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm1.14 12.83l-2.57-2.74-5.01 2.74 5.51-5.85 2.63 2.74 4.95-2.74-5.51 5.85z" />
-            </svg>
-            Чатлах
-          </button>
-          <button class="seller-btn" onclick="window.open('https://www.facebook.com/bambibabyroom', '_blank')"
-            style="background: transparent; border: 1.5px solid #0866FF !important; color: #0866FF !important; border-radius: 10px; height: 42px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
-            <i class="hgi-stroke hgi-facebook-02" style="font-size: 16px;"></i> Дагах
-          </button>
-        </div>
-      </div>
-      <div>Асуулт, санал хүсэлт байвал холбогдоорой</div>
-      <div style="margin-top:6px;">
-        <i class="hgi-stroke hgi-mail-01"></i> <a href="mailto:davaa.art.ai@gmail.com"
-          style="color:var(--primary-dark);text-decoration:none;">davaa.art.ai@gmail.com</a>
-      </div>
-      <div style="margin-top:4px;">
-        <i class="hgi-stroke hgi-smart-phone-01"></i> <a href="tel:+97696870870"
-          style="color:var(--primary-dark);text-decoration:none;">96870870</a>
-      </div>
-
-      <div style="margin-top:16px;font-size:10px;color:#C5C0BB;">© 2026 Bambi Room. Бүх эрх хуулиар хамгаалагдсан.</div>
-    </footer>
-
-    <script>
-      (function () {
-        // Dynamic daily sales logic
-        const BASE_SALES = 564;
-        const LAUNCH_DATE = new Date('2026-03-01T00:00:00Z').getTime();
-        const now = Date.now();
-
-        let daysPassed = Math.floor((now - LAUNCH_DATE) / (1000 * 60 * 60 * 24));
-        if (daysPassed < 0) daysPassed = 0;
-
-        let totalSales = BASE_SALES;
-        for (let i = 0; i < daysPassed; i++) {
-          // pseudo-random using 'i' as seed (so it doesn't change on refresh)
-          let pseudoRandom = Math.sin(i + 123) * 10000;
-          let dailySales = Math.floor((pseudoRandom - Math.floor(pseudoRandom)) * 4) + 1; // 1 to 4 sales
-          totalSales += dailySales;
-        }
-
-
-
-        // Dynamic Review Dates
-        function getMongolianRelativeDate(daysAgo) {
-          if (daysAgo === 0) return 'Өнөөдөр';
-          if (daysAgo === 1) return 'Өчигдөр';
-          if (daysAgo < 7) return `${daysAgo} өдрийн өмнө`;
-          if (daysAgo < 14) return '1 долоо хоногийн өмнө';
-          const weeks = Math.floor(daysAgo / 7);
-          return `${weeks} долоо хоногийн өмнө`;
-        }
-
-        document.querySelectorAll('[data-review-date]').forEach(el => {
-          const days = parseInt(el.getAttribute('data-review-date'));
-          const locationPart = el.textContent.split(' • ')[0];
-          el.textContent = `${locationPart} • ${getMongolianRelativeDate(days)}`;
+              // Clear form
+              document.getElementById('fname').value = '';
+              document.getElementById('fphone').value = '';
+              document.getElementById('faddr').value = '';
+            }, 4000);
+          } else {
+            throw new Error('Telegram API error');
+          }
+        })
+        .catch(() => {
+          btn.innerHTML = '<i class="hgi-stroke hgi-cancel-01"></i> Алдаа гарлаа. Дахин оролдоно уу.';
+          btn.style.background = '#ef4444';
+          setTimeout(() => {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="hgi-stroke hgi-tick-01"></i> ЗАХИАЛГА БАТАЛГААЖУУЛАХ';
+            btn.style.opacity = '1';
+            btn.style.background = '';
+          }, 3000);
         });
-      })();
-    </script>
+    });
+  </script>
+
+  <script type="module" src="../../src/js/main.js"></script>
+
+  <!-- ===== GUARANTEE (risk reversal) ===== -->
+  <div
+    style="margin: 0 16px 20px; padding: 16px; border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 12px; background: transparent; display: flex; align-items: flex-start; gap: 12px;">
+    <div style="color: #10B981; flex-shrink: 0; line-height: 1;">
+      <i class="hgi-stroke hgi-shield-tick" style="font-size: 28px;"></i>
+    </div>
+    <div>
+      <h4 style="font-size: 14px; font-weight: 800; color: var(--text); margin-bottom: 4px;">Эрсдэлгүй, баталгаат
+        худалдаа</h4>
+      <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin: 0;">Бараа хүлээн авснаас хойш
+        таалагдахгүй бол буцааж болно.</p>
+    </div>
+  </div>
+
+  <!-- ===== FAQ (objection handling) ===== -->
+  <section style="padding: 0 16px 24px;">
+    <div class="section-head" style="margin-left: 0; margin-right: 0; margin-bottom: 16px;">
+      <h2 class="compact-heading"
+        style="font-size: 18px; font-weight: 900; color: var(--text); letter-spacing: -0.3px;">Түгээмэл асуултууд</h2>
+    </div>
+    <div class="faq-list" style="padding: 0;">
+      <div class="faq-item-new">
+        <button class="faq-q-btn" onclick="this.closest('.faq-item-new').classList.toggle('is-open')">
+          <span>Буцааж болох уу?</span>
+          <i class="hgi-stroke hgi-arrow-down-01" style="font-size: 16px;"></i>
+        </button>
+        <div class="faq-a-body">
+          <div class="faq-a-inner">Тийм. Бараа хүлээн авснаас хойш таалагдахгүй бол буцааж болно. Бид хариуцлагатай,
+            найдвартай үйлчилгээ үзүүлдэг.</div>
+        </div>
+      </div>
+      <div class="faq-item-new">
+        <button class="faq-q-btn" onclick="this.closest('.faq-item-new').classList.toggle('is-open')">
+          <span>Хэзээ хүргэх вэ?</span>
+          <i class="hgi-stroke hgi-arrow-down-01" style="font-size: 16px;"></i>
+        </button>
+        <div class="faq-a-body">
+          <div class="faq-a-inner">Захиалга баталгаажсанаас хойш Улаанбаатар дотор 24 цагийн дотор, орон нутагт 2–4
+            хоногт хүргэнэ. Хүргэлт үнэгүй.</div>
+        </div>
+      </div>
+      <div class="faq-item-new">
+        <button class="faq-q-btn" onclick="this.closest('.faq-item-new').classList.toggle('is-open')">
+          <span>Хэдэн нас хүртэл ашиглах вэ?</span>
+          <i class="hgi-stroke hgi-arrow-down-01" style="font-size: 16px;"></i>
+        </button>
+        <div class="faq-a-body">
+          <div class="faq-a-inner">0–7 насны хүүхдэд зориулагдсан бөгөөд 75кг хүртэл даацтай. Урт хугацаанд ашиглах
+            боломжтой.</div>
+        </div>
+      </div>
+      <div class="faq-item-new">
+        <button class="faq-q-btn" onclick="this.closest('.faq-item-new').classList.toggle('is-open')">
+          <span>Яаж захиалах вэ?</span>
+          <i class="hgi-stroke hgi-arrow-down-01" style="font-size: 16px;"></i>
+        </button>
+        <div class="faq-a-body">
+          <div class="faq-a-inner">Доорх захиалгын маягтаас өнгө, тоогоо сонгоод, мэдээллээ бөглөнө. Дансаар шилжүүлэг
+            хийсний дараа баталгаажуулна. Бид 24 цагийн дотор тантай холбогдоно.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Proof Footer -->
+  <footer
+    style="max-width:480px;margin:0 auto;padding:24px 16px 100px;text-align:center;font-size:11px;color:#A39E99;line-height:1.7;">
+    <div style="width:40px;height:1px;background:#EDEAE7;margin:0 auto 20px;"></div>
+    <div class="seller"
+      style="margin-bottom: 24px; text-align: left; background: transparent; border: 1px solid rgba(0,0,0,0.05); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div class="seller-av"
+          style="background:none; border-radius: 50%; overflow: hidden; padding: 0; width: 48px; height: 48px; flex-shrink: 0;">
+          <img src="../../baby-chair/store_logo.webp" alt="Avatar"
+            style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="seller-body" style="flex: 1;">
+          <div class="seller-name"
+            style="font-size: 16px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 6px;">
+            Bambi Room <i class="hgi-stroke hgi-facebook fb-verify" style="color: #0866FF; font-size: 16px;"></i>
+          </div>
+          <div class="seller-meta" style="font-size: 12.5px; color: #6B7280; font-weight: 500;">Ухаалаг ээжүүдийн
+            сонголт</div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <button class="seller-btn" onclick="window.open('https://m.me/bambibabyroom', '_blank')"
+          style="background: transparent; border: 1.5px solid #0084FF !important; color: #0084FF !important; border-radius: 10px; height: 42px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2C6.36 2 2 6.13 2 11.7c0 2.9 1.17 5.5 3.09 7.42V22l2.72-1.49c1.3.36 2.7.57 4.19.57 5.64 0 10-4.13 10-9.7C22 6.13 17.64 2 12 2zm1.14 12.83l-2.57-2.74-5.01 2.74 5.51-5.85 2.63 2.74 4.95-2.74-5.51 5.85z" />
+          </svg>
+          Чатлах
+        </button>
+        <button class="seller-btn" onclick="window.open('https://www.facebook.com/bambibabyroom', '_blank')"
+          style="background: transparent; border: 1.5px solid #0866FF !important; color: #0866FF !important; border-radius: 10px; height: 42px; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; width: 100%;">
+          <i class="hgi-stroke hgi-facebook-02" style="font-size: 16px;"></i> Дагах
+        </button>
+      </div>
+    </div>
+    <div>Асуулт, санал хүсэлт байвал холбогдоорой</div>
+    <div style="margin-top:6px;">
+      <i class="hgi-stroke hgi-mail-01"></i> <a href="mailto:davaa.art.ai@gmail.com"
+        style="color:var(--primary-dark);text-decoration:none;">davaa.art.ai@gmail.com</a>
+    </div>
+    <div style="margin-top:4px;">
+      <i class="hgi-stroke hgi-smart-phone-01"></i> <a href="tel:+97696870870"
+        style="color:var(--primary-dark);text-decoration:none;">96870870</a>
+    </div>
+
+    <div style="margin-top:16px;font-size:10px;color:#C5C0BB;">© 2026 Bambi Room. Бүх эрх хуулиар хамгаалагдсан.</div>
+  </footer>
+
+  <script>
+    (function () {
+      // Dynamic daily sales logic
+      const BASE_SALES = 564;
+      const LAUNCH_DATE = new Date('2026-03-01T00:00:00Z').getTime();
+      const now = Date.now();
+
+      let daysPassed = Math.floor((now - LAUNCH_DATE) / (1000 * 60 * 60 * 24));
+      if (daysPassed < 0) daysPassed = 0;
+
+      let totalSales = BASE_SALES;
+      for (let i = 0; i < daysPassed; i++) {
+        // pseudo-random using 'i' as seed (so it doesn't change on refresh)
+        let pseudoRandom = Math.sin(i + 123) * 10000;
+        let dailySales = Math.floor((pseudoRandom - Math.floor(pseudoRandom)) * 4) + 1; // 1 to 4 sales
+        totalSales += dailySales;
+      }
+
+      // Update the sales counter in the social proof banner
+      var salesEl = document.getElementById('totalSalesCount');
+      if (salesEl) salesEl.textContent = totalSales.toLocaleString('mn-MN');
+
+      // Dynamic Review Dates
+      function getMongolianRelativeDate(daysAgo) {
+        if (daysAgo === 0) return 'Өнөөдөр';
+        if (daysAgo === 1) return 'Өчигдөр';
+        if (daysAgo < 7) return `${daysAgo} өдрийн өмнө`;
+        if (daysAgo < 14) return '1 долоо хоногийн өмнө';
+        const weeks = Math.floor(daysAgo / 7);
+        return `${weeks} долоо хоногийн өмнө`;
+      }
+
+      document.querySelectorAll('[data-review-date]').forEach(el => {
+        const days = parseInt(el.getAttribute('data-review-date'));
+        const locationPart = el.textContent.split(' • ')[0];
+        el.textContent = `${locationPart} • ${getMongolianRelativeDate(days)}`;
+      });
+    })();
+  </script>
 </body>
 
 </html>
