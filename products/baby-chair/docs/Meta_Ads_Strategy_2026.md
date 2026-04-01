@@ -1,308 +1,304 @@
-# 2026 Meta Ads Execution Plan: 3-in-1 Baby Chair
+# 2026 оны Meta Ads Стратеги: 3 үйлдэлт хүүхдийн сандал
 
-This file is the **media buyer execution guide**. `Campaign_Strategy.md` explains the market angle; this file explains how to structure the Meta account, what to optimize for, and how to scale without confusing the algorithm.
-
----
-
-## 1. Strategic thesis
-
-This product should not be run with a bloated multi-stage setup on day one. The offer is simple, visual, and emotionally understandable, so the winning system is:
-
-* broad enough for Meta to find buyers
-* structured enough to learn fast
-* disciplined enough to avoid fake signals
-
-The product page is currently a **lead / order form page**, not a classic cart checkout. That changes the optimization strategy in an important way:
-
-* do **not** center the account around `AddToCart`
-* do optimize around the events the page actually fires
-
-Current high-intent events that appear to be actively used in the page flow:
-
-* `begin_checkout`
-* `copy_bank`
-* `lead_submit`
-
-The tracking schema also defines `view_content`, `add_payment_info`, and `contact`, but those should not be treated as dependable optimization signals until they are confirmed to fire in the live flow.
-
-This matters because early-stage accounts often do not generate enough `lead_submit` volume for stable Meta learning.
+Энэхүү баримт бичиг нь **дижитал маркетер болон сурталчилгааны менежерүүдэд (Media Buyer) зориулсан гарын авлага** юм. `Campaign_Strategy.md` файлд маркетингийн ерөнхий өнцгийг тайлбарласан бол, энд Meta сурталчилгааны бүртгэлийг (Ad account) хэрхэн удирдах, юунд чиглүүлж оновчлох (optimize), мөн алгоритмыг төөрөгдүүлэхгүйгээр төсвөө хэрхэн зөв нэмэгдүүлэх (scale) талаарх бодит заавруудыг багтаалаа.
 
 ---
 
-## 2. Recommended account structure
+## 1. Стратегийн үндэслэл
 
-### Campaign 1: Creative Testing
-**Type:** ABO  
-**Budget share:** 20-30%
+Энэхүү бүтээгдэхүүнийг анхнаас нь л хоосон нүсэр сурталчилгааны бүтэц (campaign structure) угсарч эхлүүлэх шаардлагагүй. Бидний санал болгож буй шийдэл нь маш тодорхой, нүдэнд шууд харагдахуйц бөгөөд сэтгэл зүйд хүрч ажилладаг тул хамгийн зөв бүтэц нь:
 
-Purpose:
+* Meta худалдан авагчаа өөрөө хайж олох боломжтой хэмжээний **өргөн цар хүрээтэй (broad) зорилтот бүлэг**.
+* Алгоритм хурдан суралцаж чадах хэмжээний **тодорхой бөгөөд цэгцтэй бүтэц**.
+* Хуурамч үзүүлэлтэд хууртагдахгүй байх **чиг хандлага** юм.
 
-* test hooks
-* test angles
-* test ad formats
+Бүтээгдэхүүний вэбсайт нь одоогоор уламжлалт "Сагсанд нэмэх" (cart checkout) биш, харин **шууд мэдээлэл бөглөж захиалах (lead/order form)** зорилготой хуудас юм. Энэ нь бидний оновчлолын (optimization) стратегид маш чухал нөлөөтэй:
 
-Rules:
+* Бүртгэлийг (Ad account) бүхэлд нь `AddToCart` (Сагсанд нэмэх) руу чиглүүлж болохгүй.
+* Харин вэбсайт дээр хэрэглэгчийн бодитоор хийж логикоор хөтлөгдөж буй үйлдлүүд рүү оновчлох хэрэгтэй.
 
-* keep targeting broad
-* change one major variable at a time
-* use lightweight budgets so losers are cheap
+Одоогоор хуудсан дээр идэвхтэй ашиглагдаж буй, худалдан авах өндөр сонирхлын дохио (High-intent events):
 
-Best variables to test first:
+* `begin_checkout` (Захиалга хийж эхлэх)
+* `copy_bank` (Банкны данс хуулах)
+* `lead_submit` (Захиалга амжилттай илгээх)
 
-* hair-wash pain angle
-* 3-in-1 value angle
-* small-space angle
-* mom review angle
-
-### Campaign 2: Main Sales Campaign
-**Type:** Sales campaign or Advantage+ Shopping Campaign if account signal quality supports it  
-**Budget share:** 55-70%
-
-Purpose:
-
-* scale proven creative
-* let Meta find the best pockets inside a broad audience
-
-Recommended setup:
-
-* women, 24-38
-* Mongolia, with budget priority on Ulaanbaatar
-* keep detailed targeting minimal unless performance clearly improves with constraints
-
-### Campaign 3: Retargeting
-**Type:** Sales / Leads retargeting  
-**Budget share:** 10-15%
-
-Audience ideas:
-
-* 30-day product page visitors
-* people who triggered `begin_checkout`
-* people who triggered `add_payment_info`
-* engagers from FB/IG page content
-
-Creative focus:
-
-* social proof
-* spec clarity
-* price + delivery
-* one strong objection answer per ad
+Хэдийгээр мэдээлэл хянах системд (tracking schema) `view_content`, `add_payment_info`, `contact` зэрэг үйлдлүүд бүртгэгдсэн байгаа ч, тэдгээр нь бодитоор тогтмол ажиллаж батлагдах хүртэл гол оновчлолын дохио болгон ашиглаж болохгүй. Эхлэн ажиллаж буй дансууд алгоритмыг тогтворжуулах хангалттай `lead_submit` үйлдэл цуглуулж чаддаггүйг анхаарах нь зүйтэй.
 
 ---
 
-## 3. Conversion objective strategy
+## 2. Сурталчилгааны бүртгэлийн (Account) санал болгож буй бүтэц
 
-### Stage 1: Low-data phase
-If the account is new or low-volume:
+### Кампанит ажил 1: Контент турших (Creative Testing)
+**Төрөл (Type):** ABO (Ad Set Budget Optimization - Багцын түвшний төсөв)  
+**Эзлэх төсөв:** 20%-30%
 
-* optimize for `begin_checkout`
+Зорилго:
 
-Why:
+* Анхаарал татах эхний хэсгийг (hooks) шалгах
+* Сурталчилгааны өнцгүүдийг (angles) шалгах
+* Сурталчилгааны форматыг турших
 
-* the event will happen more often than `lead_submit`
-* Meta can learn faster
-* it is still a strong enough signal of product intent
+Дүрэм:
 
-### Stage 2: Mid-data phase
-When `lead_submit` starts happening consistently:
+* Зорилтот бүлгээ өргөн цар хүрээтэй (broad) байлгах.
+* Нэг дор зөвхөн нэг л гол өөрчлөлт (variable) оруулж турших.
+* Амжилтгүй сурталчилгаа нь хямд тусахын тулд бага төсвөөр эхлэх.
 
-* test `lead_submit` optimization in the main sales campaign
+Хамгийн түрүүнд турших өнцгүүд:
 
-Suggested threshold:
+* Үс угаах үеийн хүндрэлийн өнцөг
+* 3 хэрэглээг 1-д багтаасан үнэ цэнийн өнцөг
+* Зай талбай хэмнэх өнцөг
+* Ээжүүдийн туршлага, сэтгэгдлийн өнцөг
 
-* at least 20-30 `lead_submit` events in a rolling week before trusting it as the primary optimization event
+### Кампанит ажил 2: Үндсэн борлуулалт (Main Sales Campaign)
+**Төрөл (Type):** Sales campaign эсвэл мэдээлэл хангалттай хуримтлагдсан үед Advantage+ Shopping Campaign  
+**Эзлэх төсөв:** 55%-70%
 
-### Stage 3: Mature phase
-Once lead volume is stable and close rate is understood:
+Зорилго:
 
-* keep prospecting on the event that gives the best cost-quality balance
-* measure real outcome through lead quality, not Meta vanity alone
+* Сайн үр дүнтэй нь батлагдсан контентуудын цар хүрээг нэмэх (scale).
+* Meta-ийн системд өргөн аудитори дотроос жинхэнэ худалдан авагчаа олох боломжийг бүрдүүлэх.
 
-Strong reasoning:
+Санал болгож буй тохиргоо (Setup):
 
-If the algorithm is starved of conversion data, it will spend badly. Optimizing too early for the deepest event often feels "advanced" but performs worse in small accounts.
+* Эмэгтэй, 24-38 нас
+* Монгол улс даяар, хэдий ч Улаанбаатар хотод төсвийг түлхүү чиглүүлэх.
+* Хэрэв нарийвчилсан сонирхол (detailed targeting) нь үр дүнг илт сайжруулахгүй бол түүнийг хамгийн бага хэмжээнд байлгах.
+
+### Кампанит ажил 3: Дахин чиглүүлэх (Retargeting)
+**Төрөл (Type):** Sales / Leads retargeting  
+**Эзлэх төсөв:** 10%-15%
+
+Зорилтот бүлгийн санаанууд:
+
+* Сүүлийн 30 хоногт вэбсайт руу зочилсон хүмүүс
+* `begin_checkout` үйлдэл хийсэн хүмүүс
+* `add_payment_info` үйлдэл хийсэн хүмүүс
+* FB/IG пэйжийн контенттой идэвхтэй харилцсан хүмүүс
+
+Контентын гол чиглэл:
+
+* Нийгмийн баталгаа (Бусдын эерэг сэтгэгдэл)
+* Үзүүлэлт, даац зэргийн тодорхой мэдээлэл хэрэгтэй
+* Үнэ болон хүргэлтийн нөхцөл
+* Нэг сурталчилгаа нь хэрэглэгчийн нэг л эргэлзээг арилгах зорилготой байх
 
 ---
 
-## 4. Audience strategy
+## 3. Зорилтот үйлдлийг оновчлох стратеги (Conversion objective)
 
-### Primary audience
-* women
-* age 24-38
-* Mongolia
-* priority geography: Ulaanbaatar
+### Шат 1: Өгөгдөл багатай эхний үе (Low-data phase)
+Хэрэв сурталчилгааны бүртгэл (Account) шинэ, эсвэл хандалт бага байгаа бол:
 
-This is broad on purpose. The creative should do the filtering.
+* `begin_checkout`-р оновчил (Optimize).
 
-### Secondary audience tests
-Run these only as tests, not the main structure:
+Яагаад:
 
-* gift buyers
-* new parents
-* parents of toddlers
-* page engagers
+* Энэ үйлдэл нь `lead_submit`-г бодвол хамаагүй олон давтамжтай гарна.
+* Мэдээлэл их ирэх тул Meta илүү хурдан бөгөөд оновчтой суралцана.
+* Энэ нь бүтээгдэхүүнийг бодитоор сонирхож буйг илтгэх хангалттай хүчтэй дохио болдог.
 
-Reason:
+### Шат 2: Өгөгдөл дунджаар тогтворжсон үе (Mid-data phase)
+Хэдийд бүртгэл дээр `lead_submit` тогтмол орж ирж эхэлнэ, тэр үед:
 
-The product is easier to filter through creative than through interest stacking. Over-building the audience too early usually makes CPM and delivery worse.
+* Үндсэн борлуулалтын кампанит ажилд `lead_submit` оновчлолыг туршиж үзэх.
+
+Санал болгож буй босго үзүүлэлт:
+
+* Долоо хоногт дор хаяж 20-30 удаа `lead_submit` үйлдэл хийгдсэн байх үед л үүнийг үндсэн оновчлох үйлдэл болгох нь зүйтэй.
+
+### Шат 3: Өгөгдөл бүрэн хуримтлагдсан үе (Mature phase)
+Захиалгын тоо хэмжээ тогтворжиж, борлуулалт хаах хувь (close rate) тодорхой болсны дараа:
+
+* Өртөг болон чанарын хамгийн сайн тэнцвэрийг хадгалсан үйлдэл дээр илүү их хайлт (prospecting) хийсээр байх.
+* Meta-ийн гаднах өнгөц үзүүлэлтэд (vanity metrics) тархиа угаалгахгүйгээр, бодит чанартай борлуулалтаар үр дүнгээ хэмжих.
+
+Реал шалтгаан:
+
+Алгоритм хэрэв конверсион мэдээллээр өлсвөл төсөв маш муу зарцуулагддаг. Дөнгөж эхэлж байгаа, жижиг дансанд хэт гүнзгий үйлдэл (захиалга амжилттай илгээх) руу эрт оновчлох нь "мэргэжлийн" мэт санагдах боловч бодит үр дүн нь маш муу гардаг.
 
 ---
 
-## 5. Creative testing protocol
+## 4. Зорилтот бүлгийн (Audience) стратеги
 
-### Phase 1: Hook testing
-Test 3-5 hooks with the same core body footage.
+### Үндсэн зорилтот бүлэг
+* Эмэгтэйчүүд
+* 24-38 нас
+* Монгол улс
+* Тэргүүлэх байршил: Улаанбаатар хот
 
-Examples:
+Энэ нь санаатайгаар өргөн хүрээг хамарч байгаа явдал юм. Гол шүүлтүүрийг бидний бэлтгэсэн сурталчилгааны контент өөрөө хийх ёстой.
 
-* "Үс угаах болгонд хүүхэд уйлдаг уу?"
-* "Нэг сандал. Гурван хэрэглээ."
-* "Жижиг зайтай айлд яг хэрэгтэй хүүхдийн туслах."
+### Хоёрдогч зорилтот бүлгүүдийн туршилт
+Эдгээрийг үндсэн бүтэц болгох бус зөвхөн туршилт болгон ажиллуул:
 
-Watch:
+* Бэлэг хайж буй хүмүүс
+* Шинэхэн эцэг эхчүүд
+* Бага насны хүүхэдтэй эцэг эхчүүд
+* Пэйжтэй идэвхтэй харилцдаг хүмүүс
 
-* thumb-stop / hook rate
-* outbound CTR
-* landing page view quality
+Шалтгаан:
+Бүтээгдэхүүнийг олон төрлийн сонирхлуудаар (interest stacking) давхарлан шүүхээс илүү, сурталчилгааныхаа зөв өнцгөөр худалдан авагчаа шүүх нь хавьгүй амархан бөгөөд оновчтой байдаг. Анхнаас нь зорилтот бүлгээ хэт нарийвчилж барих нь ихэвчлэн сурталчилгааны өртгийг (CPM) нэмж, хүртээмжийг муутгадаг.
 
-Kill quickly if:
+---
 
-* hook rate is clearly weaker than the batch
-* CTR is poor
-* comments show confusion about what the product is
+## 5. Контент турших журам (Creative testing protocol)
 
-### Phase 2: Angle testing
-Take the best hook and test different bodies:
+### Шат 1: Анхаарал татах хэсгийг (Hook) турших
+Нэг ижил дүрстэй 3-5 өөр гарчиг эсвэл анхаарал татах хэсэг (hook) хийж турших.
 
-* hair washing
-* feeding cleanup
-* 3-in-1 transformation
-* mom testimonial
+Жишээ нь:
 
-Watch:
+* "Үс угаах болгонд хүүхэд тань уйлдаг уу?"
+* "Ердөө ганцхан сандал. Гурван өөр хэрэглээ."
+* "Зай талбай багатай айлд яг л дутагддаг ухаалаг туслах."
+
+Юуг анхаарах вэ:
+
+* Хуруугаа зогсоож буй хувь (Thumb-stop / hook rate)
+* Вэбсайт руу дарж байгаа хувь (Outbound CTR)
+* Вэбсайт дээр тогтож буй чанар (Landing page view quality)
+
+Дараах тохиолдолд шууд зогсоо (kill):
+
+* Hook rate багцын бусад контентоос илт муу байвал
+* Линк рүү дарах хувь (CTR) муу байвал
+* Сэтгэгдэл дээр хүмүүс бүтээгдэхүүнийг ойлгохгүй төөрөгдсөн байвал
+
+### Шат 2: Өнцгүүдийг (Angle) турших
+Хамгийн сайн ажиллаж буй Hook-г авч өөр өөр дүрстэйгээр шалгах:
+
+* Үс угаалгаж буй дүрсүүд
+* Хоолны дараах цэвэрлэгээг харуулах
+* 3 хэрэглээнд хувиргах байдлыг харуулах
+* Ээжүүдийн бодит туршлагын бичлэгүүд
+
+Юуг анхаарах вэ:
 
 * CTR
-* cost per `begin_checkout`
-* quality of comments and DMs
+* `begin_checkout` үйлдэл хийлгэж буй өртөг
+* Сэтгэгдэл болон чатаар ирж буй асуултын чанар
 
-### Phase 3: Offer / close testing
-Once a creative angle works, test close mechanics:
+### Шат 3: Үнийн санал болон гүйцэтгэлийг турших
+Аль нэг контентын өнцөг амжилттай ажиллаж эхэлбэл, хэрхэн борлуулалт хаах үйлдлийг шалгана:
 
-* free shipping line
-* price framing
-* review-led close
-* spec-led close
+* Үнэгүй хүргэлт гэдгийг онцолсон хэллэгүүд
+* Үнийг хэрхэн хүлээж авч байгаа өнцгүүд
+* Бусдын эерэг сэтгэгдлээр эргэлзээг арилгах
+* Бат бөх, үзүүлэлтээр баталгаажуулах
 
-At this phase, the job is not to find a prettier ad. The job is to remove hesitation.
+Энэ шатанд бид худалдан авагчдын "эргэлзээг л арилгах" нь чухал болохоос царайлаг сурталчилгаа хайх хэрэггүй.
 
 ---
 
-## 6. ManyChat / Auto-DM guidance
+## 6. ManyChat болон Автомат чат (Auto-DM) ашиглах зааварчилгаа
 
-ManyChat can work well here, but it should be treated as an **optional amplifier**, not the core dependency.
+Энэ бүтээгдэхүүнд ManyChat амжилттай ажиллах боломжтой ч хэзээ ч түүнийг **цор ганц хамаарал** болгох биш, харин **борлуулалтаа нэмэгдүүлэх хөшүүрэг (amplifier)** хэлбэрээр ашиглахыг зөвлөж байна.
 
-### Use it when
-* comment volume already exists
-* you can monitor DMs
-* the keyword flow is fully in Mongolian
+### Ашиглах тохиромжтой үе
+* Сэтгэгдэл (коммент) хангалттай их ирж эхэлсэн үед
+* Чатыг цаг алдалгүй хянаж, удирдах оператортай үед
+* Хэрэглэгчидтэй холбогдох автомат түлхүүр үг (keyword) монгол хэл дээр байх үед
 
-### Suggested keyword
+### Санал болгож буй түлхүүр үг (Keyword)
 **"САНДАЛ"**
 
-This is better than `"CHAIR"` because:
+Энэ үг нь "CHAIR" гэх үгээс илүү дээр юм, учир нь:
 
-* it matches the language of the ads
-* it lowers friction
-* it feels native to the audience
+* Сурталчилгааны Монгол хэлтэй шууд нийлнэ.
+* Хэрэглэгчид хүч шаардахгүй, үйлдэл хийхэд хялбар (lowers friction).
+* Аудиторид маань хамгийн байгалийн (native) бөгөөд ойлгомжтой санагдана.
 
-### Recommended flow
-1. User comments `САНДАЛ`
-2. Auto-reply confirms the link was sent
-3. DM sends product page link + one clear reason to click
-4. Optional follow-up answers one FAQ, not a hard sell
+### Санал болгож буй автоматжуулалтын урсгал
+1. Хэрэглэгч `САНДАЛ` гэж коммент бичнэ.
+2. Автомат хариулагч хэрэглэгчид "Танд линкийг чатаар явууллаа" гэж комментоор баталгаажуулна.
+3. Чат руу нь бүтээгдэхүүний дэлгэрэнгүй линк болон дарах үнэ цэнтэй нэг шалтгааныг явуулна.
+4. (Нэмэлт) Идэвхтэй байх хугацааны дараа хамгийн түгээмэл асуудаг 1 асуултад (FAQ) хариулах мессеж явуулна, гэхдээ хүчтэй зарах гэж шахахгүй.
 
-### Do not do this
-* promise extra discounts you cannot sustain
-* add DM automation before the basic landing page funnel is proven
-* split too much budget away from direct click-to-page campaigns
+### Дараах зүйлсийг битгий хийгээрэй
+* Тасалгаа гаргаж чадахгүй (биелүүлэх боломжгүй) хямдралыг сүржин амлах.
+* Вэбсайтын (landing page) захиалгын урсгал алдаагүй жигдрэхээс өмнө DM автоматжуулалтыг нэвтрүүлэх.
+* Вэбсайт руу шууд хандалтаар орох (click-to-page) сурталчилгааны төсвийг хэт их хуваах.
 
-Reason:
+Шалтгаан:
 
-Comment automation is powerful for engagement, but if the product page and lead flow are not stable first, it adds complexity without fixing the actual bottleneck.
-
----
-
-## 7. Budget model
-
-### Percentage model
-* Creative Testing: 20-30%
-* Main Sales: 55-70%
-* Retargeting: 10-15%
-
-### Example with 60,000 MNT/day
-* Testing: 15,000 MNT/day
-* Main Sales: 36,000 MNT/day
-* Retargeting: 9,000 MNT/day
-
-This structure is better than spreading tiny budgets across many ad sets because:
-
-* each campaign gets enough spend to learn
-* winners become obvious faster
-* management stays simple
+Сэтгэгдлийн (Comment) автоматжуулалт нь хуудасны идэвхийг нэмэгдүүлдэг ч вэбсайтын процесс өөрөө алдаатай байвал энэ нь зүгээр л асуудлыг томруулж, жинхэнэ гацааг (bottleneck) шийдэж чаддаггүй.
 
 ---
 
-## 8. Scale and kill rules
+## 7. Төсвийн хуваарилалтын загвар
 
-### Kill or pause when
-* CTR is weak versus the rest of the batch
-* comments show the product is not understood
-* cost per `begin_checkout` is far above the account average
-* the creative gets clicks but no downstream intent
+### Хувийн загварчилгаа (Percentage model)
+* Контент турших (Creative Testing): 20%-30%
+* Үндсэн борлуулалт (Main Sales): 55%-70%
+* Дахин чиглүүлэх (Retargeting): 10%-15%
 
-### Scale when
-* CTR is healthy
-* cost per `begin_checkout` is stable
-* `lead_submit` volume follows, not just empty clicks
+### Загвар жишээ (Өдрийн төсөв 60,000 MNT байвал)
+* Туршилт хийхэд: 15,000 MNT / өдөрт
+* Үндсэн борлуулалтад: 36,000 MNT / өдөрт
+* Дахин чиглүүлэхэд: 9,000 MNT / өдөрт
 
-### Safe scaling rule
-Increase budget gradually, around 15-20% at a time, then wait before making the next jump.
+Ийм байдлаар төсвийг хуваарилах нь хэт олон сурталчилгааны багц (ad sets) үүсгэж, тус бүрт нь өчүүхэн төсөв тавихаас хавьгүй оновчтой арга юм. Учир нь:
 
-Reason:
-
-Large jumps reset delivery behavior and can turn a winner into an unstable campaign.
+* Кампанит ажил бүр алгоритм суралцахад хангалттай төсвөөр хангагдана.
+* Аль нь сайн ажиллаж байгаа (winners) баттай үр дүн илүү хурдан харагдана.
+* Сурталчилгааны менежмент илүү энгийн, хянахад амар байна.
 
 ---
 
-## 9. Weekly review checklist
+## 8. Төсөв нэмэх (Scale) болон зогсоох (Kill) дүрмүүд
 
-Every week answer these questions:
+### Зар сурталчилгааг зогсоох эсвэл түр зогсоох (Kill / Pause) үе:
+* Линк рүү дарах (CTR) хувь нь багцын бусад контентоосоо сул байх үед.
+* Сэтгэгдэл дээр ирж буй мэдээллээс харахад хүмүүс бүтээгдэхүүнийг бүрэн ойлгоогүй байгаа нь ажиглагдах үед.
+* `begin_checkout` хийх өртөг нь дансны дунджаас (account average) дэндүү өндөр байх үед.
+* Зар сурталчилгаа даралт (clicks) авч байгаа ч цаашилж захиалгын ямар ч алхам руу орохгүй байх үед.
 
-1. Which hook stopped the scroll fastest?
-2. Which angle produced the cheapest `begin_checkout`?
-3. Which creative produced the best quality leads?
-4. Which comments showed the biggest objections?
-5. Is the landing page helping or hurting the ad signal?
+### Төсвийг нэмэх үе (Scale):
+* CTR нь эрүүл мөн тогтмол байх үед.
+* `begin_checkout` хийх өртөг нь тогтвортой хэвээр байх үед.
+* Зөвхөн хий хоосон хандалт биш, харин `lead_submit` үйлдэл (амжилттай захиалга) бодитоор тогтмол ирж эхлэх үед.
 
-If the ads are getting attention but not leads, the problem is often not targeting. It is usually:
+### Төсвийг аюулгүй нэмэх дүрэм
+Төсвийг аажмаар буюу 15%-20% орчмоор шатлан нэмж, дараагийн нэмэлт хийхээс өмнө үр дүнгээ харж хүлээх хэрэгтэй.
 
-* weak angle-message fit
-* landing page hesitation
-* unclear offer
-* slow operational follow-up
+Шалтгаан:
+Хоорондоо хэт том зөрүүтэйгээр төсвөө огцом нэмэх нь алгоритмын сургалтын төлөв байдлыг алдагдуулж (reset), амжилттай сурталчилгааг тогтворгүй кампанит ажил болгон хувиргах аюултай байдаг.
 
 ---
 
-## 10. Final guidance
+## 9. Долоо хоног тутмын хяналтын хуудас (Weekly review checklist)
 
-This account should be run with one discipline above all:
+Долоо хоног бүр өөрөөсөө дараах асуултуудыг заавал асууж дүгнэлт хийнэ үү:
 
-**optimize for signal quality, not just vanity performance.**
+1. Аль Hook буюу анхаарал татах хэсэг нь уншигчдын хурууг хамгийн хурдан зогсоож чадсан бэ?
+2. Аль өнцөг нь хамгийн хямд `begin_checkout` дохиог авчирсан бэ?
+3. Аль контентоос орж ирсэн худалдан авагчид хамгийн найдвартай захиалгуудаа үлдээсэн бэ?
+4. Сэтгэгдлүүдээс харахад хүмүүсийн хамгийн том эргэлзээ нь юу байна вэ?
+5. Одоогийн вэбсайт (Landing page) энэ сурталчилгааг амжилттай дэмжиж чадаж байна уу, эсвэл бүр унагаад (hurting) байна уу?
 
-For this product, the best order of operations is:
+Хэрэв сурталчилгаа маш их анхаарал татаж чадсан хэр нь захиалга (leads) болж чадахгүй байвал энэ нь зорилтот бүлгээ (Targeting) буруу сонгосных байдаггүй. Харин ихэвчлэн дараах шалтгаантай байдаг:
 
-1. find the winning angle
-2. optimize around the right event depth
-3. scale the winner slowly
-4. retarget with proof, not noise
+* Өнцөг болон мессеж сул, эсвэл авцалдаагүй байх.
+* Вэбсайт руу ороод хүмүүс эргэлзэх, ойлгохгүй байх мэдрэмж төрүүлсэн (hesitation).
+* Үнийн болон урамшууллын санал тодорхой бус байх.
+* Захиалга баталгаажуулах зэрэг үйл ажиллагааны үе шатууд удаашралтай (slow operational follow-up) байх.
 
-That sequence gives the account enough clarity to grow without becoming messy.
+---
+
+## 10. Эцсийн бөгөөд хамгийн чухал зөвлөгөө
+
+Энэхүү зар сурталчилгааны бүртгэлийг удирдахдаа хамгийн түрүүнд нэг л чухал дүрмийг баримтлах ёстой:
+
+**Зөвхөн хийсвэр, өнгөн үзүүлэлт (vanity metrics) хөөхөөс илүү, чанартай, худалдан авалтын дохио өгсөн мэдээлэл (signal quality) рүү чиглүүлж оновчилно уу.**
+
+Энэ бүтээгдэхүүний хувьд дараах дараалал хамгийн оновчтой бөгөөд баттай үр дүн авчирна:
+
+1. Яг худалдан авагчийг хөдөлгөж чадах зөв өнцгийг (winning angle) олох.
+2. Вэбсайттай уялдсан зөв гүнзгийрүүлэлттэй үйлдлээ мэдэрч оновчлох.
+3. Амжилттай байгаа контентын цар хүрээг тогтвортойгоор, аажмаар нэмэх (scale).
+4. Хоосон шуугианаар бус бодит баталгаагаар хүмүүсээ дахин чиглүүлэх (retarget).
+
+Хэрэв энэ дарааллыг зөв мөрдвөл алгоритм мэдээлэлдээ төөрөгдөхгүй, улмаар таны данс үр ашиггүй зардлаас бүрэх сэргийлэгдэж, тогтвортой өсөх болно.
